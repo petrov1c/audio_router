@@ -1,0 +1,14 @@
+# envs
+__pycache__/
+.idea/
+.ipynb_checkpoints
+.pytest_cache
+
+# Рабочий конфиг
+/config/config.yml
+/config/config.json
+
+# directories
+/sandbox/
+/data/
+/models/
