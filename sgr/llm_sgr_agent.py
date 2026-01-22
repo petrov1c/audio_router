@@ -24,6 +24,7 @@ from pydantic import BaseModel, Field
 import json
 import time
 import os
+import dotenv
 from datetime import datetime
 from openai import OpenAI
 from rich.console import Console
@@ -33,6 +34,8 @@ from rich.table import Table
 from rich.text import Text
 from rich.align import Align
 from rich.tree import Tree
+
+dotenv.load_dotenv()
 
 DB = {
     "rules": [],
@@ -59,8 +62,8 @@ class GetCustomerData(BaseModel):
     email: str
 
 
-class IssueInvoice(BaseModel):
-    tool: Literal["issue_invoice"]
+class CreateInvoice(BaseModel):
+    tool: Literal["create_invoice"]
     email: str
     skus: List[str]
     discount_percent: Annotated[int, Le(50)]
@@ -73,29 +76,29 @@ class VoidInvoice(BaseModel):
 
 
 class CreateRule(BaseModel):
-    tool: Literal["remember"]
+    tool: Literal["create_rule"]
     email: str
     rule: str
 
 
 class ReportTaskCompletion(BaseModel):
-    tool: Literal["report_completion"]
+    tool: Literal["report_task_completion"]
     completed_steps_laconic: List[str]
     code: Literal["completed", "failed"]
 
 
 class NextStep(BaseModel):
     current_state: str
-    plan_remaining_steps_brief: Annotated[List[str], MinLen(1), MaxLen(5)]
+    plan_remaining_steps_brief: Annotated[List[str], MinLen(1), MaxLen(5)] = Field(..., description="план действий")
     task_completed: bool
     function: Union[
         ReportTaskCompletion,
         SendEmail,
         GetCustomerData,
-        IssueInvoice,
+        CreateInvoice,
         VoidInvoice,
         CreateRule,
-    ] = Field(..., description="execute first remaining step")
+    ] = Field(..., description="выполни первый шаг")
 
 
 # Global report logger
@@ -229,7 +232,7 @@ def dispatch(cmd: BaseModel):
             "emails": [e for e in DB["emails"] if e.get("to") == addr],
         }
 
-    if isinstance(cmd, IssueInvoice):
+    if isinstance(cmd, CreateInvoice):
         total = 0.0
         for sku in cmd.skus:
             product = DB["products"].get(sku)
@@ -262,23 +265,40 @@ def dispatch(cmd: BaseModel):
 
 
 TASKS = [
-    "Rule: address sama@openai.com as 'The SAMA', always give him 5% discount.",
-    "Rule for elon@x.com: Email his invoices to finance@x.com",
-    "sama@openai.com wants one of each product. Email him the invoice",
-    "elon@x.com wants 2x of what sama@openai.com got. Send invoice",
-    "redo last elon@x.com invoice: use 3x discount of sama@openai.com",
+    "Создай правило: клиенту sama@openai.com всегда давай скидку 5%.",
+    "Создай правило для elon@x.com: Отправляй его счета на finance@x.com.",
+    "sama@openai.com хочет приобрести по одной штуке каждого товара из списка товаров. Отправь ему счет по электронной почте.",
+    "elon@x.com хочет в 2 раза больше, чем заказал sama@openai.com. Отправь счет.",
+    "повтори последний счет elon@x.com: примени 3-кратную скидку от sama@openai.com.",
 ]
 
 system_prompt = f"""
-You are a business assistant helping Rinat Abdullin with customer interactions.
-- Clearly report when tasks are done.
-- Always send customers emails after issuing invoices (with invoice attached).
-- Be laconic. Especially in emails
-- No need to wait for payment confirmation before proceeding.
-- Always check customer data before issuing invoices or making changes.
+Ты являешься помошником по взаимодействию с клиентами. Тебе доступны следующие активности:
+
+<Actions>
+    get_customerd_data # получает данные клиента из базы данных
+    create_rule # записывает правило взаимодействия с клиентом в базу данных
+    send_email # отправляет электронное письмо
+    create_invoice # создает счет
+    void_invoice # удаляет счет
+    report_task_completion # пишет отчет о выполнении задачи
+</Actions> 
+
+<Main_rules>
+    Напиши, что тебя просят сделать. 
+    Составь план действий.
+    Напиши отчет о выполненной задаче
+</Main_rules>
+
+<Rules>
+    Всегда проверяй данные клиента перед выставлением счетов.
+    Всегда отправляй клиентам электронные письма после выставления счетов.
+</Rules>
+
 Products: {DB["products"]}""".strip()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# client = OpenAI(base_url="https://routerai.ru/api/v1", api_key=os.getenv("API_KEY"))
+client = OpenAI(base_url="http://0.0.0.0:8000/v1", api_key='-')
 console = Console()
 print = console.print
 reporter = MarkdownReporter()
@@ -334,7 +354,7 @@ def execute_tasks():
 
         steps_completed = []
 
-        for i in range(20):
+        for i in range(5):
             step = f"step_{i + 1}"
 
             step_text = Text(f"🧠 Planning {step}...", style="bold yellow")
@@ -344,10 +364,15 @@ def execute_tasks():
 
             try:
                 completion = client.beta.chat.completions.parse(
-                    model="gpt-4o",
+                    model="Qwen/Qwen3-VL-8B-Instruct", # 'qwen/qwen3-vl-32b-instruct'
                     response_format=NextStep,
                     messages=log,
-                    max_completion_tokens=10000,
+                    temperature=0,
+                    top_p=1,
+                    extra_body= {
+                        'chat_template_kwargs': {"enable_thinking": False},
+                    },
+                    # max_completion_tokens=10000,
                 )
                 job = completion.choices[0].message.parsed
             except Exception as e:
