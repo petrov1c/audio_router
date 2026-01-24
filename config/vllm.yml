@@ -1,0 +1,8 @@
+model: 'Qwen/QWEN2.5-Omni-3B'
+dtype: auto
+max-model-len: 8192 # 32768
+host: '0.0.0.0'
+port: 8000
+gpu-memory-utilization: 0.9
+max_num_seqs: 1
+uvicorn-log-level: "info"

@@ -1,0 +1,47 @@
+# Конфигурация Audio Router
+
+# LLM настройки
+# URL и API ключ берутся из переменных окружения LLM_BASE_URL и LLM_API_KEY
+llm:
+  base_url_env: "LLM_BASE_URL"  # Переменная окружения для URL
+  api_key_env: "LLM_API_KEY"    # Переменная окружения для API ключа
+  model: "Qwen/QWEN2.5-Omni-3B"
+  temperature: 0.0
+  max_tokens: 8192
+
+# Инструменты
+tools:
+  # Расписание авиарейсов
+  flights:
+    enabled: true
+    api_key_env: "YANDEX_RASP_API_KEY"
+    base_url: "https://api.rasp.yandex.net/v3.0"
+  
+  # Календарь
+  calendar:
+    enabled: true
+    file_path: "data/calendar.csv"
+  
+  # Яндекс Музыка
+  music:
+    enabled: true
+    api_key_env: "YANDEX_MUSIC_TOKEN"
+  
+  # Заметки
+  notes:
+    enabled: true
+    storage_path: "data/notes/"
+
+# Пользовательский интерфейс
+ui:
+  host: "0.0.0.0"
+  port: 7860
+  share: false
+  audio_sample_rate: 16000
+  server_name: null
+
+# Логирование
+logging:
+  level: "INFO"
+  file: "data/logs/app.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
