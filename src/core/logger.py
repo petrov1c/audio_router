@@ -5,7 +5,6 @@
 
 import logging
 import sys
-from pathlib import Path
 from typing import Optional
 
 from src.core.config import get_config, LoggingConfig
