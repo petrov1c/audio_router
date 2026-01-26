@@ -36,7 +36,7 @@ ui:
   port: 7860
   # share: true создает публичную HTTPS ссылку для доступа к микрофону
   # Используйте true если доступ идет по IP адресу (не localhost)
-  share: true
+  share: false
   audio_sample_rate: 16000
   server_name: null
 
