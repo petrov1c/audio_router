@@ -1,0 +1,21 @@
+omegaconf
+pydantic
+python-dotenv
+gradio
+tqdm
+soundfile
+
+# remote режим
+vllm
+openai
+
+# local режим
+torch
+transformers
+xgrammar
+
+# Пакеты для тестов, линтера, ..
+httpx
+pytest
+pytest-asyncio
+wemake-python-styleguide
