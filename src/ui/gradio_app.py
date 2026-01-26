@@ -85,6 +85,13 @@ class GradioApp:
             Кортеж (None, обновленная история).
         """
         if audio_path is None:
+            logger.warning("Audio path is None - recording may not have started")
+            history.append((
+                "🎤 [Голосовое сообщение]",
+                "❌ Не удалось записать аудио. Проверьте:\n"
+                "1. Разрешения микрофона в браузере\n"
+                "2. Доступ через HTTPS или localhost"
+            ))
             return None, history
         
         logger.info(f"Processing audio from: {audio_path}")
@@ -158,7 +165,8 @@ class GradioApp:
                         sources=["microphone"],
                         type="filepath",
                         label="Запись с микрофона",
-                        format="wav"
+                        format="wav",
+                        recording=False
                     )
                     
                     audio_submit = gr.Button(
@@ -212,6 +220,9 @@ class GradioApp:
         """Запустить Gradio приложение."""
         demo = self.create_interface()
         
+        # ВАЖНО: Для работы микрофона требуется HTTPS или localhost
+        # Если доступ идет по IP адресу, используйте share=True для HTTPS
+        # или настройте SSL сертификаты через ssl_certfile/ssl_keyfile
         demo.launch(
             server_name=self.config.ui.host,
             server_port=self.config.ui.port,
