@@ -1,6 +1,7 @@
 # envs
 __pycache__/
 .idea/
+.vscode/
 .ipynb_checkpoints
 .pytest_cache
 
