@@ -2,12 +2,11 @@
 Главный файл приложения Audio Router.
 """
 
-import asyncio
 import argparse
 from dotenv import load_dotenv
 
 from src.ui.gradio_app import create_app
-from src.core.logger import setup_logger, get_logger
+from src.core.logger import setup_logger
 from src.core.config import get_config
 
 

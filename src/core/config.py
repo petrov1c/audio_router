@@ -18,8 +18,6 @@ class LLMConfig:
     base_url_env: str = "LLM_BASE_URL"  # Переменная окружения для URL
     api_key_env: str = "LLM_API_KEY"    # Переменная окружения для ключа
     model: str = "Qwen/QWEN2.5-Omni-3B"
-    temperature: float = 0.0
-    top_p: float = 1.0
 
     @property
     def base_url(self) -> str:
