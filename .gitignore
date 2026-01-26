@@ -4,12 +4,9 @@ __pycache__/
 .ipynb_checkpoints
 .pytest_cache
 
-# Рабочий конфиг
-/config/config.yml
-/config/config.json
+# API-KEY
 .env
 
 # directories
 /sandbox/
 /data/
-/models/
