@@ -1,6 +1,3 @@
-APP_PORT := 1980
-
-
 .PHONY: lint
 lint:
 	flake8 *.py src/*/*.py
