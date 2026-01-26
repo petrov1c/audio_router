@@ -141,15 +141,17 @@ class OpenAILLMProvider(LLMProvider):
         
         try:
             # Кодируем аудио в base64
-            audio_b64 = base64.b64encode(audio).decode('utf-8')
+            audio_b64 = base64.b64encode(audio).decode()
             
             # Формируем сообщение с аудио для QWEN2.5-Omni
             audio_message = {
                 "role": "user",
                 "content": [
                     {
-                        "type": "audio",
-                        "audio": audio_b64
+                        "type": "audio_url",
+                        "audio_url": {
+                            "url": "data:audio/mp3;base64," + audio_b64,
+                        },
                     }
                 ]
             }

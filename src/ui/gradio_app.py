@@ -165,7 +165,7 @@ class GradioApp:
                         sources=["microphone"],
                         type="filepath",
                         label="Запись с микрофона",
-                        format="wav",
+                        format="mp3",
                         recording=False
                     )
                     
@@ -226,7 +226,10 @@ class GradioApp:
         demo.launch(
             server_name=self.config.ui.host,
             server_port=self.config.ui.port,
-            share=self.config.ui.share
+            share=self.config.ui.share,
+            ssl_certfile="./cert.pem",
+            ssl_keyfile="./key.pem",
+            ssl_verify=False  # только для самоподписанных сертификатов
         )
 # END:gradio_app
 
