@@ -1,0 +1,96 @@
+"""
+Тесты для системы конфигурации.
+"""
+
+import pytest
+from pathlib import Path
+
+from src.core.config import (
+    Config,
+    LLMConfig,
+    ToolsConfig,
+    UIConfig,
+    LoggingConfig,
+    ConfigLoader,
+    get_config,
+    set_config
+)
+
+
+# ANCHOR:test_default_config
+def test_default_config(monkeypatch):
+    """Тест создания конфигурации по умолчанию."""
+    # Устанавливаем переменные окружения для теста
+    monkeypatch.setenv("LLM_BASE_URL", "http://localhost:8000/v1")
+    monkeypatch.setenv("LLM_API_KEY", "dummy")
+    
+    config = Config()
+    
+    assert config.llm is not None
+    assert config.tools is not None
+    assert config.ui is not None
+    assert config.logging is not None
+    
+    # Проверяем значения по умолчанию
+    assert config.llm.base_url == "http://localhost:8000/v1"
+    assert config.llm.api_key == "dummy"
+    assert config.llm.model == "Qwen/QWEN2.5-Omni-3B"
+
+    assert config.ui.host == "0.0.0.0"
+    assert config.ui.port == 7860
+    
+    assert config.logging.level == "INFO"
+# END:test_default_config
+
+
+# ANCHOR:test_llm_config
+def test_llm_config(monkeypatch):
+    """Тест конфигурации LLM."""
+    # Устанавливаем переменные окружения для теста
+    monkeypatch.setenv("TEST_BASE_URL", "https://api.example.com/v1")
+    monkeypatch.setenv("TEST_API_KEY", "test-key-123")
+    
+    llm_config = LLMConfig(
+        base_url_env="TEST_BASE_URL",
+        api_key_env="TEST_API_KEY",
+        model="test-model",
+    )
+    
+    assert llm_config.base_url == "https://api.example.com/v1"
+    assert llm_config.api_key == "test-key-123"
+    assert llm_config.model == "test-model"
+# END:test_llm_config
+
+
+# ANCHOR:test_tools_config
+def test_tools_config():
+    """Тест конфигурации инструментов."""
+    tools_config = ToolsConfig()
+    
+    assert tools_config.flights.enabled is True
+    assert tools_config.calendar.enabled is True
+    assert tools_config.music.enabled is True
+    assert tools_config.notes.enabled is True
+    
+    # Проверяем пути
+    assert isinstance(tools_config.calendar.full_path, Path)
+    assert isinstance(tools_config.notes.full_path, Path)
+# END:test_tools_config
+
+
+# ANCHOR:test_config_singleton
+def test_config_singleton():
+    """Тест singleton паттерна для конфигурации."""
+    config1 = get_config()
+    config2 = get_config()
+    
+    # Должны быть одним и тем же объектом
+    assert config1 is config2
+    
+    # Тест установки новой конфигурации
+    new_config = Config()
+    set_config(new_config)
+    
+    config3 = get_config()
+    assert config3 is new_config
+# END:test_config_singleton
