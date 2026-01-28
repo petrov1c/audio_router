@@ -1,5 +1,5 @@
 """
-Инструмент для поиска расписания авиарейсов и поездов.
+Инструмент для поиска расписания авиарейсов по России.
 Использует Yandex Rasp API.
 """
 
@@ -9,6 +9,7 @@ from datetime import datetime
 
 from src.tools.base import Tool, BaseTool
 from src.tools.schemas import FlightScheduleTool
+from src.tools.airport_registry import AirportRegistry, Airport
 from src.core.config import FlightsToolConfig
 from src.core.logger import get_module_logger
 
@@ -18,7 +19,7 @@ logger = get_module_logger(__name__)
 
 # ANCHOR:flights_tool
 class FlightsTool(Tool):
-    """Инструмент для поиска расписания рейсов через Yandex Rasp API."""
+    """Инструмент для поиска расписания авиарейсов по России через Yandex Rasp API."""
     
     def __init__(self, config: FlightsToolConfig):
         """
@@ -30,9 +31,14 @@ class FlightsTool(Tool):
         self.config = config
         self.base_url = config.base_url
         self.api_key = config.api_key
+        self.airport_registry = AirportRegistry(config)
         
         if not self.api_key:
             logger.warning("Yandex Rasp API key not configured")
+    
+    async def initialize(self) -> None:
+        """Инициализировать инструмент (загрузить реестр аэропортов)."""
+        await self.airport_registry.ensure_loaded()
     
     @property
     def name(self) -> str:
@@ -41,8 +47,9 @@ class FlightsTool(Tool):
     @property
     def description(self) -> str:
         return (
-            "Поиск расписания авиарейсов, поездов, автобусов и электричек. "
-            "Позволяет найти рейсы между двумя станциями на указанную дату."
+            "Поиск расписания авиарейсов по России. "
+            "Позволяет найти рейсы между двумя городами на указанную дату. "
+            "Поддерживаются только внутренние рейсы по России."
         )
     
     def get_schema(self) -> Type[BaseTool]:
@@ -63,13 +70,66 @@ class FlightsTool(Tool):
         if not self.api_key:
             return {
                 "success": False,
-                "error": "Yandex Rasp API key not configured",
+                "error": "api_key_not_configured",
                 "message": "Для использования этого инструмента необходим API ключ Yandex Rasp"
             }
         
+        # Убедиться что реестр загружен
+        try:
+            await self.airport_registry.ensure_loaded()
+        except Exception as e:
+            logger.error(f"Error loading airport registry: {e}", exc_info=True)
+            return {
+                "success": False,
+                "error": "registry_load_error",
+                "message": "Не удалось загрузить справочник аэропортов"
+            }
+        
         logger.info(
-            f"Searching flights from {params.from_station} to {params.to_station} "
-            f"on {params.date}, transport: {params.transport_type}"
+            f"Searching flights from {params.from_city} to {params.to_city} on {params.date}"
+        )
+        
+        # Найти аэропорт отправления
+        from_airport = self.airport_registry.find_airport(params.from_city)
+        if not from_airport:
+            suggestions = self.airport_registry.find_airports(params.from_city, limit=3)
+            suggestion_names = [a.settlement for a in suggestions]
+            
+            return {
+                "success": False,
+                "error": "airport_not_found",
+                "message": f"Аэропорт отправления '{params.from_city}' не найден. Возможно вы имели в виду: {', '.join(suggestion_names)}?" if suggestion_names else f"Аэропорт отправления '{params.from_city}' не найден",
+                "suggestions": suggestion_names
+            }
+        
+        # Найти аэропорт прибытия
+        to_airport = self.airport_registry.find_airport(params.to_city)
+        if not to_airport:
+            suggestions = self.airport_registry.find_airports(params.to_city, limit=3)
+            suggestion_names = [a.settlement for a in suggestions]
+            
+            return {
+                "success": False,
+                "error": "airport_not_found",
+                "message": f"Аэропорт прибытия '{params.to_city}' не найден. Возможно вы имели в виду: {', '.join(suggestion_names)}?" if suggestion_names else f"Аэропорт прибытия '{params.to_city}' не найден",
+                "suggestions": suggestion_names
+            }
+        
+        # Проверить что оба аэропорта в России
+        if self.config.only_russia:
+            error_msg = self._validate_russia_only(from_airport, to_airport)
+            if error_msg:
+                return {
+                    "success": False,
+                    "error": "international_not_supported",
+                    "message": error_msg,
+                    "from": from_airport.settlement,
+                    "to": to_airport.settlement
+                }
+        
+        logger.info(
+            f"Found airports: {from_airport.settlement} ({from_airport.code}) -> "
+            f"{to_airport.settlement} ({to_airport.code})"
         )
         
         try:
@@ -78,15 +138,13 @@ class FlightsTool(Tool):
             
             query_params = {
                 "apikey": self.api_key,
-                "from": params.from_station,
-                "to": params.to_station,
+                "from": from_airport.code,
+                "to": to_airport.code,
                 "date": params.date,
                 "format": "json",
-                "lang": "ru_RU"
+                "lang": "ru_RU",
+                "transport_types": "plane"  # Только самолёты
             }
-            
-            if params.transport_type:
-                query_params["transport_types"] = params.transport_type
             
             async with httpx.AsyncClient() as client:
                 response = await client.get(url, params=query_params, timeout=10.0)
@@ -100,9 +158,13 @@ class FlightsTool(Tool):
                 return {
                     "success": True,
                     "found": False,
-                    "message": f"Рейсы из {params.from_station} в {params.to_station} на {params.date} не найдены",
-                    "from": params.from_station,
-                    "to": params.to_station,
+                    "message": (
+                        f"Прямых авиарейсов из {from_airport.settlement} "
+                        f"в {to_airport.settlement} на {params.date} не найдено. "
+                        f"Попробуйте выбрать другую дату или рассмотрите рейсы с пересадками."
+                    ),
+                    "from": from_airport.settlement,
+                    "to": to_airport.settlement,
                     "date": params.date
                 }
             
@@ -116,7 +178,9 @@ class FlightsTool(Tool):
                     "carrier": segment.get("thread", {}).get("carrier", {}).get("title"),
                     "number": segment.get("thread", {}).get("number"),
                     "title": segment.get("thread", {}).get("title"),
-                    "transport_type": segment.get("thread", {}).get("transport_type")
+                    "transport_type": segment.get("thread", {}).get("transport_type"),
+                    "from_station": segment.get("from", {}).get("title"),
+                    "to_station": segment.get("to", {}).get("title")
                 }
                 flights.append(flight_info)
             
@@ -125,11 +189,13 @@ class FlightsTool(Tool):
                 "found": True,
                 "count": len(flights),
                 "total_found": len(segments),
-                "from": params.from_station,
-                "to": params.to_station,
+                "from": from_airport.settlement,
+                "from_airport": from_airport.title,
+                "to": to_airport.settlement,
+                "to_airport": to_airport.title,
                 "date": params.date,
                 "flights": flights,
-                "message": self._format_message(flights, params)
+                "message": self._format_message(flights, from_airport, to_airport, params.date)
             }
             
         except httpx.HTTPStatusError as e:
@@ -147,22 +213,59 @@ class FlightsTool(Tool):
                 "message": "Произошла ошибка при поиске рейсов"
             }
     
-    def _format_message(self, flights: List[Dict], params: FlightScheduleTool) -> str:
+    def _validate_russia_only(self, from_airport: Airport, to_airport: Airport) -> str:
+        """
+        Проверить что оба аэропорта в России.
+        
+        Args:
+            from_airport: Аэропорт отправления.
+            to_airport: Аэропорт прибытия.
+            
+        Returns:
+            Сообщение об ошибке или пустая строка если всё ОК.
+        """
+        if from_airport.country != "Россия":
+            return (
+                f"Извините, я знаю расписание только по авиарейсам внутри России. "
+                f"{from_airport.settlement} находится в стране: {from_airport.country}"
+            )
+        
+        if to_airport.country != "Россия":
+            return (
+                f"Извините, я знаю расписание только по авиарейсам внутри России. "
+                f"{to_airport.settlement} находится в стране: {to_airport.country}"
+            )
+        
+        return ""
+    
+    def _format_message(
+        self,
+        flights: List[Dict],
+        from_airport: Airport,
+        to_airport: Airport,
+        date: str
+    ) -> str:
         """
         Форматировать сообщение с результатами поиска.
         
         Args:
             flights: Список найденных рейсов.
-            params: Параметры поиска.
+            from_airport: Аэропорт отправления.
+            to_airport: Аэропорт прибытия.
+            date: Дата вылета.
             
         Returns:
             Отформатированное сообщение.
         """
         if not flights:
-            return f"Рейсы из {params.from_station} в {params.to_station} на {params.date} не найдены"
+            return (
+                f"Авиарейсы из {from_airport.settlement} в {to_airport.settlement} "
+                f"на {date} не найдены"
+            )
         
         message_parts = [
-            f"Найдено {len(flights)} рейсов из {params.from_station} в {params.to_station} на {params.date}:\n"
+            f"Найдено {len(flights)} авиарейсов из {from_airport.settlement} ({from_airport.title}) "
+            f"в {to_airport.settlement} ({to_airport.title}) на {date}:\n"
         ]
         
         for i, flight in enumerate(flights[:5], 1):  # Показываем первые 5
@@ -172,17 +275,21 @@ class FlightsTool(Tool):
             arrival = flight.get("arrival", "")
             duration = flight.get("duration", 0)
             
-            # Форматируем время
+            # Форматируем время (убираем дату, оставляем только время)
+            dep_time = departure.split("T")[1][:5] if "T" in departure else departure
+            arr_time = arrival.split("T")[1][:5] if "T" in arrival else arrival
+            
+            # Форматируем длительность
             hours = duration // 3600
             minutes = (duration % 3600) // 60
             duration_str = f"{hours}ч {minutes}мин" if hours > 0 else f"{minutes}мин"
             
             message_parts.append(
-                f"{i}. {carrier} {number}: {departure} → {arrival} ({duration_str})"
+                f"{i}. {carrier} {number}: вылет {dep_time}, прилёт {arr_time} ({duration_str})"
             )
         
         if len(flights) > 5:
-            message_parts.append(f"\n... и еще {len(flights) - 5} рейсов")
+            message_parts.append(f"\n... и ещё {len(flights) - 5} рейсов")
         
         return "\n".join(message_parts)
 # END:flights_tool

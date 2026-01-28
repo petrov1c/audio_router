@@ -19,3 +19,6 @@ httpx
 pytest
 pytest-asyncio
 wemake-python-styleguide
+
+# Пакеты для инструментов
+rapidfuzz>=3.0.0

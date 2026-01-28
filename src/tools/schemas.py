@@ -11,14 +11,16 @@ from src.tools.base import BaseTool
 
 # ANCHOR:flight_schedule_schema
 class FlightScheduleTool(BaseTool):
-    """Схема инструмента поиска расписания рейсов."""
+    """Схема инструмента поиска расписания авиарейсов по России."""
     tool: Literal["flight_schedule"]
-    from_station: str = Field(description="Код или название станции отправления")
-    to_station: str = Field(description="Код или название станции прибытия")
-    date: str = Field(description="Дата в формате YYYY-MM-DD")
-    transport_type: Optional[str] = Field(
-        default="plane",
-        description="Тип транспорта: plane, train, bus, suburban"
+    from_city: str = Field(
+        description="Город или аэропорт отправления (например: Москва, Санкт-Петербург, Шереметьево)"
+    )
+    to_city: str = Field(
+        description="Город или аэропорт прибытия (например: Сочи, Владивосток, Пулково)"
+    )
+    date: str = Field(
+        description="Дата вылета в формате YYYY-MM-DD"
     )
 # END:flight_schedule_schema
 
