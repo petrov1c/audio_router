@@ -5,7 +5,7 @@ LLM провайдер на основе OpenAI клиента.
 
 from typing import List, Dict, Any, Type, Optional
 from pydantic import BaseModel
-from openai import OpenAI, AsyncOpenAI
+from openai import AsyncOpenAI
 
 from src.llm.provider import LLMProvider
 from src.core.config import LLMConfig
@@ -31,12 +31,7 @@ class OpenAILLMProvider(LLMProvider):
         """
         self.config = config
         
-        # Создаем синхронный и асинхронный клиенты
-        self.client = OpenAI(
-            base_url=config.base_url,
-            api_key=config.api_key
-        )
-        
+        # Создаем асинхронный клиент
         self.async_client = AsyncOpenAI(
             base_url=config.base_url,
             api_key=config.api_key
