@@ -102,7 +102,7 @@ class GradioApp:
                 audio_bytes = f.read()
             
             # Обрабатываем через агента
-            result = await self.agent.process_audio_request(audio_bytes)
+            result = await self.agent.process_request(audio_bytes)
             
             # Формируем ответ
             if result.get("success"):
