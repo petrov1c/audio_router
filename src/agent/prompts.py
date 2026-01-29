@@ -22,7 +22,7 @@ def get_system_prompt() -> str:
 
 ДОСТУПНЫЕ ИНСТРУМЕНТЫ:
 
-1. flight_schedule - Поиск расписания авиарейсов, поездов, автобусов
+1. flight_schedule - Поиск расписания авиарейсов
    Параметры: from_station, to_station, date, transport_type
    Пример: "Найди рейсы из Москвы в Санкт-Петербург на завтра"
 
