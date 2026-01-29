@@ -3,11 +3,11 @@ Schema-Guided Reasoning (SGR) Agent.
 Агент для планирования и выполнения задач через вызов инструментов.
 """
 
-from typing import List, Dict, Any, Optional
+from typing import Dict, Union, Any
 from pydantic import ValidationError
 
 from src.agent.schemas import AgentStep
-from src.agent.prompts import get_system_prompt, format_tool_result
+from src.agent.prompts import get_system_prompt, format_user_message, format_tool_result
 from src.llm import LLMProvider
 from src.tools import ToolDispatcher
 from src.core.logger import get_module_logger
@@ -41,7 +41,7 @@ class SGRAgent:
         
         logger.info("SGR Agent initialized")
     
-    async def process_request(self, user_input: str) -> Dict[str, Any]:
+    async def process_request(self, user_input: Union[str, bytes]) -> Dict[str, Any]:
         """
         Обработать запрос пользователя.
         
@@ -56,7 +56,7 @@ class SGRAgent:
         # Инициализируем историю диалога
         messages = [
             {"role": "system", "content": self.system_prompt},
-            {"role": "user", "content": user_input}
+            {"role": "user", "content": format_user_message(user_input)}
         ]
         
         steps_history = []
@@ -99,7 +99,7 @@ class SGRAgent:
                 
                 # Проверяем завершение задачи
                 if (agent_step.task_completed
-                        or agent_step.next_action.tool in ("task_completion", "no_tool_available")):
+                        or agent_step.next_action.tool in ("task_completion", "no_tool_available", "flight_schedule", "search_music", "create_note", "search_notes")):
                     logger.info("Task completed")
                     return {
                         "success": True,
@@ -133,33 +133,4 @@ class SGRAgent:
             "error": f"Достигнут лимит шагов ({self.max_steps})",
             "steps": steps_history
         }
-    
-    async def process_audio_request(self, audio_bytes: bytes) -> Dict[str, Any]:
-        """
-        Обработать аудио запрос пользователя.
-        
-        Args:
-            audio_bytes: Аудио данные в байтах.
-            
-        Returns:
-            Результат обработки.
-        """
-        logger.info(f"Processing audio request: {len(audio_bytes)} bytes")
-        
-        try:
-            # Обрабатываем аудио через LLM
-            # QWEN2.5-Omni вернет понимание запроса в текстовом виде
-            text_understanding = await self.llm.process_audio(audio_bytes)
-            
-            logger.info(f"Audio understood as: {text_understanding}")
-            
-            # Обрабатываем как обычный текстовый запрос
-            return await self.process_request(text_understanding)
-            
-        except Exception as e:
-            logger.error(f"Error processing audio request: {e}", exc_info=True)
-            return {
-                "success": False,
-                "error": f"Ошибка обработки аудио: {str(e)}"
-            }
 # END:sgr_agent
