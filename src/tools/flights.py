@@ -5,7 +5,6 @@
 
 from typing import Dict, Any, Type, List
 import httpx
-from datetime import datetime
 
 from src.tools.base import Tool, BaseTool
 from src.tools.schemas import FlightScheduleTool
@@ -97,7 +96,7 @@ class FlightsTool(Tool):
             
             return {
                 "success": False,
-                "error": "airport_not_found",
+                "error": f"Аэропорт отправления '{params.from_city}' не найден. Возможно вы имели в виду: {', '.join(suggestion_names)}?" if suggestion_names else f"Аэропорт отправления '{params.from_city}' не найден",
                 "message": f"Аэропорт отправления '{params.from_city}' не найден. Возможно вы имели в виду: {', '.join(suggestion_names)}?" if suggestion_names else f"Аэропорт отправления '{params.from_city}' не найден",
                 "suggestions": suggestion_names
             }
@@ -110,7 +109,7 @@ class FlightsTool(Tool):
             
             return {
                 "success": False,
-                "error": "airport_not_found",
+                "error": f"Аэропорт прибытия '{params.to_city}' не найден. Возможно вы имели в виду: {', '.join(suggestion_names)}?" if suggestion_names else f"Аэропорт прибытия '{params.to_city}' не найден",
                 "message": f"Аэропорт прибытия '{params.to_city}' не найден. Возможно вы имели в виду: {', '.join(suggestion_names)}?" if suggestion_names else f"Аэропорт прибытия '{params.to_city}' не найден",
                 "suggestions": suggestion_names
             }
@@ -121,7 +120,7 @@ class FlightsTool(Tool):
             if error_msg:
                 return {
                     "success": False,
-                    "error": "international_not_supported",
+                    "error": error_msg,
                     "message": error_msg,
                     "from": from_airport.settlement,
                     "to": to_airport.settlement
@@ -170,7 +169,7 @@ class FlightsTool(Tool):
             
             # Форматируем результаты
             flights = []
-            for segment in segments[:10]:  # Берем первые 10 рейсов
+            for segment in segments:
                 flight_info = {
                     "departure": segment.get("departure"),
                     "arrival": segment.get("arrival"),
@@ -282,7 +281,7 @@ class FlightsTool(Tool):
             # Форматируем длительность
             hours = duration // 3600
             minutes = (duration % 3600) // 60
-            duration_str = f"{hours}ч {minutes}мин" if hours > 0 else f"{minutes}мин"
+            duration_str = f"{hours:.0f} ч {minutes:.0f} мин" if hours > 0 else f"{minutes:.0f} мин"
             
             message_parts.append(
                 f"{i}. {carrier} {number}: вылет {dep_time}, прилёт {arr_time} ({duration_str})"

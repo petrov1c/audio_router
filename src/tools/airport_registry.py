@@ -133,7 +133,7 @@ class AirportRegistry:
             
             # Пропускаем если не Россия
             if country_title != "Россия":
-                continue
+                pass
             
             regions = country.get("regions", [])
             for region in regions:
