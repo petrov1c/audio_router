@@ -95,21 +95,6 @@ def get_system_prompt() -> str:
 # END:system_prompt
 
 
-# ANCHOR:user_prompt_template
-def format_user_message(user_input: str) -> str:
-    """
-    Форматировать сообщение пользователя.
-    
-    Args:
-        user_input: Входное сообщение пользователя.
-        
-    Returns:
-        Отформатированное сообщение.
-    """
-    return user_input
-# END:user_prompt_template
-
-
 # ANCHOR:tool_result_template
 def format_tool_result(tool_name: str, result: dict) -> str:
     """
