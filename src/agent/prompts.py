@@ -2,6 +2,8 @@
 Системные промпты для SGR агента.
 """
 
+import base64
+from typing import Union
 from datetime import datetime
 
 
@@ -93,6 +95,39 @@ def get_system_prompt() -> str:
 - Всегда заполняй ВСЕ обязательные параметры инструмента
 """.strip()
 # END:system_prompt
+
+
+# ANCHOR:user_prompt_template
+def format_user_message(user_input: Union[str, bytes]) -> Union[str , list]:
+    """
+    Форматировать сообщение пользователя.
+
+    Args:
+        user_input: Входное сообщение пользователя.
+
+    Returns:
+        Отформатированное сообщение.
+    """
+
+    if isinstance(user_input, str):
+        return user_input
+
+    # Кодируем аудио в base64
+    audio_b64 = base64.b64encode(user_input).decode()
+
+    # Формируем сообщение с аудио для QWEN2.5-Omni
+    audio_input = [
+        {
+            "type": "audio_url",
+            "audio_url": {
+                "url": "data:audio/mp3;base64," + audio_b64,
+            },
+        }
+    ]
+
+    return audio_input
+
+# END:user_prompt_template
 
 
 # ANCHOR:tool_result_template
