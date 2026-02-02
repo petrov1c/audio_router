@@ -29,7 +29,16 @@ class FlightScheduleTool(BaseTool):
 class AddCalendarEventTool(BaseTool):
     """Схема инструмента добавления события в календарь."""
     tool: Literal["add_calendar_event"]
-    date: str = Field(description="Дата события в формате YYYY-MM-DD")
+    date: str = Field(
+        description=(
+            "Дата события. Поддерживаются форматы:\n"
+            "- Абсолютные: YYYY-MM-DD, DD.MM.YYYY, 15 февраля\n"
+            "- Относительные: завтра, послезавтра, вчера\n"
+            "- Дни недели: понедельник, следующий вторник, в пятницу\n"
+            "- Смещения: через 3 дня, через неделю, через месяц\n"
+            "Примеры: '2026-02-15', 'завтра', 'следующий понедельник', 'через 3 дня'"
+        )
+    )
     description: str = Field(description="Описание события")
 
 
@@ -38,15 +47,27 @@ class GetCalendarEventsTool(BaseTool):
     tool: Literal["get_calendar_events"]
     date: Optional[str] = Field(
         default=None,
-        description="Дата для фильтрации в формате YYYY-MM-DD. Если None, возвращает все события"
+        description=(
+            "Дата или период для фильтрации. Поддерживаются:\n"
+            "- Конкретная дата: 'завтра', '2026-02-15', 'понедельник', 'через 3 дня'\n"
+            "- Период: 'следующая неделя', 'этот месяц', 'через 2 недели'\n"
+            "Если указан период, автоматически вычисляются date_from и date_to.\n"
+            "Если None, возвращает все события"
+        )
     )
     date_from: Optional[str] = Field(
         default=None,
-        description="Начало периода в формате YYYY-MM-DD"
+        description=(
+            "Начало периода. Поддерживает те же форматы что и date.\n"
+            "Автоматически вычисляется если date содержит период"
+        )
     )
     date_to: Optional[str] = Field(
         default=None,
-        description="Конец периода в формате YYYY-MM-DD"
+        description=(
+            "Конец периода. Поддерживает те же форматы что и date.\n"
+            "Автоматически вычисляется если date содержит период"
+        )
     )
 # END:calendar_schemas
 
