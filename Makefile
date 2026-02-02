@@ -4,7 +4,7 @@ lint:
 
 .PHONY: run_app
 run_app:
-	python src/main.py
+	python -m src.main
 
 .PHONY: vllm
 vllm:
