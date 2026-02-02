@@ -50,7 +50,7 @@ class MusicTool(Tool):
         
         if self._client is None:
             from yandex_music import Client
-            self._client = Client(self.api_key).init()
+            self._client = Client().init()
             logger.info("Yandex Music client initialized")
         
         return self._client
@@ -227,7 +227,7 @@ class MusicTool(Tool):
                 "name": artist.name,
                 "genres": artist.genres if hasattr(artist, 'genres') else [],
                 "tracks_count": artist.counts.tracks if hasattr(artist, 'counts') and artist.counts else 0,
-                "albums_count": artist.counts.albums if hasattr(artist, 'counts') and artist.counts else 0
+                "albums_count": artist.counts.also_albums if hasattr(artist, 'counts') and artist.counts else 0
             }
             formatted_artists.append(artist_info)
         
