@@ -4,11 +4,13 @@
 """
 
 from typing import Dict, Any, Type, List
+from datetime import datetime
 import httpx
 
 from src.tools.base import Tool, BaseTool
 from src.tools.schemas import FlightScheduleTool
 from src.tools.airport_registry import AirportRegistry, Airport
+from src.tools.date_parser import DateParser
 from src.core.config import FlightsToolConfig
 from src.core.logger import get_module_logger
 
@@ -31,6 +33,9 @@ class FlightsTool(Tool):
         self.base_url = config.base_url
         self.api_key = config.api_key
         self.airport_registry = AirportRegistry(config)
+        
+        # Инициализируем парсер дат
+        self.date_parser = DateParser()
         
         if not self.api_key:
             logger.warning("Yandex Rasp API key not configured")
@@ -84,8 +89,52 @@ class FlightsTool(Tool):
                 "message": "Не удалось загрузить справочник аэропортов"
             }
         
+        # ANCHOR:date_parsing
+        # Парсим дату
+        logger.debug(f"Parsing date: {params.date}")
+        try:
+            parsed_date = self.date_parser.parse(params.date)
+        except ValueError as e:
+            logger.error(f"Failed to parse date '{params.date}': {e}")
+            return {
+                "success": False,
+                "error": "date_parse_error",
+                "message": f"Не удалось распознать дату: {params.date}. {str(e)}"
+            }
+        
+        # Проверяем что это не период
+        if parsed_date.is_period:
+            return {
+                "success": False,
+                "error": "period_not_allowed",
+                "message": (
+                    f"Для поиска авиарейсов укажите конкретную дату вылета, а не период. "
+                    f"Вы указали: '{params.date}' (период с {parsed_date.date_from} по {parsed_date.date_to}). "
+                    f"Попробуйте указать конкретный день, например: 'завтра', 'понедельник', 'через 3 дня'"
+                )
+            }
+        
+        # Валидируем распарсенную дату
+        try:
+            datetime.strptime(parsed_date.date, "%Y-%m-%d")
+        except ValueError:
+            return {
+                "success": False,
+                "error": "invalid_date",
+                "message": f"Некорректная дата: {parsed_date.date}"
+            }
+        
+        # Используем распарсенную дату для дальнейшей работы
+        flight_date = parsed_date.date
+        original_date_text = parsed_date.original_text
         logger.info(
-            f"Searching flights from {params.from_city} to {params.to_city} on {params.date}"
+            f"Parsed date '{params.date}' as {flight_date} "
+            f"(original: '{original_date_text}')"
+        )
+        # END:date_parsing
+        
+        logger.info(
+            f"Searching flights from {params.from_city} to {params.to_city} on {flight_date}"
         )
         
         # Найти аэропорт отправления
@@ -139,7 +188,7 @@ class FlightsTool(Tool):
                 "apikey": self.api_key,
                 "from": from_airport.code,
                 "to": to_airport.code,
-                "date": params.date,
+                "date": flight_date,  # Используем распарсенную дату в формате YYYY-MM-DD
                 "format": "json",
                 "lang": "ru_RU",
                 "transport_types": "plane"  # Только самолёты
@@ -154,17 +203,19 @@ class FlightsTool(Tool):
             segments = data.get("segments", [])
             
             if not segments:
+                date_text = original_date_text if original_date_text else flight_date
                 return {
                     "success": True,
                     "found": False,
                     "message": (
                         f"Прямых авиарейсов из {from_airport.settlement} "
-                        f"в {to_airport.settlement} на {params.date} не найдено. "
+                        f"в {to_airport.settlement} на {date_text} ({flight_date}) не найдено. "
                         f"Попробуйте выбрать другую дату или рассмотрите рейсы с пересадками."
                     ),
                     "from": from_airport.settlement,
                     "to": to_airport.settlement,
-                    "date": params.date
+                    "date": flight_date,
+                    "original_date": original_date_text
                 }
             
             # Форматируем результаты
@@ -192,9 +243,12 @@ class FlightsTool(Tool):
                 "from_airport": from_airport.title,
                 "to": to_airport.settlement,
                 "to_airport": to_airport.title,
-                "date": params.date,
+                "date": flight_date,  # Распарсенная дата в ISO формате
+                "original_date": original_date_text,  # Оригинальный текст даты
                 "flights": flights,
-                "message": self._format_message(flights, from_airport, to_airport, params.date)
+                "message": self._format_message(
+                    flights, from_airport, to_airport, flight_date, original_date_text
+                )
             }
             
         except httpx.HTTPStatusError as e:
@@ -242,7 +296,8 @@ class FlightsTool(Tool):
         flights: List[Dict],
         from_airport: Airport,
         to_airport: Airport,
-        date: str
+        date: str,
+        original_date: str = None
     ) -> str:
         """
         Форматировать сообщение с результатами поиска.
@@ -251,20 +306,24 @@ class FlightsTool(Tool):
             flights: Список найденных рейсов.
             from_airport: Аэропорт отправления.
             to_airport: Аэропорт прибытия.
-            date: Дата вылета.
+            date: Дата вылета (ISO формат).
+            original_date: Оригинальный текст даты (например, "завтра").
             
         Returns:
             Отформатированное сообщение.
         """
+        # Используем оригинальный текст если доступен, иначе ISO дату
+        date_text = original_date if original_date else date
+        
         if not flights:
             return (
                 f"Авиарейсы из {from_airport.settlement} в {to_airport.settlement} "
-                f"на {date} не найдены"
+                f"на {date_text} не найдены"
             )
         
         message_parts = [
             f"Найдено {len(flights)} авиарейсов из {from_airport.settlement} ({from_airport.title}) "
-            f"в {to_airport.settlement} ({to_airport.title}) на {date}:\n"
+            f"в {to_airport.settlement} ({to_airport.title}) на {date_text} ({date}):\n"
         ]
         
         for i, flight in enumerate(flights[:5], 1):  # Показываем первые 5

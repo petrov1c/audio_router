@@ -130,11 +130,7 @@ class AirportRegistry:
         
         for country in countries:
             country_title = country.get("title", "")
-            
-            # Пропускаем если не Россия
-            if country_title != "Россия":
-                pass
-            
+
             regions = country.get("regions", [])
             for region in regions:
                 region_title = region.get("title", "")
@@ -147,7 +143,7 @@ class AirportRegistry:
                     for station in stations:
                         # Фильтруем только аэропорты (самолёты)
                         transport_type = station.get("transport_type", "")
-                        if transport_type != "plane":
+                        if transport_type not in ("plane", "Самолёт"):
                             continue
                         
                         codes = station.get("codes", {})
