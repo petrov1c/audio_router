@@ -294,7 +294,7 @@ class TestAirportRegistryAPI:
         
         with patch('httpx.AsyncClient') as mock_client:
             mock_get = AsyncMock()
-            mock_get.return_value.json.return_value = mock_response
+            mock_get.return_value.json = MagicMock(return_value=mock_response)
             mock_get.return_value.raise_for_status = MagicMock()
             mock_client.return_value.__aenter__.return_value.get = mock_get
             
@@ -345,7 +345,7 @@ class TestAirportRegistryAPI:
         
         with patch('httpx.AsyncClient') as mock_client:
             mock_get = AsyncMock()
-            mock_get.return_value.json.return_value = mock_response
+            mock_get.return_value.json = MagicMock(return_value=mock_response)
             mock_get.return_value.raise_for_status = MagicMock()
             mock_client.return_value.__aenter__.return_value.get = mock_get
             

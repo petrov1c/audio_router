@@ -340,3 +340,131 @@ class TestParsedDateValidation:
         assert not parsed.is_period
         assert parsed.date == "2026-02-15"
 # END:test_parsed_date_validation
+
+
+# ANCHOR:test_english_dates
+class TestEnglishDates:
+    """Тесты для английских дат."""
+    
+    def test_today_en(self, parser):
+        """Тест парсинга 'today'."""
+        result = parser.parse("today")
+        assert result.date == "2026-02-02"
+        assert not result.is_period
+    
+    def test_tomorrow_en(self, parser):
+        """Тест парсинга 'tomorrow'."""
+        result = parser.parse("tomorrow")
+        assert result.date == "2026-02-03"
+        assert not result.is_period
+    
+    def test_yesterday_en(self, parser):
+        """Тест парсинга 'yesterday'."""
+        result = parser.parse("yesterday")
+        assert result.date == "2026-02-01"
+        assert not result.is_period
+    
+    def test_monday_en(self, parser):
+        """Тест парсинга 'monday'."""
+        result = parser.parse("monday")
+        assert result.date == "2026-02-09"
+        assert not result.is_period
+    
+    def test_next_tuesday_en(self, parser):
+        """Тест парсинга 'next tuesday'."""
+        result = parser.parse("next tuesday")
+        assert result.date == "2026-02-10"
+        assert not result.is_period
+    
+    def test_on_friday_en(self, parser):
+        """Тест парсинга 'on friday'."""
+        result = parser.parse("on friday")
+        assert result.date == "2026-02-06"
+        assert not result.is_period
+    
+    def test_this_week_en(self, parser):
+        """Тест парсинга 'this week'."""
+        result = parser.parse("this week")
+        assert result.is_period
+        assert result.date_from == "2026-02-02"
+        assert result.date_to == "2026-02-08"
+    
+    def test_next_week_en(self, parser):
+        """Тест парсинга 'next week'."""
+        result = parser.parse("next week")
+        assert result.is_period
+        assert result.date_from == "2026-02-09"
+        assert result.date_to == "2026-02-15"
+    
+    def test_in_3_days_en(self, parser):
+        """Тест парсинга 'in 3 days'."""
+        result = parser.parse("in 3 days")
+        assert result.date == "2026-02-05"
+        assert not result.is_period
+    
+    def test_in_a_week_en(self, parser):
+        """Тест парсинга 'in a week'."""
+        result = parser.parse("in a week")
+        assert result.is_period
+        assert result.date_from == "2026-02-09"
+        assert result.date_to == "2026-02-15"
+    
+    def test_in_2_weeks_en(self, parser):
+        """Тест парсинга 'in 2 weeks'."""
+        result = parser.parse("in 2 weeks")
+        assert result.is_period
+        assert result.date_from == "2026-02-16"
+        assert result.date_to == "2026-02-22"
+    
+    def test_this_month_en(self, parser):
+        """Тест парсинга 'this month'."""
+        result = parser.parse("this month")
+        assert result.is_period
+        assert result.date_from == "2026-02-01"
+        assert result.date_to == "2026-02-28"
+    
+    def test_next_month_en(self, parser):
+        """Тест парсинга 'next month'."""
+        result = parser.parse("next month")
+        assert result.is_period
+        assert result.date_from == "2026-03-01"
+        assert result.date_to == "2026-03-31"
+    
+    def test_in_a_month_en(self, parser):
+        """Тест парсинга 'in a month'."""
+        result = parser.parse("in a month")
+        assert result.date == "2026-03-02"
+        assert not result.is_period
+    
+    def test_february_15_en(self, parser):
+        """Тест парсинга 'February 15'."""
+        result = parser.parse("February 15")
+        assert result.date == "2026-02-15"
+        assert not result.is_period
+    
+    def test_march_15_2026_en(self, parser):
+        """Тест парсинга 'March 15, 2026'."""
+        result = parser.parse("March 15, 2026")
+        assert result.date == "2026-03-15"
+        assert not result.is_period
+    
+    def test_jan_1st_en(self, parser):
+        """Тест парсинга 'Jan 1st'."""
+        result = parser.parse("Jan 1st")
+        assert result.date == "2027-01-01"  # Уже прошло в 2026
+        assert not result.is_period
+    
+    def test_slash_format_en(self, parser):
+        """Тест парсинга '02/15/2026' (MM/DD/YYYY)."""
+        result = parser.parse("02/15/2026")
+        assert result.date == "2026-02-15"
+        assert not result.is_period
+    
+    def test_mixed_case_en(self, parser):
+        """Тест что английские даты не зависят от регистра."""
+        result1 = parser.parse("TOMORROW")
+        result2 = parser.parse("Tomorrow")
+        result3 = parser.parse("tomorrow")
+        
+        assert result1.date == result2.date == result3.date
+# END:test_english_dates

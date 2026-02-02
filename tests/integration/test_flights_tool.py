@@ -110,7 +110,7 @@ class TestFlightsToolExecute:
         }
         
         with patch('httpx.AsyncClient') as mock_client:
-            mock_get = AsyncMock()
+            mock_get = AsyncMock(return_value=MagicMock())
             mock_get.return_value.json.return_value = mock_api_response
             mock_get.return_value.raise_for_status = MagicMock()
             mock_client.return_value.__aenter__.return_value.get = mock_get
@@ -160,7 +160,7 @@ class TestFlightsToolExecute:
         mock_api_response = {"segments": []}
         
         with patch('httpx.AsyncClient') as mock_client:
-            mock_get = AsyncMock()
+            mock_get = AsyncMock(return_value=MagicMock())
             mock_get.return_value.json.return_value = mock_api_response
             mock_get.return_value.raise_for_status = MagicMock()
             mock_client.return_value.__aenter__.return_value.get = mock_get
@@ -204,7 +204,7 @@ class TestFlightsToolExecute:
         }
         
         with patch('httpx.AsyncClient') as mock_client:
-            mock_get = AsyncMock()
+            mock_get = AsyncMock(return_value=MagicMock())
             mock_get.return_value.json.return_value = mock_api_response
             mock_get.return_value.raise_for_status = MagicMock()
             mock_client.return_value.__aenter__.return_value.get = mock_get
@@ -319,6 +319,30 @@ class TestFlightsToolFormatting:
         assert "Аэрофлот" in message
         assert "SU1234" in message
     
+    def test_format_message_with_original_date(self, tool, sample_airports):
+        """Тест форматирования сообщения с оригинальной датой."""
+        flights = [
+            {
+                "carrier": "Аэрофлот",
+                "number": "SU1234",
+                "departure": "2026-02-03T10:00:00+03:00",
+                "arrival": "2026-02-03T11:30:00+03:00",
+                "duration": 5400
+            }
+        ]
+        
+        message = tool._format_message(
+            flights,
+            sample_airports[0],
+            sample_airports[1],
+            "2026-02-03",
+            "завтра"
+        )
+        
+        assert "завтра" in message
+        assert "2026-02-03" in message
+        assert "Аэрофлот" in message
+    
     def test_format_message_no_flights(self, tool, sample_airports):
         """Тест форматирования сообщения без рейсов."""
         message = tool._format_message(
@@ -357,3 +381,123 @@ class TestFlightsToolFormatting:
         assert "Авиакомпания 4" in message
         assert "и ещё 5 рейсов" in message
 # END:test_tool_formatting
+
+
+# ANCHOR:test_relative_dates
+class TestRelativeDates:
+    """Тесты для относительных дат."""
+    
+    @pytest.mark.asyncio
+    async def test_tomorrow_russian(self, tool, sample_airports):
+        """Тест поиска рейсов на завтра."""
+        tool.airport_registry.airports = sample_airports
+        tool.airport_registry._build_indexes()
+        tool.airport_registry._loaded = True
+        
+        mock_api_response = {
+            "segments": [
+                {
+                    "departure": "2026-02-03T10:00:00+03:00",
+                    "arrival": "2026-02-03T11:30:00+03:00",
+                    "duration": 5400,
+                    "thread": {
+                        "carrier": {"title": "Аэрофлот"},
+                        "number": "SU26",
+                        "title": "Москва — Санкт-Петербург",
+                        "transport_type": "plane"
+                    },
+                    "from": {"title": "Шереметьево"},
+                    "to": {"title": "Пулково"}
+                }
+            ]
+        }
+        
+        with patch('httpx.AsyncClient') as mock_client:
+            mock_get = AsyncMock(return_value=MagicMock())
+            mock_get.return_value.json.return_value = mock_api_response
+            mock_get.return_value.raise_for_status = MagicMock()
+            mock_client.return_value.__aenter__.return_value.get = mock_get
+            
+            params = FlightScheduleTool(
+                tool="flight_schedule",
+                from_city="Москва",
+                to_city="Санкт-Петербург",
+                date="завтра"
+            )
+            
+            result = await tool.execute(params)
+        
+        assert result["success"] is True
+        assert result["found"] is True
+        assert "original_date" in result
+        assert result["original_date"] == "завтра"
+        assert result["date"].startswith("2026-")
+        assert "завтра" in result["message"]
+    
+    @pytest.mark.asyncio
+    async def test_next_monday(self, tool, sample_airports):
+        """Тест поиска рейсов на следующий понедельник."""
+        tool.airport_registry.airports = sample_airports
+        tool.airport_registry._build_indexes()
+        tool.airport_registry._loaded = True
+        
+        mock_api_response = {"segments": []}
+        
+        with patch('httpx.AsyncClient') as mock_client:
+            mock_get = AsyncMock(return_value=MagicMock())
+            mock_get.return_value.json.return_value = mock_api_response
+            mock_get.return_value.raise_for_status = MagicMock()
+            mock_client.return_value.__aenter__.return_value.get = mock_get
+            
+            params = FlightScheduleTool(
+                tool="flight_schedule",
+                from_city="Москва",
+                to_city="Санкт-Петербург",
+                date="следующий понедельник"
+            )
+            
+            result = await tool.execute(params)
+        
+        assert result["success"] is True
+        assert "original_date" in result
+        assert result["original_date"] == "следующий понедельник"
+    
+    @pytest.mark.asyncio
+    async def test_period_rejected(self, tool, sample_airports):
+        """Тест что периоды отклоняются."""
+        tool.airport_registry.airports = sample_airports
+        tool.airport_registry._build_indexes()
+        tool.airport_registry._loaded = True
+        
+        params = FlightScheduleTool(
+            tool="flight_schedule",
+            from_city="Москва",
+            to_city="Санкт-Петербург",
+            date="следующая неделя"
+        )
+        
+        result = await tool.execute(params)
+        
+        assert result["success"] is False
+        assert result["error"] == "period_not_allowed"
+        assert "период" in result["message"].lower()
+    
+    @pytest.mark.asyncio
+    async def test_invalid_date(self, tool, sample_airports):
+        """Тест обработки некорректной даты."""
+        tool.airport_registry.airports = sample_airports
+        tool.airport_registry._build_indexes()
+        tool.airport_registry._loaded = True
+        
+        params = FlightScheduleTool(
+            tool="flight_schedule",
+            from_city="Москва",
+            to_city="Санкт-Петербург",
+            date="32 февраля"
+        )
+        
+        result = await tool.execute(params)
+        
+        assert result["success"] is False
+        assert result["error"] == "date_parse_error"
+# END:test_relative_dates

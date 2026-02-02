@@ -20,7 +20,12 @@ def music_config():
 @pytest.fixture
 def music_tool(music_config):
     """Фикстура инструмента."""
-    return MusicTool(music_config)
+    tool = MusicTool(music_config)
+    # ANCHOR:test_fixture_api_key
+    # Устанавливаем фиктивный токен для тестов
+    tool.api_key = "test_token"
+    # END:test_fixture_api_key
+    return tool
 
 
 def test_music_tool_name(music_tool):
@@ -45,11 +50,17 @@ def test_music_tool_schema(music_tool):
 async def test_search_tracks_success(music_tool):
     """Тест успешного поиска треков."""
     # Mock клиента
+    mock_artist = Mock()
+    mock_artist.name = "Test Artist"
+    
+    mock_album = Mock()
+    mock_album.title = "Test Album"
+    
     mock_track = Mock()
     mock_track.id = "123"
     mock_track.title = "Test Track"
-    mock_track.artists = [Mock(name="Test Artist")]
-    mock_track.albums = [Mock(title="Test Album")]
+    mock_track.artists = [mock_artist]
+    mock_track.albums = [mock_album]
     mock_track.duration_ms = 180000
     mock_track.available = True
     
@@ -117,11 +128,17 @@ async def test_search_tracks_multiple_results(music_tool):
     # Mock треков
     mock_tracks = []
     for i in range(3):
+        mock_artist = Mock()
+        mock_artist.name = f"Artist {i}"
+        
+        mock_album = Mock()
+        mock_album.title = f"Album {i}"
+        
         mock_track = Mock()
         mock_track.id = f"track_{i}"
         mock_track.title = f"Track {i}"
-        mock_track.artists = [Mock(name=f"Artist {i}")]
-        mock_track.albums = [Mock(title=f"Album {i}")]
+        mock_track.artists = [mock_artist]
+        mock_track.albums = [mock_album]
         mock_track.duration_ms = 180000 + i * 1000
         mock_track.available = True
         mock_tracks.append(mock_track)
@@ -236,10 +253,13 @@ async def test_search_artists_no_results(music_tool):
 async def test_search_albums_success(music_tool):
     """Тест успешного поиска альбомов."""
     # Mock альбома
+    mock_artist = Mock()
+    mock_artist.name = "Test Artist"
+    
     mock_album = Mock()
     mock_album.id = "album_123"
     mock_album.title = "Test Album"
-    mock_album.artists = [Mock(name="Test Artist")]
+    mock_album.artists = [mock_artist]
     mock_album.year = 2020
     mock_album.track_count = 12
     mock_album.genre = "Rock"
