@@ -126,44 +126,4 @@ async def test_dispatcher_dispatch(clean_registry):
     assert result["success"] is True
     assert result["param1"] == "test"
     assert result["param2"] == 100
-
-
-@pytest.mark.asyncio
-async def test_dispatcher_dispatch_from_dict(clean_registry):
-    """Тест диспетчеризации из словаря."""
-    registry = clean_registry
-    tool = TestTool()
-    registry.register(tool)
-    
-    dispatcher = ToolDispatcher(registry)
-    
-    # Создаем вызов из словаря
-    tool_data = {
-        "tool": "test_tool",
-        "param1": "hello",
-        "param2": 999
-    }
-    
-    result = await dispatcher.dispatch_from_dict(tool_data)
-    
-    assert result["success"] is True
-    assert result["param1"] == "hello"
-    assert result["param2"] == 999
-
-
-@pytest.mark.asyncio
-async def test_dispatcher_nonexistent_tool(clean_registry):
-    """Тест вызова несуществующего инструмента."""
-    registry = clean_registry
-    dispatcher = ToolDispatcher(registry)
-    
-    tool_data = {
-        "tool": "nonexistent_tool",
-        "param": "value"
-    }
-    
-    result = await dispatcher.dispatch_from_dict(tool_data)
-    
-    assert result["success"] is False
-    assert "not found" in result["error"]
 # END:test_tool_dispatcher

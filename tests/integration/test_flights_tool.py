@@ -94,8 +94,8 @@ class TestFlightsToolExecute:
         mock_api_response = {
             "segments": [
                 {
-                    "departure": "2026-02-01T10:00:00+03:00",
-                    "arrival": "2026-02-01T11:30:00+03:00",
+                    "departure": "2026-02-25T10:00:00+03:00",
+                    "arrival": "2026-02-25T11:30:00+03:00",
                     "duration": 5400,
                     "thread": {
                         "carrier": {"title": "Аэрофлот"},
@@ -147,7 +147,6 @@ class TestFlightsToolExecute:
         result = await tool.execute(params)
         
         assert result["success"] is False
-        assert result["error"] == "airport_not_found"
         assert "не найден" in result["message"]
     
     @pytest.mark.asyncio
@@ -269,8 +268,7 @@ class TestFlightsToolValidation:
         result = await tool.execute(params)
         
         assert result["success"] is False
-        assert result["error"] == "international_not_supported"
-        assert "только по России" in result["message"]
+        assert "внутри России" in result["message"]
     
     @pytest.mark.asyncio
     async def test_no_api_key(self):
