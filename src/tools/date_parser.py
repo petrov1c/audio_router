@@ -1,6 +1,6 @@
 """
-Модуль для парсинга относительных и абсолютных дат на русском языке.
-Поддерживает естественные выражения типа "завтра", "следующий понедельник", "через 3 дня".
+Модуль для парсинга относительных и абсолютных дат на русском и английском языках.
+Поддерживает естественные выражения типа "завтра"/"tomorrow", "следующий понедельник"/"next monday", "через 3 дня"/"in 3 days".
 """
 
 import re
@@ -43,7 +43,7 @@ class ParsedDate:
 
 # ANCHOR:date_parser
 class DateParser:
-    """Парсер относительных и абсолютных дат на русском языке."""
+    """Парсер относительных и абсолютных дат на русском и английском языках."""
     
     def __init__(self, reference_date: Optional[datetime] = None):
         """
@@ -54,8 +54,9 @@ class DateParser:
         """
         self.reference_date = reference_date or datetime.now()
         
-        # Словари для парсинга
+        # Словари для парсинга (русский + английский)
         self.weekdays = {
+            # Русский
             "понедельник": 0, "пн": 0,
             "вторник": 1, "вт": 1,
             "среда": 2, "среду": 2, "ср": 2,
@@ -63,13 +64,35 @@ class DateParser:
             "пятница": 4, "пятницу": 4, "пт": 4,
             "суббота": 5, "субботу": 5, "сб": 5,
             "воскресенье": 6, "вс": 6,
+            # Английский
+            "monday": 0, "mon": 0,
+            "tuesday": 1, "tue": 1, "tues": 1,
+            "wednesday": 2, "wed": 2,
+            "thursday": 3, "thu": 3, "thur": 3, "thurs": 3,
+            "friday": 4, "fri": 4,
+            "saturday": 5, "sat": 5,
+            "sunday": 6, "sun": 6,
         }
         
         self.months = {
+            # Русский
             "января": 1, "февраля": 2, "марта": 3,
             "апреля": 4, "мая": 5, "июня": 6,
             "июля": 7, "августа": 8, "сентября": 9,
             "октября": 10, "ноября": 11, "декабря": 12,
+            # Английский
+            "january": 1, "jan": 1,
+            "february": 2, "feb": 2,
+            "march": 3, "mar": 3,
+            "april": 4, "apr": 4,
+            "may": 5,
+            "june": 6, "jun": 6,
+            "july": 7, "jul": 7,
+            "august": 8, "aug": 8,
+            "september": 9, "sep": 9, "sept": 9,
+            "october": 10, "oct": 10,
+            "november": 11, "nov": 11,
+            "december": 12, "dec": 12,
         }
         
         # Компилируем регулярные выражения
@@ -77,41 +100,69 @@ class DateParser:
     
     def _compile_patterns(self):
         """Компилировать регулярные выражения для парсинга."""
-        # Простые относительные даты
+        # Простые относительные даты (русский + английский)
         self.simple_relative = {
+            # Русский
             re.compile(r"^сегодня$"): 0,
             re.compile(r"^завтра$"): 1,
             re.compile(r"^послезавтра$"): 2,
             re.compile(r"^вчера$"): -1,
             re.compile(r"^позавчера$"): -2,
+            # Английский
+            re.compile(r"^today$"): 0,
+            re.compile(r"^tomorrow$"): 1,
+            re.compile(r"^yesterday$"): -1,
         }
         
-        # Дни недели
+        # Дни недели (русский + английский)
         self.weekday_pattern = re.compile(
-            r"^(следующий\s+|следующую\s+)?(в\s+)?"
+            r"^(следующий\s+|следующую\s+|next\s+|on\s+)?(в\s+)?"
             r"(понедельник|вторник|среда|среду|четверг|пятница|пятницу|суббота|субботу|воскресенье|"
-            r"пн|вт|ср|чт|пт|сб|вс)$"
+            r"пн|вт|ср|чт|пт|сб|вс|"
+            r"monday|tuesday|wednesday|thursday|friday|saturday|sunday|"
+            r"mon|tue|tues|wed|thu|thur|thurs|fri|sat|sun)$"
         )
         
-        # Периоды недель
-        self.week_period_pattern = re.compile(r"^(эта|эту|следующая|следующую)\s+недел[яюе]$")
-        self.weeks_offset_pattern = re.compile(r"^через\s+(\d+)\s+недел[иьюя]$")
-        self.week_offset_single_pattern = re.compile(r"^через\s+недел[юу]$")
+        # Периоды недель (русский + английский)
+        self.week_period_pattern = re.compile(
+            r"^(эта|эту|следующая|следующую|this|next)\s+(недел[яюе]|week)$"
+        )
+        self.weeks_offset_pattern = re.compile(
+            r"^(через|in)\s+(\d+)\s+(недел[иьюя]|weeks?)$"
+        )
+        self.week_offset_single_pattern = re.compile(
+            r"^(через|in)\s+(a\s+)?(недел[юу]|week)$"
+        )
         
-        # Периоды месяцев
-        self.month_period_pattern = re.compile(r"^(этот|следующий)\s+месяц$")
+        # Периоды месяцев (русский + английский)
+        self.month_period_pattern = re.compile(
+            r"^(этот|следующий|this|next)\s+(месяц|month)$"
+        )
         
-        # Смещения
-        self.days_offset_pattern = re.compile(r"^через\s+(\d+)\s+(день|дня|дней)$")
-        self.months_offset_pattern = re.compile(r"^через\s+(\d+)\s+месяц[аев]?$")
-        self.month_offset_single_pattern = re.compile(r"^через\s+месяц$")
+        # Смещения (русский + английский)
+        self.days_offset_pattern = re.compile(
+            r"^(через|in)\s+(\d+)\s+(день|дня|дней|days?)$"
+        )
+        self.months_offset_pattern = re.compile(
+            r"^(через|in)\s+(\d+)\s+(месяц[аев]?|months?)$"
+        )
+        self.month_offset_single_pattern = re.compile(
+            r"^(через|in)\s+(a\s+)?(месяц|month)$"
+        )
         
         # Абсолютные даты
         self.date_iso_pattern = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
         self.date_dot_pattern = re.compile(r"^(\d{1,2})\.(\d{1,2})\.(\d{2,4})$")
-        self.date_text_pattern = re.compile(
+        self.date_slash_pattern = re.compile(r"^(\d{1,2})/(\d{1,2})/(\d{2,4})$")
+        # Русский формат
+        self.date_text_ru_pattern = re.compile(
             r"^(\d{1,2})\s+(января|февраля|марта|апреля|мая|июня|"
             r"июля|августа|сентября|октября|ноября|декабря)(\s+(\d{4}))?$"
+        )
+        # Английский формат
+        self.date_text_en_pattern = re.compile(
+            r"^(january|february|march|april|may|june|july|august|september|october|november|december|"
+            r"jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec)\s+(\d{1,2})(st|nd|rd|th)?(,?\s+(\d{4}))?$"
         )
     
     def parse(self, text: str) -> ParsedDate:
@@ -176,7 +227,7 @@ class DateParser:
     
     def _parse_weekday(self, text: str) -> Optional[ParsedDate]:
         """
-        Парсинг дней недели: понедельник, следующий вторник, в пятницу.
+        Парсинг дней недели: понедельник/monday, следующий вторник/next tuesday, в пятницу/on friday.
         
         Args:
             text: Текст для парсинга.
@@ -188,7 +239,8 @@ class DateParser:
         if not match:
             return None
         
-        is_next = bool(match.group(1))  # "следующий"
+        prefix = match.group(1)  # "следующий", "next", "on", etc.
+        is_next = prefix and ("следующ" in prefix or "next" in prefix)
         weekday_name = match.group(3)
         
         # Получаем номер дня недели (0 = понедельник)
@@ -223,7 +275,7 @@ class DateParser:
     
     def _parse_week_period(self, text: str) -> Optional[ParsedDate]:
         """
-        Парсинг периодов недель: эта неделя, следующая неделя.
+        Парсинг периодов недель: эта неделя/this week, следующая неделя/next week.
         
         Args:
             text: Текст для парсинга.
@@ -231,7 +283,7 @@ class DateParser:
         Returns:
             ParsedDate или None.
         """
-        # Проверяем "эта/следующая неделя"
+        # Проверяем "эта/следующая неделя" или "this/next week"
         match = self.week_period_pattern.match(text)
         if match:
             period_type = match.group(1)
@@ -241,11 +293,11 @@ class DateParser:
             monday_offset = -current_weekday
             current_monday = self.reference_date + timedelta(days=monday_offset)
             
-            if period_type in ["эта", "эту"]:
+            if period_type in ["эта", "эту", "this"]:
                 # Эта неделя: от понедельника до воскресенья
                 week_start = current_monday
                 week_end = current_monday + timedelta(days=6)
-            else:  # "следующая", "следующую"
+            else:  # "следующая", "следующую", "next"
                 # Следующая неделя
                 week_start = current_monday + timedelta(days=7)
                 week_end = week_start + timedelta(days=6)
@@ -256,10 +308,10 @@ class DateParser:
                 is_period=True
             )
         
-        # Проверяем "через N недель"
+        # Проверяем "через N недель" или "in N weeks"
         match = self.weeks_offset_pattern.match(text)
         if match:
-            weeks = int(match.group(1))
+            weeks = int(match.group(2))
             
             # Находим понедельник через N недель
             current_weekday = self.reference_date.weekday()
@@ -273,7 +325,7 @@ class DateParser:
                 is_period=True
             )
         
-        # Проверяем "через неделю"
+        # Проверяем "через неделю" или "in a week"
         match = self.week_offset_single_pattern.match(text)
         if match:
             # Находим понедельник через 1 неделю
@@ -292,7 +344,7 @@ class DateParser:
     
     def _parse_month_period(self, text: str) -> Optional[ParsedDate]:
         """
-        Парсинг периодов месяцев: этот месяц, следующий месяц.
+        Парсинг периодов месяцев: этот месяц/this month, следующий месяц/next month.
         
         Args:
             text: Текст для парсинга.
@@ -306,11 +358,11 @@ class DateParser:
         
         period_type = match.group(1)
         
-        if period_type == "этот":
+        if period_type in ["этот", "this"]:
             # Этот месяц: с 1-го числа до последнего дня
             year = self.reference_date.year
             month = self.reference_date.month
-        else:  # "следующий"
+        else:  # "следующий", "next"
             # Следующий месяц
             if self.reference_date.month == 12:
                 year = self.reference_date.year + 1
@@ -337,7 +389,7 @@ class DateParser:
     
     def _parse_offset(self, text: str) -> Optional[ParsedDate]:
         """
-        Парсинг смещений: через 3 дня, через 2 недели, через месяц.
+        Парсинг смещений: через 3 дня/in 3 days, через 2 недели/in 2 weeks, через месяц/in a month.
         
         Args:
             text: Текст для парсинга.
@@ -345,20 +397,20 @@ class DateParser:
         Returns:
             ParsedDate или None.
         """
-        # Через N дней
+        # Через N дней / in N days
         match = self.days_offset_pattern.match(text)
         if match:
-            days = int(match.group(1))
+            days = int(match.group(2))
             target_date = self.reference_date + timedelta(days=days)
             return ParsedDate(
                 date=target_date.strftime("%Y-%m-%d"),
                 is_period=False
             )
         
-        # Через N месяцев
+        # Через N месяцев / in N months
         match = self.months_offset_pattern.match(text)
         if match:
-            months = int(match.group(1))
+            months = int(match.group(2))
             
             # Вычисляем новый месяц и год
             new_month = self.reference_date.month + months
@@ -417,7 +469,7 @@ class DateParser:
     
     def _parse_absolute(self, text: str) -> Optional[ParsedDate]:
         """
-        Парсинг абсолютных дат: 2026-02-15, 15.02.2026, 15 февраля.
+        Парсинг абсолютных дат: 2026-02-15, 15.02.2026, 15 февраля, February 15.
         
         Args:
             text: Текст для парсинга.
@@ -456,12 +508,63 @@ class DateParser:
             except ValueError:
                 return None
         
-        # Формат "15 февраля" или "15 февраля 2026"
-        match = self.date_text_pattern.match(text)
+        # Формат MM/DD/YYYY или MM/DD/YY (американский)
+        match = self.date_slash_pattern.match(text)
+        if match:
+            month, day, year = int(match.group(1)), int(match.group(2)), int(match.group(3))
+            
+            # Если год двузначный, добавляем 2000
+            if year < 100:
+                year += 2000
+            
+            try:
+                date = datetime(year, month, day)
+                return ParsedDate(
+                    date=date.strftime("%Y-%m-%d"),
+                    is_period=False
+                )
+            except ValueError:
+                return None
+        
+        # Формат "15 февраля" или "15 февраля 2026" (русский)
+        match = self.date_text_ru_pattern.match(text)
         if match:
             day = int(match.group(1))
             month_name = match.group(2)
             year_str = match.group(4)
+            
+            month = self.months.get(month_name)
+            if month is None:
+                return None
+            
+            # Если год не указан, используем текущий или следующий
+            if year_str:
+                year = int(year_str)
+            else:
+                year = self.reference_date.year
+                # Если дата уже прошла в этом году, берем следующий год
+                try:
+                    date = datetime(year, month, day)
+                    if date < self.reference_date:
+                        year += 1
+                except ValueError:
+                    pass
+            
+            try:
+                date = datetime(year, month, day)
+                return ParsedDate(
+                    date=date.strftime("%Y-%m-%d"),
+                    is_period=False
+                )
+            except ValueError:
+                return None
+        
+        # Формат "February 15" или "February 15, 2026" (английский)
+        match = self.date_text_en_pattern.match(text)
+        if match:
+            month_name = match.group(1)
+            day = int(match.group(2))
+            year_str = match.group(5)
             
             month = self.months.get(month_name)
             if month is None:
