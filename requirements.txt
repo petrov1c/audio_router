@@ -4,6 +4,7 @@ python-dotenv
 gradio
 tqdm
 soundfile
+librosa
 
 # remote режим
 vllm
@@ -23,3 +24,7 @@ wemake-python-styleguide
 # Пакеты для инструментов
 rapidfuzz>=3.0.0
 yandex-music>=3.0.0
+
+# Пакеты для оценки и визуализации
+matplotlib>=3.5.0
+qwen-tts
