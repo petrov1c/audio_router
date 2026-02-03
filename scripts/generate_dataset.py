@@ -1,14 +1,23 @@
 """
 Генерация тестового датасета для голосового помощника.
 Расширенная версия с 50-100 шаблонами и 500-700 примерами.
+С поддержкой LLM перефразирования и двух текстов (text и text_for_tts).
 """
 
 import json
 import random
 import argparse
+import asyncio
+import sys
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
+
+# Добавляем путь к скриптам
+sys.path.insert(0, str(Path(__file__).parent))
+
+from date_converter import DateToTextConverter
+from text_rephraser import SimpleRephraser, TextRephraser
 
 
 # ANCHOR:templates
@@ -183,30 +192,28 @@ NOTE_CONTENTS = [
     "подготовить отчет", "купить подарок", "забронировать отель",
     "проверить почту", "обновить резюме", "написать статью"
 ]
-
-# Варианты дат
-DATE_VARIANTS = [
-    "завтра",
-    "послезавтра",
-    "в понедельник",
-    "в пятницу",
-    "через 3 дня",
-    "через неделю",
-]
 # END:templates
 
 
 # ANCHOR:dataset_generator
 class DatasetGenerator:
-    """Генератор тестового датасета."""
+    """Генератор тестового датасета с LLM перефразированием."""
     
-    def __init__(self, output_dir: str = "data/datasets", seed: int = None):
+    def __init__(
+        self,
+        output_dir: str = "data/datasets",
+        seed: int = None,
+        llm_provider = None,
+        use_llm_rephrase: bool = False
+    ):
         """
         Инициализация генератора.
         
         Args:
             output_dir: Директория для сохранения датасета.
             seed: Seed для воспроизводимости.
+            llm_provider: Провайдер LLM для перефразирования.
+            use_llm_rephrase: Использовать ли LLM для перефразирования.
         """
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
@@ -214,6 +221,20 @@ class DatasetGenerator:
         
         if seed is not None:
             random.seed(seed)
+        
+        # Инициализируем перефразировщик
+        self.use_llm_rephrase = use_llm_rephrase
+        if use_llm_rephrase and llm_provider:
+            self.rephraser = TextRephraser(
+                llm_provider=llm_provider,
+                cache_file="data/datasets/.rephrase_cache.json"
+            )
+        else:
+            # Используем простой перефразировщик (правила)
+            self.rephraser = SimpleRephraser()
+        
+        # Инициализируем конвертер дат
+        self.date_converter = DateToTextConverter()
     
     def _get_random_date(self, days_ahead: int = 30) -> str:
         """Получить случайную дату в будущем."""
@@ -247,6 +268,30 @@ class DatasetGenerator:
         else:
             return "complex"
     
+    def _create_tts_text(
+        self,
+        text: str,
+        date_iso: str,
+        date_desc: str
+    ) -> str:
+        """
+        Создать текст для TTS с датами прописью.
+        
+        Args:
+            text: Исходный текст.
+            date_iso: Дата в формате ISO (YYYY-MM-DD).
+            date_desc: Описание даты в тексте.
+            
+        Returns:
+            Текст для TTS.
+        """
+        return self.date_converter.convert_text_for_tts(text, date_iso, date_desc)
+    
+    def _rephrase_sync(self, text: str) -> str:
+        """Синхронная обёртка для перефразирования."""
+        loop = asyncio.get_event_loop()
+        return loop.run_until_complete(self.rephraser.rephrase(text))
+    
     def generate_flight_samples(self, count: int = 200) -> None:
         """Генерировать примеры для расписания рейсов."""
         for i in range(count):
@@ -261,15 +306,23 @@ class DatasetGenerator:
             else:  # 30% - конкретные даты
                 date_desc = date
             
-            text = template.format(
+            # Генерируем базовый текст
+            base_text = template.format(
                 from_city=from_city,
                 to_city=to_city,
                 date=date_desc
             )
             
+            # Перефразируем
+            text = self._rephrase_sync(base_text)
+            
+            # Создаём текст для TTS
+            text_for_tts = self._create_tts_text(text, date, date_desc)
+            
             self.dataset.append({
                 "id": f"flight_{i+1:03d}",
                 "text": text,
+                "text_for_tts": text_for_tts,
                 "tool": "flight_schedule",
                 "params": {
                     "from_city": from_city,
@@ -279,7 +332,8 @@ class DatasetGenerator:
                 "metadata": {
                     "template_id": f"flight_template_{FLIGHT_TEMPLATES.index(template)+1:02d}",
                     "complexity": self._get_complexity(template),
-                    "language": "ru"
+                    "language": "ru",
+                    "llm_rephrased": self.use_llm_rephrase
                 }
             })
     
@@ -296,14 +350,21 @@ class DatasetGenerator:
             else:
                 date_desc = date
             
-            text = template.format(
+            base_text = template.format(
                 description=description,
                 date=date_desc
             )
             
+            # Перефразируем
+            text = self._rephrase_sync(base_text)
+            
+            # Создаём текст для TTS
+            text_for_tts = self._create_tts_text(text, date, date_desc)
+            
             self.dataset.append({
                 "id": f"calendar_add_{i+1:03d}",
                 "text": text,
+                "text_for_tts": text_for_tts,
                 "tool": "add_calendar_event",
                 "params": {
                     "date": date,
@@ -312,7 +373,8 @@ class DatasetGenerator:
                 "metadata": {
                     "template_id": f"calendar_add_template_{CALENDAR_ADD_TEMPLATES.index(template)+1:02d}",
                     "complexity": self._get_complexity(template),
-                    "language": "ru"
+                    "language": "ru",
+                    "llm_rephrased": self.use_llm_rephrase
                 }
             })
         
@@ -326,11 +388,18 @@ class DatasetGenerator:
             else:
                 date_desc = date
             
-            text = template.format(date=date_desc)
+            base_text = template.format(date=date_desc)
+            
+            # Перефразируем
+            text = self._rephrase_sync(base_text)
+            
+            # Создаём текст для TTS
+            text_for_tts = self._create_tts_text(text, date, date_desc)
             
             self.dataset.append({
                 "id": f"calendar_get_{i+1:03d}",
                 "text": text,
+                "text_for_tts": text_for_tts,
                 "tool": "get_calendar_events",
                 "params": {
                     "date": date
@@ -338,7 +407,8 @@ class DatasetGenerator:
                 "metadata": {
                     "template_id": f"calendar_get_template_{CALENDAR_GET_TEMPLATES.index(template)+1:02d}",
                     "complexity": self._get_complexity(template),
-                    "language": "ru"
+                    "language": "ru",
+                    "llm_rephrased": self.use_llm_rephrase
                 }
             })
     
@@ -348,7 +418,13 @@ class DatasetGenerator:
             template = random.choice(MUSIC_TEMPLATES)
             query = random.choice(MUSIC_QUERIES)
             
-            text = template.format(query=query)
+            base_text = template.format(query=query)
+            
+            # Перефразируем
+            text = self._rephrase_sync(base_text)
+            
+            # Для музыки text_for_tts = text (нет дат)
+            text_for_tts = text
             
             # Определяем тип поиска
             if " - " in query:
@@ -361,6 +437,7 @@ class DatasetGenerator:
             self.dataset.append({
                 "id": f"music_{i+1:03d}",
                 "text": text,
+                "text_for_tts": text_for_tts,
                 "tool": "search_music",
                 "params": {
                     "query": query,
@@ -369,7 +446,8 @@ class DatasetGenerator:
                 "metadata": {
                     "template_id": f"music_template_{MUSIC_TEMPLATES.index(template)+1:02d}",
                     "complexity": self._get_complexity(template),
-                    "language": "ru"
+                    "language": "ru",
+                    "llm_rephrased": self.use_llm_rephrase
                 }
             })
     
@@ -380,11 +458,18 @@ class DatasetGenerator:
             template = random.choice(NOTE_CREATE_TEMPLATES)
             content = random.choice(NOTE_CONTENTS)
             
-            text = template.format(content=content)
+            base_text = template.format(content=content)
+            
+            # Перефразируем
+            text = self._rephrase_sync(base_text)
+            
+            # Для заметок text_for_tts = text (нет дат)
+            text_for_tts = text
             
             self.dataset.append({
                 "id": f"note_create_{i+1:03d}",
                 "text": text,
+                "text_for_tts": text_for_tts,
                 "tool": "create_note",
                 "params": {
                     "title": content.split()[0],
@@ -393,7 +478,8 @@ class DatasetGenerator:
                 "metadata": {
                     "template_id": f"note_create_template_{NOTE_CREATE_TEMPLATES.index(template)+1:02d}",
                     "complexity": self._get_complexity(template),
-                    "language": "ru"
+                    "language": "ru",
+                    "llm_rephrased": self.use_llm_rephrase
                 }
             })
         
@@ -402,11 +488,18 @@ class DatasetGenerator:
             template = random.choice(NOTE_SEARCH_TEMPLATES)
             query = random.choice(NOTE_CONTENTS).split()[0]
             
-            text = template.format(query=query)
+            base_text = template.format(query=query)
+            
+            # Перефразируем
+            text = self._rephrase_sync(base_text)
+            
+            # Для заметок text_for_tts = text (нет дат)
+            text_for_tts = text
             
             self.dataset.append({
                 "id": f"note_search_{i+1:03d}",
                 "text": text,
+                "text_for_tts": text_for_tts,
                 "tool": "search_notes",
                 "params": {
                     "query": query
@@ -414,7 +507,8 @@ class DatasetGenerator:
                 "metadata": {
                     "template_id": f"note_search_template_{NOTE_SEARCH_TEMPLATES.index(template)+1:02d}",
                     "complexity": self._get_complexity(template),
-                    "language": "ru"
+                    "language": "ru",
+                    "llm_rephrased": self.use_llm_rephrase
                 }
             })
     
@@ -422,6 +516,9 @@ class DatasetGenerator:
         """Генерировать примеры без инструмента."""
         for i in range(count):
             text = random.choice(NO_TOOL_TEMPLATES)
+            
+            # Для примеров без инструмента text_for_tts = text
+            text_for_tts = text
             
             # Определяем причину
             if any(word in text.lower() for word in ["поезд", "автобус", "электричка"]):
@@ -434,6 +531,7 @@ class DatasetGenerator:
             self.dataset.append({
                 "id": f"no_tool_{i+1:03d}",
                 "text": text,
+                "text_for_tts": text_for_tts,
                 "tool": "no_tool_available",
                 "params": {
                     "reason": reason,
@@ -442,7 +540,8 @@ class DatasetGenerator:
                 "metadata": {
                     "template_id": f"no_tool_template_{NO_TOOL_TEMPLATES.index(text)+1:02d}",
                     "complexity": "simple",
-                    "language": "ru"
+                    "language": "ru",
+                    "llm_rephrased": False
                 }
             })
     
@@ -465,6 +564,11 @@ class DatasetGenerator:
             no_tool: Количество примеров без инструмента.
         """
         print("Генерация расширенного датасета...")
+        if self.use_llm_rephrase:
+            print("⚠️  LLM перефразирование включено (может занять время)")
+        else:
+            print("✓ Используется простой перефразировщик (правила)")
+        print()
         
         self.generate_flight_samples(flights)
         print(f"✓ Сгенерировано {flights} примеров для рейсов")
@@ -572,6 +676,11 @@ def main():
         default=42,
         help="Seed для воспроизводимости"
     )
+    parser.add_argument(
+        "--use-llm-rephrase",
+        action="store_true",
+        help="Использовать LLM для перефразирования (требует настройки LLM провайдера)"
+    )
     
     args = parser.parse_args()
     
@@ -592,7 +701,12 @@ def main():
     print()
     
     # Создаем генератор
-    generator = DatasetGenerator(output_dir=args.output, seed=args.seed)
+    generator = DatasetGenerator(
+        output_dir=args.output,
+        seed=args.seed,
+        llm_provider=None,  # TODO: добавить поддержку LLM провайдера
+        use_llm_rephrase=args.use_llm_rephrase
+    )
     
     # Генерируем датасет
     generator.generate_full_dataset(
