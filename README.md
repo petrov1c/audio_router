@@ -168,10 +168,10 @@ pytest tests/integration/
 
 ```bash
 # Генерация текстовых запросов
-python scripts/generate_dataset.py --output data/datasets/text_dataset.json
+python -m scripts.generate_dataset --output data/datasets/text_dataset.json
 
 # Синтез аудио
-python scripts/synthesize_audio.py --input data/datasets/text_dataset.json
+python -m scripts.synthesize_audio --input data/datasets/text_dataset.json
 ```
 
 ## 📊 Метрики и оценка
@@ -186,7 +186,7 @@ python scripts/synthesize_audio.py --input data/datasets/text_dataset.json
 
 ```bash
 # Запуск оценки
-python scripts/evaluate.py --dataset data/datasets/test_dataset.json
+python -m scripts.evaluate --dataset data/datasets/test_dataset.json
 ```
 
 ## 🔧 Конфигурация
@@ -273,14 +273,16 @@ registry.register(MyTool())
 - Лучшее качество на сложных задачах
 
 ### Дополнительные модели
-- **T-one** - ASR модель для fallback
 - **Qwen3-TTS-12Hz-1.7B-VoiceDesign** - Синтез речи для датасета
 
 ## 📚 Документация
 
-- [Архитектура системы](docs/architecture.md)
-- [API документация](docs/api.md)
-- [Руководство по добавлению инструментов](docs/adding_tools.md)
+- [Инструмент календаря](docs/calendar_tool_usage.md)
+- [Инструмент поиска авиарейсов](docs/flights_tool_usage.md)
+- [Инструмент Яндекс.Музыка](docs/music_tool_usage.md)
+- [Руководство по генерации датасета](docs/dataset_generation_guide.md)
+- [Оценка голосового помошника](docs/evaluation_quickstart.md)
+
 
 ## 🎓 Примеры и ноутбуки
 

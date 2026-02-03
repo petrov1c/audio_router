@@ -166,19 +166,19 @@ pip install transformers torch qwen-tts
 
 ```bash
 # Оценка только на тексте
-python scripts/evaluate.py \
+python -m scripts.evaluate \
     --dataset data/datasets/evaluation_dataset.json \
     --modality text \
     --output data/results
 
 # Оценка только на аудио
-python scripts/evaluate.py \
+python -m scripts.evaluate \
     --dataset data/datasets/evaluation_dataset_with_audio.json \
     --modality audio \
     --output data/results
 
 # Оценка на обеих модальностях + анализ разрыва
-python scripts/evaluate.py \
+python -m scripts.evaluate \
     --dataset data/datasets/evaluation_dataset_with_audio.json \
     --modality both \
     --output data/results
@@ -263,27 +263,27 @@ data/results/
 
 ```bash
 # Шаг 1: Генерация датасета
-python scripts/generate_dataset.py \
+python -m scripts.generate_dataset \
     --count 600 \
     --seed 42
 
 # Шаг 2: Синтез аудио
-python scripts/synthesize_audio.py \
+python -m scripts.synthesize_audio \
     --input data/datasets/evaluation_dataset.json \
     --output data/datasets/audio \
     --device cuda
 
 # Шаг 3: Оценка качества
-python scripts/evaluate.py \
+python -m scripts.evaluate \
     --dataset data/datasets/evaluation_dataset_with_audio.json \
     --modality both \
     --output data/results
 
 # Шаг 4: Анализ результатов
-python scripts/analyze_results.py \
-    --text-metrics data/results/text_metrics.json \
-    --audio-metrics data/results/audio_metrics.json \
-    --gap-metrics data/results/modality_gap.json \
+python -m scripts.analyze_results \
+    --text-metrics data/datasets/results/text_metrics.json \
+    --audio-metrics data/datasets/results/audio_metrics.json \
+    --gap-metrics data/datasets/results/modality_gap.json \
     --output data/results
 ```
 
@@ -295,12 +295,12 @@ python scripts/analyze_results.py \
 # Генерация датасета
 .PHONY: generate-dataset
 generate-dataset:
-	python scripts/generate_dataset.py --count 600 --seed 42
+	python -m scripts.generate_dataset --count 600 --seed 42
 
 # Синтез аудио
 .PHONY: synthesize-audio
 synthesize-audio:
-	python scripts/synthesize_audio.py \
+	python -m scripts.synthesize_audio \
 		--input data/datasets/evaluation_dataset.json \
 		--output data/datasets/audio \
 		--device cuda
@@ -308,7 +308,7 @@ synthesize-audio:
 # Оценка качества
 .PHONY: evaluate
 evaluate:
-	python scripts/evaluate.py \
+	python -m scripts.evaluate \
 		--dataset data/datasets/evaluation_dataset_with_audio.json \
 		--modality both \
 		--output data/results
@@ -316,10 +316,10 @@ evaluate:
 # Анализ результатов
 .PHONY: analyze
 analyze:
-	python scripts/analyze_results.py \
-		--text-metrics data/results/text_metrics.json \
-		--audio-metrics data/results/audio_metrics.json \
-		--gap-metrics data/results/modality_gap.json \
+	python -m scripts.analyze_results \
+		--text-metrics data/datasets/results/text_metrics.json \
+		--audio-metrics data/datasets/results/audio_metrics.json \
+		--gap-metrics data/datasets/results/modality_gap.json \
 		--output data/results
 
 # Полный пайплайн
@@ -390,10 +390,7 @@ data/
 **Решение:**
 ```bash
 # Используйте CPU
-python scripts/synthesize_audio.py --device cpu
-
-# Или уменьшите batch size
-python scripts/synthesize_audio.py --batch-size 1
+python -m scripts.synthesize_audio --device cpu
 ```
 
 ### Проблема: Долгое время выполнения
@@ -401,10 +398,10 @@ python scripts/synthesize_audio.py --batch-size 1
 **Решение:**
 ```bash
 # Уменьшите количество примеров
-python scripts/generate_dataset.py --count 200
+python -m scripts.generate_dataset --count 200
 
 # Или используйте GPU для синтеза
-python scripts/synthesize_audio.py --device cuda
+python -m scripts.synthesize_audio --device cuda
 ```
 
 ---
