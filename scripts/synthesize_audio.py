@@ -162,7 +162,9 @@ class AudioSynthesizer:
         speakers = ['Aiden', 'Serena', 'Ryan']
         for idx, item in enumerate(tqdm(self.dataset, desc="Синтез аудио")):
             item_id = item['id']
-            text = item['text']
+            
+            # Используем text_for_tts если доступен, иначе text
+            text = item.get('text_for_tts', item['text'])
             
             # Путь к аудио файлу
             audio_filename = f"{item_id}.wav"
