@@ -140,6 +140,7 @@ class GradioApp:
             )
             
             chatbot = gr.Chatbot(
+                type="messages",
                 label="Диалог",
                 height=500,
                 show_label=True
