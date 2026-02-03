@@ -141,7 +141,7 @@ class MetricsCalculator:
                 audio_bytes = f.read()
             
             # Обрабатываем аудио запрос
-            result = await self.agent.process_audio(audio_bytes)
+            result = await self.agent.process_request(audio_bytes)
             
             # Извлекаем вызванный инструмент
             predicted_tool = None
@@ -188,7 +188,7 @@ class MetricsCalculator:
         print(f"Оценка на тексте: {len(self.dataset)} примеров...")
         
         for i, sample in enumerate(self.dataset, 1):
-            print(f"\rОбработано: {i}/{len(self.dataset)}", end="")
+            print(f"\rОбработано: {i}/{len(self.dataset)}\n", end="")
             result = await self.evaluate_sample_text(sample)
             self.text_results.append(result)
         

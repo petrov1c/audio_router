@@ -51,7 +51,7 @@ class SGRAgent:
         Returns:
             Результат обработки.
         """
-        logger.info(f"Processing request: {user_input}")
+        logger.info(f"Processing request: {user_input if isinstance(user_input, str) else 'голосовой ввод'}")
         
         # Инициализируем историю диалога
         messages = [
