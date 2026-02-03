@@ -70,7 +70,7 @@ class Qwen3TTSSynthesizer:
         self,
         text: str,
         output_path: str,
-        speaker: str = 'Aiden',
+        instruct: str,
     ) -> bool:
         """
         Синтезировать аудио для текста.
@@ -78,7 +78,7 @@ class Qwen3TTSSynthesizer:
         Args:
             text: Текст для синтеза.
             output_path: Путь для сохранения аудио.
-            speaker: Спикер.
+            instruct: Инструкция для синтеза голоса.
 
         Returns:
             True если успешно, False иначе.
@@ -90,7 +90,7 @@ class Qwen3TTSSynthesizer:
             audio, sr = self.model.generate_voice_design(
                 text = text,
                 language='Russian',
-                instruct='Используй мягкий тон. Говори спокойно',
+                instruct=instruct,
             )
 
             # Сохранение аудио
@@ -159,7 +159,12 @@ class AudioSynthesizer:
         success_count = 0
         fail_count = 0
 
-        speakers = ['Aiden', 'Serena', 'Ryan']
+        instructs = [
+            'Используй мягкий тон. Говори спокойно',
+            'Используй женский голос',
+            'Используй мужской голос'
+        ]
+
         for idx, item in enumerate(tqdm(self.dataset, desc="Синтез аудио")):
             item_id = item['id']
             
@@ -171,14 +176,14 @@ class AudioSynthesizer:
             audio_path = self.output_dir / audio_filename
             
             # Чередуем голоса для разнообразия
-            speaker = speakers[idx % 3] if alternate_speakers else speakers[0]
+            instruct = instructs[idx % 3] if alternate_speakers else instructs[0]
             
             try:
                 # Синтезируем аудио
                 success = self.tts.synthesize(
                     text=text,
                     output_path=str(audio_path),
-                    speaker=speaker
+                    instruct=instruct
                 )
                 
                 if success:
