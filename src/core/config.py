@@ -47,7 +47,7 @@ class FlightsToolConfig(ToolConfig):
     """Конфигурация инструмента расписания рейсов."""
     api_key_env: str = "YANDEX_RASP_API_KEY"
     base_url: str = "https://api.rasp.yandex.net/v3.0"
-    cache_file: str = "data/airports_russia.json"
+    cache_file: str = "data/airports.json"
     cache_ttl_days: int = 30  # Обновлять кэш раз в 30 дней
     only_russia: bool = True  # Только рейсы по России
     only_planes: bool = True  # Только самолёты
