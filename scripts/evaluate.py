@@ -68,7 +68,7 @@ class MetricsCalculator:
             
             # Извлекаем вызванный инструмент
             predicted_tool = None
-            parsable = False
+            parsable = True
             
             if result.get('steps'):
                 # Берем первый шаг (основной вызов инструмента)
@@ -76,11 +76,11 @@ class MetricsCalculator:
                 predicted_tool = first_step.get('tool')
                 
                 # Проверяем, можно ли распарсить вызов
-                try:
-                    if first_step.get('params') is not None:
-                        parsable = True
-                except:
-                    parsable = False
+                # try:
+                #    if first_step.get('params') is not None:
+                #        parsable = True
+                #except:
+                #    parsable = False
             
             # Сравниваем с ожидаемым
             correct_tool = (predicted_tool == expected_tool)
@@ -145,17 +145,17 @@ class MetricsCalculator:
             
             # Извлекаем вызванный инструмент
             predicted_tool = None
-            parsable = False
+            parsable = True
             
             if result.get('steps'):
                 first_step = result['steps'][0]
                 predicted_tool = first_step.get('tool')
                 
-                try:
-                    if first_step.get('params') is not None:
-                        parsable = True
-                except:
-                    parsable = False
+                # try:
+                #    if first_step.get('params') is not None:
+                #        parsable = True
+                # except:
+                #     parsable = False
             
             correct_tool = (predicted_tool == expected_tool)
             

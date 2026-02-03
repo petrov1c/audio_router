@@ -105,19 +105,19 @@ python scripts/generate_dataset.py \
 python scripts/synthesize_audio.py \
     --input data/datasets/evaluation_dataset.json \
     --output data/datasets/audio \
-    --model Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice \
+    --model Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign \
     --device cuda
 ```
 
 ### Параметры
 
-| Параметр | Описание | По умолчанию                               |
-|----------|----------|--------------------------------------------|
-| `--input` | Путь к датасету | `data/datasets/evaluation_dataset.json`    |
-| `--output` | Директория для аудио | `data/datasets/audio`                      |
-| `--model` | Имя TTS модели | `Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice` |
-| `--device` | Устройство (cuda/cpu) | Автоопределение                            |
-| `--no-alternate-speakers` | Не чередовать голоса | `False`                                    |
+| Параметр | Описание | По умолчанию                            |
+|----------|----------|-----------------------------------------|
+| `--input` | Путь к датасету | `data/datasets/evaluation_dataset.json` |
+| `--output` | Директория для аудио | `data/datasets/audio`                   |
+| `--model` | Имя TTS модели | `Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign`  |
+| `--device` | Устройство (cuda/cpu) | Автоопределение                         |
+| `--no-alternate-speakers` | Не чередовать голоса | `False`                                 |
 
 ### Требования
 
