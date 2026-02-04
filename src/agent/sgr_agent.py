@@ -99,7 +99,16 @@ class SGRAgent:
                 
                 # Проверяем завершение задачи
                 if (agent_step.task_completed
-                        or agent_step.next_action.tool in ("task_completion", "no_tool_available", "flight_schedule", "search_music", "create_note", "search_notes")):
+                        or agent_step.next_action.tool in (
+                                "task_completion",
+                                "no_tool_available",
+                                "flight_schedule",
+                                "search_music",
+                                "create_note",
+                                "search_notes",
+                                "add_calendar_event",
+                        )
+                ):
                     logger.info("Task completed")
                     return {
                         "success": True,

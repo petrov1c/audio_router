@@ -3,8 +3,11 @@
 """
 
 import base64
+import json
 from typing import Union
 from datetime import datetime
+
+from src.agent.schemas import AgentStep
 
 
 # ANCHOR:system_prompt
@@ -16,7 +19,9 @@ def get_system_prompt() -> str:
         Системный промпт.
     """
     current_date = datetime.now().strftime("%Y-%m-%d")
-    
+    model_fields = {key: value.description for key, value in AgentStep.model_fields.items()}
+    json_schema = json.dumps(model_fields,  ensure_ascii=False, indent=2)
+
     return f"""
 Ты — голосовой помощник, способный выполнять различные задачи через вызов инструментов.
 
@@ -104,6 +109,9 @@ def get_system_prompt() -> str:
 - Не придумывай инструменты, которых нет в списке
 - Если запрос неясен - используй no_tool_available с объяснением
 - Всегда заполняй ВСЕ обязательные параметры инструмента
+
+ФОРМАТ ОТВЕТА:
+{json_schema}
 """.strip()
 # END:system_prompt
 

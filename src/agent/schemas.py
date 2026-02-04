@@ -28,7 +28,7 @@ class AgentStep(BaseModel):
     # Анализ текущей ситуации
     current_state: str = Field(
         description="Текущее состояние и понимание запроса пользователя",
-        max_length=1_000,
+        max_length=500,
     )
     
     # Требуется ли инструмент
@@ -38,7 +38,8 @@ class AgentStep(BaseModel):
     
     # План действий (1-3 шага)
     plan: Annotated[List[str], MinLen(1), MaxLen(3)] = Field(
-        description="Краткий план оставшихся шагов для выполнения задачи"
+        description="Краткий план оставшихся шагов для выполнения задачи",
+        max_length = 500,
     )
     
     # Задача завершена?
