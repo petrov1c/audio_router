@@ -18,6 +18,8 @@ class LLMConfig:
     base_url_env: str = "LLM_BASE_URL"  # Переменная окружения для URL
     api_key_env: str = "LLM_API_KEY"    # Переменная окружения для ключа
     model: str = "Qwen/QWEN2.5-Omni-3B"
+    router_mode: bool = False
+    max_steps: int = 10
 
     @property
     def base_url(self) -> str:

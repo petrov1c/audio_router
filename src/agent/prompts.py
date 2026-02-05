@@ -145,7 +145,6 @@ def format_user_message(user_input: Union[str, bytes]) -> Union[str , list]:
     ]
 
     return audio_input
-
 # END:user_prompt_template
 
 

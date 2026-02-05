@@ -5,7 +5,7 @@
 from src.agent.sgr_agent import SGRAgent
 from src.agent.schemas import AgentStep
 from src.agent.prompts import get_system_prompt
-from src.llm import OpenAILLMProvider
+from src.llm import OpenAILLMProvider, LocalLLMProvider
 from src.tools import ToolDispatcher, register_all_tools
 from src.core.config import get_config
 
@@ -21,7 +21,7 @@ def create_agent() -> SGRAgent:
     config = get_config()
     
     # Создаем LLM провайдер
-    llm_provider = OpenAILLMProvider(config.llm)
+    llm_provider = LocalLLMProvider(config.llm)
     
     # Регистрируем все инструменты
     registry = register_all_tools()
@@ -33,7 +33,8 @@ def create_agent() -> SGRAgent:
     agent = SGRAgent(
         llm_provider=llm_provider,
         tool_dispatcher=dispatcher,
-        max_steps=10
+        router_mode=config.llm.router_mode,
+        max_steps=config.llm.max_steps,
     )
     
     return agent

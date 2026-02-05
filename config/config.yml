@@ -6,6 +6,7 @@ llm:
   base_url_env: "LLM_BASE_URL"  # Переменная окружения для URL
   api_key_env: "LLM_API_KEY"    # Переменная окружения для API ключа
   model: "Qwen/QWEN2.5-Omni-3B"
+  router_mode: true
 
 # Инструменты
 tools:

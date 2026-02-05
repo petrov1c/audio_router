@@ -36,5 +36,4 @@ class LLMProvider(ABC):
             Exception: При ошибке генерации.
         """
         pass
-
 # END:llm_provider_interface

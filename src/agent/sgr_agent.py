@@ -24,7 +24,8 @@ class SGRAgent:
         self,
         llm_provider: LLMProvider,
         tool_dispatcher: ToolDispatcher,
-        max_steps: int = 10 # ToDo вынести в сonfig
+        router_mode: bool = False,
+        max_steps: int = 10
     ):
         """
         Инициализация агента.
@@ -37,6 +38,7 @@ class SGRAgent:
         self.llm = llm_provider
         self.dispatcher = tool_dispatcher
         self.max_steps = max_steps
+        self.router_mode = router_mode
         self.system_prompt = get_system_prompt()
         
         logger.info("SGR Agent initialized")
@@ -96,17 +98,13 @@ class SGRAgent:
                     tool_result
                 )
                 messages.append({"role": "assistant", "content": result_message})
-                
+
                 # Проверяем завершение задачи
                 if (agent_step.task_completed
+                        or self.router_mode
                         or agent_step.next_action.tool in (
                                 "task_completion",
                                 "no_tool_available",
-                                "flight_schedule",
-                                "search_music",
-                                "create_note",
-                                "search_notes",
-                                "add_calendar_event",
                         )
                 ):
                     logger.info("Task completed")
