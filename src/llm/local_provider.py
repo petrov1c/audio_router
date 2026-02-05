@@ -3,7 +3,6 @@ LLM провайдер на основе transformers.
 Работает с vLLM, OpenRouter и другими OpenAI-совместимыми API.
 """
 
-import json
 from typing import List, Dict, Any, Type
 
 from pydantic import BaseModel
@@ -46,7 +45,7 @@ class LocalLLMProvider(LLMProvider):
 
         self.model = Qwen2_5OmniForConditionalGeneration.from_pretrained(
             config.model,
-            max_length=8192,
+            max_length=4096,
             trust_remote_code=True,
             dtype="auto",
             device_map="auto"
@@ -79,7 +78,7 @@ class LocalLLMProvider(LLMProvider):
         """
 
         logger.info(f"Generating structured output with schema: {schema.__name__}")
-        
+
         try:
             compiled_grammar = self.grammar_compiler.compile_json_schema(schema)
             logits_processor = LogitsProcessorList([xgr.contrib.hf.LogitsProcessor(compiled_grammar)])

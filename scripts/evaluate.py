@@ -204,7 +204,7 @@ class MetricsCalculator:
         print(f"Оценка на аудио: {len(audio_samples)} примеров...")
         
         for i, sample in enumerate(audio_samples, 1):
-            print(f"\rОбработано: {i}/{len(audio_samples)}", end="")
+            print(f"\rОбработано: {i}/{len(audio_samples)}\n", end="")
             result = await self.evaluate_sample_audio(sample)
             self.audio_results.append(result)
         
