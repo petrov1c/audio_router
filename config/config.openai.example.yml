@@ -1,0 +1,57 @@
+# Пример конфигурации для OpenAI-совместимого провайдера
+# Скопируйте в config.yml и настройте переменные окружения
+
+# LLM настройки
+llm:
+  # Использование OpenAI-совместимого API
+  provider: "openai"
+  
+  # Переменные окружения для URL и API ключа
+  base_url_env: "LLM_BASE_URL"
+  api_key_env: "LLM_API_KEY"
+  
+  # Модель для удаленного использования (более мощная)
+  model: "qwen/qwen3-omni-30b-a3b-instruct"
+  
+  # Режим роутера
+  router_mode: true
+  
+  # Максимальное количество шагов
+  max_steps: 10
+
+# Инструменты
+tools:
+  # Расписание авиарейсов
+  flights:
+    enabled: true
+    api_key_env: "YANDEX_RASP_API_KEY"
+    base_url: "https://api.rasp.yandex.net/v3.0"
+  
+  # Календарь
+  calendar:
+    enabled: true
+    file_path: "data/calendar.csv"
+  
+  # Яндекс Музыка
+  music:
+    enabled: true
+    api_key_env: "YANDEX_MUSIC_TOKEN"
+  
+  # Заметки
+  notes:
+    enabled: true
+    storage_path: "data/notes/"
+
+# Пользовательский интерфейс
+ui:
+  host: "0.0.0.0"
+  port: 7860
+  share: false
+  audio_sample_rate: 16000
+  server_name: null
+
+# Логирование
+logging:
+  level: "INFO"
+  file: "data/logs/app.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

@@ -20,7 +20,6 @@ import torch
 from src.llm.provider import LLMProvider
 from src.core.config import LLMConfig
 from src.core.logger import get_module_logger
-from src.agent.schemas import AgentStep
 
 
 logger = get_module_logger(__name__)
@@ -136,7 +135,7 @@ class LocalLLMProvider(LLMProvider):
             prompt_tokens = len(inputs.input_ids[0])
             choice = self.processor.decode(text_ids[0][prompt_tokens:], skip_special_tokens=True)
 
-            result = AgentStep.model_validate_json(choice)
+            result = schema.model_validate_json(choice)
             logger.info(f"Successfully generated structured output")
             
             return result

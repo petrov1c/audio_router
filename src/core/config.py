@@ -15,6 +15,7 @@ from omegaconf import OmegaConf
 @dataclass
 class LLMConfig:
     """Конфигурация LLM провайдера (vLLM или OpenRouter)."""
+    provider: str = "local"  # Тип провайдера: "openai" или "local"
     base_url_env: str = "LLM_BASE_URL"  # Переменная окружения для URL
     api_key_env: str = "LLM_API_KEY"    # Переменная окружения для ключа
     model: str = "Qwen/QWEN2.5-Omni-3B"
@@ -22,20 +23,24 @@ class LLMConfig:
     max_steps: int = 10
 
     @property
-    def base_url(self) -> str:
-        """Получить base URL из переменной окружения."""
-        url = os.getenv(self.base_url_env)
-        if not url:
-            raise ValueError(f"LLM base URL not found in environment variable: {self.base_url_env}")
-        return url
+    def base_url(self) -> Optional[str]:
+        """Получить base URL из переменной окружения (только для openai провайдера)."""
+        if self.provider.lower() == "openai":
+            url = os.getenv(self.base_url_env)
+            if not url:
+                raise ValueError(f"LLM base URL required for openai provider: {self.base_url_env}")
+            return url
+        return None
     
     @property
-    def api_key(self) -> str:
-        """Получить API ключ из переменной окружения."""
-        key = os.getenv(self.api_key_env)
-        if not key:
-            raise ValueError(f"API key not found in environment variable: {self.api_key_env}")
-        return key
+    def api_key(self) -> Optional[str]:
+        """Получить API ключ из переменной окружения (только для openai провайдера)."""
+        if self.provider.lower() == "openai":
+            key = os.getenv(self.api_key_env)
+            if not key:
+                raise ValueError(f"API key required for openai provider: {self.api_key_env}")
+            return key
+        return None
 
 
 @dataclass

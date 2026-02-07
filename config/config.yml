@@ -1,12 +1,27 @@
 # Конфигурация Audio Router
 
 # LLM настройки
-# URL и API ключ берутся из переменных окружения LLM_BASE_URL и LLM_API_KEY
 llm:
+  # Тип провайдера: "openai" или "local"
+  # - "openai": Использует OpenAI-совместимое API (vLLM, OpenRouter)
+  #   Требует: base_url_env, api_key_env
+  # - "local": Локальный запуск через transformers
+  #   Требует: достаточно GPU/CPU ресурсов
+  provider: "local"
+  
+  # URL и API ключ (только для provider: "openai")
+  # Берутся из переменных окружения LLM_BASE_URL и LLM_API_KEY
   base_url_env: "LLM_BASE_URL"  # Переменная окружения для URL
   api_key_env: "LLM_API_KEY"    # Переменная окружения для API ключа
+  
+  # Название модели
   model: "Qwen/QWEN2.5-Omni-3B"
+  
+  # Режим роутера (один шаг выбора инструмента)
   router_mode: true
+  
+  # Максимальное количество шагов агента
+  max_steps: 10
 
 # Инструменты
 tools:
