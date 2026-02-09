@@ -1,0 +1,82 @@
+{
+  "overall": {
+    "accuracy_gap_abs": 0.012499999999999956,
+    "accuracy_gap_rel": 1.3550135501354965,
+    "parsable_rate_gap_abs": 0.0,
+    "parsable_rate_gap_rel": 0.0,
+    "tool_agreement_rate": 0.9375,
+    "degradation_rate": 0.035
+  },
+  "flight_schedule": {
+    "precision_gap_abs": 0.0,
+    "precision_gap_rel": 0.0,
+    "recall_gap_abs": 0.0,
+    "recall_gap_rel": 0.0,
+    "f1_gap_abs": 0.0,
+    "f1_gap_rel": 0.0,
+    "far_gap_abs": 0.0
+  },
+  "get_calendar_events": {
+    "precision_gap_abs": 0.037735849056603765,
+    "precision_gap_rel": -3.92156862745098,
+    "recall_gap_abs": 0.016666666666666607,
+    "recall_gap_rel": 1.9607843137254832,
+    "f1_gap_abs": 0.006436041834271933,
+    "f1_gap_rel": -0.7130124777183613,
+    "far_gap_abs": 0.0058823529411764705
+  },
+  "search_music": {
+    "precision_gap_abs": 0.017241379310344862,
+    "precision_gap_rel": -1.7543859649122844,
+    "recall_gap_abs": 0.06666666666666665,
+    "recall_gap_rel": 7.017543859649121,
+    "f1_gap_abs": 0.02804859757012146,
+    "f1_gap_rel": 2.9032758888371335,
+    "far_gap_abs": 0.0029411764705882353
+  },
+  "add_calendar_event": {
+    "precision_gap_abs": 0.01666666666666672,
+    "precision_gap_rel": 1.6666666666666718,
+    "recall_gap_abs": 0.06666666666666665,
+    "recall_gap_rel": -7.272727272727271,
+    "f1_gap_abs": 0.02681159420289847,
+    "f1_gap_rel": -2.8030303030302943,
+    "far_gap_abs": 0.0029411764705882353
+  },
+  "no_tool_available": {
+    "precision_gap_abs": 0.05494505494505497,
+    "precision_gap_rel": 7.142857142857147,
+    "recall_gap_abs": 0.11363636363636365,
+    "recall_gap_rel": 12.500000000000004,
+    "f1_gap_abs": 0.08064516129032262,
+    "f1_gap_rel": 9.677419354838715,
+    "far_gap_abs": 0.0056179775280898875
+  },
+  "search_notes": {
+    "precision_gap_abs": 0.0357142857142857,
+    "precision_gap_rel": 3.57142857142857,
+    "recall_gap_abs": 0.0357142857142857,
+    "recall_gap_rel": 3.57142857142857,
+    "f1_gap_abs": 0.0357142857142857,
+    "f1_gap_rel": 3.57142857142857,
+    "far_gap_abs": 0.002688172043010753
+  },
+  "create_note": {
+    "precision_gap_abs": 0.052380952380952306,
+    "precision_gap_rel": -5.820105820105812,
+    "recall_gap_abs": 0.0714285714285714,
+    "recall_gap_rel": -11.111111111111105,
+    "f1_gap_abs": 0.06632653061224492,
+    "f1_gap_rel": -8.84353741496599,
+    "far_gap_abs": 0.002688172043010753
+  },
+  "task_completion": {
+    "precision_gap_abs": 0.0,
+    "precision_gap_rel": 0.0,
+    "recall_gap_abs": 0.0,
+    "recall_gap_rel": 0.0,
+    "f1_gap_abs": 0.0,
+    "f1_gap_rel": 0.0,
+    "far_gap_abs": 0.0125
+  }
+}

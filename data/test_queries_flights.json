@@ -1,0 +1,129 @@
+[
+  {
+    "query": "Найди рейсы из Москвы в Санкт-Петербург на завтра",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Москва",
+      "to_city": "Санкт-Петербург"
+    },
+    "description": "Базовый запрос с полными названиями городов"
+  },
+  {
+    "query": "Покажи самолёты из Москвы в Питер на 15 февраля",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Москва",
+      "to_city": "Питер"
+    },
+    "description": "Запрос с использованием сокращённого названия (Питер)"
+  },
+  {
+    "query": "Когда летят самолёты из Сочи в Екатеринбург",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Сочи",
+      "to_city": "Екатеринбург"
+    },
+    "description": "Запрос без указания даты (должна быть добавлена агентом)"
+  },
+  {
+    "query": "Найди авиарейсы из Владивостока в Москву на первое марта",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Владивосток",
+      "to_city": "Москва",
+      "date": "2026-03-01"
+    },
+    "description": "Запрос с датой в текстовом формате"
+  },
+  {
+    "query": "Покажи рейсы из Шереметьево в Пулково",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Шереметьево",
+      "to_city": "Пулково"
+    },
+    "description": "Запрос с названиями аэропортов вместо городов"
+  },
+  {
+    "query": "Найди самолёты из Казани в Новосибирск на следующей неделе",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Казань",
+      "to_city": "Новосибирск"
+    },
+    "description": "Запрос с относительной датой"
+  },
+  {
+    "query": "Когда поезд из Москвы в Питер",
+    "expected_tool": "no_tool_available",
+    "reason": "Только авиарейсы, поезда не поддерживаются",
+    "description": "Запрос на поезд - должен быть отклонён"
+  },
+  {
+    "query": "Найди рейсы из Москвы в Париж",
+    "expected_tool": "flight_schedule",
+    "expected_error": "international_not_supported",
+    "description": "Международный рейс - должен быть отклонён при выполнении"
+  },
+  {
+    "query": "Покажи автобусы из Москвы в Санкт-Петербург",
+    "expected_tool": "no_tool_available",
+    "reason": "Только авиарейсы, автобусы не поддерживаются",
+    "description": "Запрос на автобус - должен быть отклонён"
+  },
+  {
+    "query": "Найди рейсы из Краснодара в Сочи на выходные",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Краснодар",
+      "to_city": "Сочи"
+    },
+    "description": "Запрос с относительной датой (выходные)"
+  },
+  {
+    "query": "Когда самолёты из Иркутска в Хабаровск",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Иркутск",
+      "to_city": "Хабаровск"
+    },
+    "description": "Запрос без даты для дальневосточного направления"
+  },
+  {
+    "query": "Найди рейсы из Калининграда в Москву на понедельник",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Калининград",
+      "to_city": "Москва"
+    },
+    "description": "Запрос с днём недели вместо даты"
+  },
+  {
+    "query": "Покажи самолёты из Мурманска в Санкт-Петербург завтра утром",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Мурманск",
+      "to_city": "Санкт-Петербург"
+    },
+    "description": "Запрос с указанием времени суток (утром)"
+  },
+  {
+    "query": "Найди авиарейсы из Ростова-на-Дону в Симферополь",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Ростов-на-Дону",
+      "to_city": "Симферополь"
+    },
+    "description": "Запрос с составным названием города"
+  },
+  {
+    "query": "Когда летят из Нижнего Новгорода в Москву",
+    "expected_tool": "flight_schedule",
+    "expected_params": {
+      "from_city": "Нижний Новгород",
+      "to_city": "Москва"
+    },
+    "description": "Запрос без слова 'самолёты' или 'рейсы'"
+  }
+]

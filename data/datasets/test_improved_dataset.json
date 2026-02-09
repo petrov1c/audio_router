@@ -1,0 +1,324 @@
+[
+  {
+    "id": "flight_001",
+    "text": "Как добраться из Москвы в Иркутск 2026-02-11",
+    "text_for_tts": "Как добраться из Москвы в Иркутск одиннадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Москва",
+      "to_city": "Иркутск",
+      "date": "2026-02-11"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_002",
+    "text": "Найди песню Nautilus Pompilius",
+    "text_for_tts": "Найди песню Nautilus Pompilius",
+    "tool": "search_music",
+    "params": {
+      "query": "Nautilus Pompilius",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_002",
+    "text": "Помоги мне",
+    "text_for_tts": "Помоги мне",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_002",
+    "text": "Как добраться из Нижнего Новгорода в Казань 2026-02-22",
+    "text_for_tts": "Как добраться из Нижнего Новгорода в Казань двадцать второе февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Нижний Новгород",
+      "to_city": "Казань",
+      "date": "2026-02-22"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_005",
+    "text": "Рейсы из Уфы в Калининград 2026-02-18",
+    "text_for_tts": "Рейсы из Уфы в Калининград восемнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Уфа",
+      "to_city": "Калининград",
+      "date": "2026-02-18"
+    },
+    "metadata": {
+      "template_id": "flight_template_18",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_006",
+    "text": "Найди рейсы из Сочи в Челябинск на 2026-02-14",
+    "text_for_tts": "Найди рейсы из Сочи в Челябинск на четырнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Сочи",
+      "to_city": "Челябинск",
+      "date": "2026-02-14"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_003",
+    "text": "Поищи трек Nautilus Pompilius",
+    "text_for_tts": "Поищи трек Nautilus Pompilius",
+    "tool": "search_music",
+    "params": {
+      "query": "Nautilus Pompilius",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_001",
+    "text": "Найди поезд из Москвы в Питер",
+    "text_for_tts": "Найди поезд из Москвы в Питер",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Поддерживаются только авиарейсы",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_14",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_002",
+    "text": "Запиши в календарь демо продукта 2026-03-03",
+    "text_for_tts": "Запиши в календарь демо продукта третье марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-03",
+      "description": "демо продукта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_001",
+    "text": "Поищи трек под названием Мумий Тролль",
+    "text_for_tts": "Поищи трек под названием Мумий Тролль",
+    "tool": "search_music",
+    "params": {
+      "query": "Мумий Тролль",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_004",
+    "text": "Найди рейсы из Нижнего Новгорода в Владивосток на 2026-02-26",
+    "text_for_tts": "Найди рейсы из Нижнего Новгорода в Владивосток на двадцать шестое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Нижний Новгород",
+      "to_city": "Владивосток",
+      "date": "2026-02-26"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_001",
+    "text": "Найди все заметки связанные с обновить",
+    "text_for_tts": "Найди все заметки связанные с обновить",
+    "tool": "search_notes",
+    "params": {
+      "query": "обновить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_001",
+    "text": "Сохрани: записаться к врачу",
+    "text_for_tts": "Сохрани: записаться к врачу",
+    "tool": "create_note",
+    "params": {
+      "title": "записаться",
+      "content": "записаться к врачу"
+    },
+    "metadata": {
+      "template_id": "note_create_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_002",
+    "text": "Посмотри что у меня в календаре на 2026-02-13",
+    "text_for_tts": "Посмотри что у меня в календаре на тринадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-13"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_09",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_001",
+    "text": "Покажи события на 2026-03-05",
+    "text_for_tts": "Покажи события на пятое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-05"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_003",
+    "text": "Найди рейсы из Казани в Калининград на 2026-02-11",
+    "text_for_tts": "Найди рейсы из Казани в Калининград на одиннадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Калининград",
+      "date": "2026-02-11"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_003",
+    "text": "Запланируй презентация проекта на 2026-02-27",
+    "text_for_tts": "Запланируй презентация проекта на двадцать седьмое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-27",
+      "description": "презентация проекта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_001",
+    "text": "Поставь напоминание встреча с инвестором в субботу",
+    "text_for_tts": "Поставь напоминание встреча с инвестором в субботу",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-07",
+      "description": "встреча с инвестором"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_003",
+    "text": "Добрый день",
+    "text_for_tts": "Добрый день",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_003",
+    "text": "Какие события у меня намечены на 2026-03-04",
+    "text_for_tts": "Какие события у меня намечены на четвёртое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-04"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  }
+]

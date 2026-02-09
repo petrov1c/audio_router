@@ -1,0 +1,4002 @@
+[
+  {
+    "id": "no_tool_011",
+    "audio_path": "data/datasets/audio/no_tool_011.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_001",
+    "audio_path": "data/datasets/audio/flight_001.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_017",
+    "audio_path": "data/datasets/audio/music_017.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_032",
+    "audio_path": "data/datasets/audio/calendar_add_032.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_019",
+    "audio_path": "data/datasets/audio/note_create_019.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_106",
+    "audio_path": "data/datasets/audio/flight_106.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_005",
+    "audio_path": "data/datasets/audio/music_005.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_060",
+    "audio_path": "data/datasets/audio/flight_060.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_038",
+    "audio_path": "data/datasets/audio/music_038.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_069",
+    "audio_path": "data/datasets/audio/flight_069.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_052",
+    "audio_path": "data/datasets/audio/flight_052.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_021",
+    "audio_path": "data/datasets/audio/note_create_021.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_030",
+    "audio_path": "data/datasets/audio/calendar_add_030.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_039",
+    "audio_path": "data/datasets/audio/no_tool_039.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_011",
+    "audio_path": "data/datasets/audio/music_011.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_008",
+    "audio_path": "data/datasets/audio/calendar_get_008.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_005",
+    "audio_path": "data/datasets/audio/calendar_add_005.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_055",
+    "audio_path": "data/datasets/audio/music_055.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_039",
+    "audio_path": "data/datasets/audio/music_039.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_006",
+    "audio_path": "data/datasets/audio/music_006.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_034",
+    "audio_path": "data/datasets/audio/calendar_add_034.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_049",
+    "audio_path": "data/datasets/audio/music_049.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_019",
+    "audio_path": "data/datasets/audio/calendar_get_019.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_003",
+    "audio_path": "data/datasets/audio/calendar_get_003.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_028",
+    "audio_path": "data/datasets/audio/calendar_get_028.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_041",
+    "audio_path": "data/datasets/audio/flight_041.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_062",
+    "audio_path": "data/datasets/audio/flight_062.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_012",
+    "audio_path": "data/datasets/audio/no_tool_012.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_006",
+    "audio_path": "data/datasets/audio/calendar_add_006.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_035",
+    "audio_path": "data/datasets/audio/music_035.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_014",
+    "audio_path": "data/datasets/audio/calendar_get_014.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_018",
+    "audio_path": "data/datasets/audio/calendar_get_018.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_004",
+    "audio_path": "data/datasets/audio/note_create_004.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_024",
+    "audio_path": "data/datasets/audio/no_tool_024.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_018",
+    "audio_path": "data/datasets/audio/music_018.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_053",
+    "audio_path": "data/datasets/audio/calendar_add_053.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_040",
+    "audio_path": "data/datasets/audio/no_tool_040.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_019",
+    "audio_path": "data/datasets/audio/calendar_add_019.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_101",
+    "audio_path": "data/datasets/audio/flight_101.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_025",
+    "audio_path": "data/datasets/audio/flight_025.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_004",
+    "audio_path": "data/datasets/audio/music_004.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_028",
+    "audio_path": "data/datasets/audio/note_create_028.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_027",
+    "audio_path": "data/datasets/audio/note_create_027.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_056",
+    "audio_path": "data/datasets/audio/calendar_get_056.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_070",
+    "audio_path": "data/datasets/audio/flight_070.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_064",
+    "audio_path": "data/datasets/audio/flight_064.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_060",
+    "audio_path": "data/datasets/audio/calendar_get_060.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_023",
+    "audio_path": "data/datasets/audio/note_search_023.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_085",
+    "audio_path": "data/datasets/audio/flight_085.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_096",
+    "audio_path": "data/datasets/audio/flight_096.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_053",
+    "audio_path": "data/datasets/audio/music_053.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_043",
+    "audio_path": "data/datasets/audio/calendar_get_043.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_022",
+    "audio_path": "data/datasets/audio/calendar_add_022.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_014",
+    "audio_path": "data/datasets/audio/calendar_add_014.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_036",
+    "audio_path": "data/datasets/audio/no_tool_036.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_058",
+    "audio_path": "data/datasets/audio/calendar_add_058.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_010",
+    "audio_path": "data/datasets/audio/note_search_010.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_088",
+    "audio_path": "data/datasets/audio/flight_088.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_022",
+    "audio_path": "data/datasets/audio/flight_022.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_004",
+    "audio_path": "data/datasets/audio/calendar_add_004.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_033",
+    "audio_path": "data/datasets/audio/calendar_add_033.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_094",
+    "audio_path": "data/datasets/audio/flight_094.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_058",
+    "audio_path": "data/datasets/audio/calendar_get_058.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_003",
+    "audio_path": "data/datasets/audio/flight_003.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_016",
+    "audio_path": "data/datasets/audio/music_016.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_013",
+    "audio_path": "data/datasets/audio/music_013.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_012",
+    "audio_path": "data/datasets/audio/flight_012.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_034",
+    "audio_path": "data/datasets/audio/no_tool_034.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_007",
+    "audio_path": "data/datasets/audio/no_tool_007.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "task_completion",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_082",
+    "audio_path": "data/datasets/audio/flight_082.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_057",
+    "audio_path": "data/datasets/audio/calendar_get_057.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_089",
+    "audio_path": "data/datasets/audio/flight_089.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_097",
+    "audio_path": "data/datasets/audio/flight_097.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_031",
+    "audio_path": "data/datasets/audio/music_031.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_017",
+    "audio_path": "data/datasets/audio/flight_017.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_051",
+    "audio_path": "data/datasets/audio/calendar_add_051.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_048",
+    "audio_path": "data/datasets/audio/calendar_add_048.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_050",
+    "audio_path": "data/datasets/audio/calendar_add_050.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_024",
+    "audio_path": "data/datasets/audio/music_024.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_010",
+    "audio_path": "data/datasets/audio/no_tool_010.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_024",
+    "audio_path": "data/datasets/audio/calendar_get_024.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_012",
+    "audio_path": "data/datasets/audio/music_012.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_018",
+    "audio_path": "data/datasets/audio/calendar_add_018.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_029",
+    "audio_path": "data/datasets/audio/music_029.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_033",
+    "audio_path": "data/datasets/audio/flight_033.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_015",
+    "audio_path": "data/datasets/audio/calendar_get_015.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_014",
+    "audio_path": "data/datasets/audio/music_014.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_059",
+    "audio_path": "data/datasets/audio/calendar_get_059.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_072",
+    "audio_path": "data/datasets/audio/flight_072.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_013",
+    "audio_path": "data/datasets/audio/flight_013.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_022",
+    "audio_path": "data/datasets/audio/calendar_get_022.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_009",
+    "audio_path": "data/datasets/audio/flight_009.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_043",
+    "audio_path": "data/datasets/audio/flight_043.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_055",
+    "audio_path": "data/datasets/audio/calendar_get_055.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_037",
+    "audio_path": "data/datasets/audio/calendar_add_037.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_007",
+    "audio_path": "data/datasets/audio/flight_007.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_077",
+    "audio_path": "data/datasets/audio/flight_077.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_046",
+    "audio_path": "data/datasets/audio/calendar_get_046.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_120",
+    "audio_path": "data/datasets/audio/flight_120.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_100",
+    "audio_path": "data/datasets/audio/flight_100.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_053",
+    "audio_path": "data/datasets/audio/flight_053.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_003",
+    "audio_path": "data/datasets/audio/note_create_003.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "search_notes",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_037",
+    "audio_path": "data/datasets/audio/flight_037.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_020",
+    "audio_path": "data/datasets/audio/note_search_020.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_015",
+    "audio_path": "data/datasets/audio/note_create_015.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_051",
+    "audio_path": "data/datasets/audio/music_051.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_026",
+    "audio_path": "data/datasets/audio/note_search_026.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_016",
+    "audio_path": "data/datasets/audio/note_search_016.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_068",
+    "audio_path": "data/datasets/audio/flight_068.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_002",
+    "audio_path": "data/datasets/audio/music_002.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_018",
+    "audio_path": "data/datasets/audio/note_create_018.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_003",
+    "audio_path": "data/datasets/audio/no_tool_003.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_032",
+    "audio_path": "data/datasets/audio/flight_032.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_029",
+    "audio_path": "data/datasets/audio/calendar_get_029.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_021",
+    "audio_path": "data/datasets/audio/calendar_get_021.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_059",
+    "audio_path": "data/datasets/audio/music_059.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_037",
+    "audio_path": "data/datasets/audio/no_tool_037.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_013",
+    "audio_path": "data/datasets/audio/calendar_add_013.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_092",
+    "audio_path": "data/datasets/audio/flight_092.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_007",
+    "audio_path": "data/datasets/audio/calendar_get_007.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_108",
+    "audio_path": "data/datasets/audio/flight_108.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_012",
+    "audio_path": "data/datasets/audio/calendar_add_012.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_030",
+    "audio_path": "data/datasets/audio/calendar_get_030.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_023",
+    "audio_path": "data/datasets/audio/no_tool_023.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_058",
+    "audio_path": "data/datasets/audio/flight_058.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_008",
+    "audio_path": "data/datasets/audio/flight_008.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_003",
+    "audio_path": "data/datasets/audio/calendar_add_003.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_036",
+    "audio_path": "data/datasets/audio/calendar_add_036.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_002",
+    "audio_path": "data/datasets/audio/calendar_add_002.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_022",
+    "audio_path": "data/datasets/audio/music_022.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_005",
+    "audio_path": "data/datasets/audio/no_tool_005.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_016",
+    "audio_path": "data/datasets/audio/note_create_016.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_045",
+    "audio_path": "data/datasets/audio/calendar_get_045.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_054",
+    "audio_path": "data/datasets/audio/calendar_get_054.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_099",
+    "audio_path": "data/datasets/audio/flight_099.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_017",
+    "audio_path": "data/datasets/audio/no_tool_017.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_021",
+    "audio_path": "data/datasets/audio/music_021.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_044",
+    "audio_path": "data/datasets/audio/music_044.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_033",
+    "audio_path": "data/datasets/audio/no_tool_033.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_095",
+    "audio_path": "data/datasets/audio/flight_095.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_041",
+    "audio_path": "data/datasets/audio/no_tool_041.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_010",
+    "audio_path": "data/datasets/audio/flight_010.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_014",
+    "audio_path": "data/datasets/audio/note_create_014.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_004",
+    "audio_path": "data/datasets/audio/calendar_get_004.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_017",
+    "audio_path": "data/datasets/audio/note_search_017.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_049",
+    "audio_path": "data/datasets/audio/calendar_get_049.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_010",
+    "audio_path": "data/datasets/audio/calendar_add_010.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_050",
+    "audio_path": "data/datasets/audio/calendar_get_050.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_003",
+    "audio_path": "data/datasets/audio/note_search_003.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_071",
+    "audio_path": "data/datasets/audio/flight_071.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_015",
+    "audio_path": "data/datasets/audio/music_015.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_114",
+    "audio_path": "data/datasets/audio/flight_114.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_001",
+    "audio_path": "data/datasets/audio/calendar_add_001.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_018",
+    "audio_path": "data/datasets/audio/flight_018.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_026",
+    "audio_path": "data/datasets/audio/note_create_026.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_039",
+    "audio_path": "data/datasets/audio/flight_039.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_013",
+    "audio_path": "data/datasets/audio/note_create_013.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_083",
+    "audio_path": "data/datasets/audio/flight_083.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_042",
+    "audio_path": "data/datasets/audio/calendar_add_042.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_022",
+    "audio_path": "data/datasets/audio/note_create_022.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_029",
+    "audio_path": "data/datasets/audio/calendar_add_029.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_025",
+    "audio_path": "data/datasets/audio/calendar_add_025.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_119",
+    "audio_path": "data/datasets/audio/flight_119.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_007",
+    "audio_path": "data/datasets/audio/calendar_add_007.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_002",
+    "audio_path": "data/datasets/audio/no_tool_002.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_046",
+    "audio_path": "data/datasets/audio/flight_046.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_006",
+    "audio_path": "data/datasets/audio/calendar_get_006.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_040",
+    "audio_path": "data/datasets/audio/flight_040.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_035",
+    "audio_path": "data/datasets/audio/calendar_add_035.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_001",
+    "audio_path": "data/datasets/audio/music_001.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_021",
+    "audio_path": "data/datasets/audio/no_tool_021.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_034",
+    "audio_path": "data/datasets/audio/music_034.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_056",
+    "audio_path": "data/datasets/audio/calendar_add_056.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_042",
+    "audio_path": "data/datasets/audio/music_042.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_061",
+    "audio_path": "data/datasets/audio/flight_061.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_043",
+    "audio_path": "data/datasets/audio/no_tool_043.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_046",
+    "audio_path": "data/datasets/audio/calendar_add_046.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_059",
+    "audio_path": "data/datasets/audio/calendar_add_059.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_090",
+    "audio_path": "data/datasets/audio/flight_090.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_018",
+    "audio_path": "data/datasets/audio/note_search_018.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_005",
+    "audio_path": "data/datasets/audio/calendar_get_005.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_016",
+    "audio_path": "data/datasets/audio/calendar_add_016.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_018",
+    "audio_path": "data/datasets/audio/no_tool_018.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_043",
+    "audio_path": "data/datasets/audio/calendar_add_043.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_028",
+    "audio_path": "data/datasets/audio/note_search_028.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_033",
+    "audio_path": "data/datasets/audio/music_033.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_051",
+    "audio_path": "data/datasets/audio/calendar_get_051.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_086",
+    "audio_path": "data/datasets/audio/flight_086.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_025",
+    "audio_path": "data/datasets/audio/music_025.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_087",
+    "audio_path": "data/datasets/audio/flight_087.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_032",
+    "audio_path": "data/datasets/audio/no_tool_032.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_044",
+    "audio_path": "data/datasets/audio/no_tool_044.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_021",
+    "audio_path": "data/datasets/audio/flight_021.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_015",
+    "audio_path": "data/datasets/audio/calendar_add_015.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_103",
+    "audio_path": "data/datasets/audio/flight_103.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_026",
+    "audio_path": "data/datasets/audio/no_tool_026.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "task_completion",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_020",
+    "audio_path": "data/datasets/audio/calendar_get_020.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_009",
+    "audio_path": "data/datasets/audio/note_search_009.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_028",
+    "audio_path": "data/datasets/audio/flight_028.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_044",
+    "audio_path": "data/datasets/audio/calendar_get_044.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_023",
+    "audio_path": "data/datasets/audio/flight_023.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_001",
+    "audio_path": "data/datasets/audio/no_tool_001.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_027",
+    "audio_path": "data/datasets/audio/music_027.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_019",
+    "audio_path": "data/datasets/audio/note_search_019.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_005",
+    "audio_path": "data/datasets/audio/note_create_005.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_058",
+    "audio_path": "data/datasets/audio/music_058.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_016",
+    "audio_path": "data/datasets/audio/no_tool_016.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_023",
+    "audio_path": "data/datasets/audio/note_create_023.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_006",
+    "audio_path": "data/datasets/audio/flight_006.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_036",
+    "audio_path": "data/datasets/audio/calendar_get_036.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_030",
+    "audio_path": "data/datasets/audio/flight_030.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_008",
+    "audio_path": "data/datasets/audio/music_008.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_107",
+    "audio_path": "data/datasets/audio/flight_107.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_044",
+    "audio_path": "data/datasets/audio/calendar_add_044.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_007",
+    "audio_path": "data/datasets/audio/note_search_007.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "create_note",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_104",
+    "audio_path": "data/datasets/audio/flight_104.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_027",
+    "audio_path": "data/datasets/audio/calendar_add_027.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_110",
+    "audio_path": "data/datasets/audio/flight_110.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_004",
+    "audio_path": "data/datasets/audio/note_search_004.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_040",
+    "audio_path": "data/datasets/audio/music_040.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_020",
+    "audio_path": "data/datasets/audio/flight_020.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_118",
+    "audio_path": "data/datasets/audio/flight_118.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_005",
+    "audio_path": "data/datasets/audio/flight_005.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_112",
+    "audio_path": "data/datasets/audio/flight_112.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_011",
+    "audio_path": "data/datasets/audio/flight_011.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_011",
+    "audio_path": "data/datasets/audio/note_create_011.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_026",
+    "audio_path": "data/datasets/audio/music_026.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_102",
+    "audio_path": "data/datasets/audio/flight_102.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_019",
+    "audio_path": "data/datasets/audio/flight_019.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_091",
+    "audio_path": "data/datasets/audio/flight_091.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_027",
+    "audio_path": "data/datasets/audio/calendar_get_027.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_052",
+    "audio_path": "data/datasets/audio/calendar_add_052.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_034",
+    "audio_path": "data/datasets/audio/calendar_get_034.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_024",
+    "audio_path": "data/datasets/audio/calendar_add_024.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_009",
+    "audio_path": "data/datasets/audio/calendar_add_009.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_028",
+    "audio_path": "data/datasets/audio/music_028.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_001",
+    "audio_path": "data/datasets/audio/note_search_001.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_009",
+    "audio_path": "data/datasets/audio/note_create_009.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_098",
+    "audio_path": "data/datasets/audio/flight_098.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_038",
+    "audio_path": "data/datasets/audio/no_tool_038.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_045",
+    "audio_path": "data/datasets/audio/flight_045.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_030",
+    "audio_path": "data/datasets/audio/music_030.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_027",
+    "audio_path": "data/datasets/audio/note_search_027.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_008",
+    "audio_path": "data/datasets/audio/calendar_add_008.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_002",
+    "audio_path": "data/datasets/audio/flight_002.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_014",
+    "audio_path": "data/datasets/audio/note_search_014.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_084",
+    "audio_path": "data/datasets/audio/flight_084.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_075",
+    "audio_path": "data/datasets/audio/flight_075.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_066",
+    "audio_path": "data/datasets/audio/flight_066.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_029",
+    "audio_path": "data/datasets/audio/no_tool_029.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_057",
+    "audio_path": "data/datasets/audio/music_057.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_017",
+    "audio_path": "data/datasets/audio/calendar_get_017.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_055",
+    "audio_path": "data/datasets/audio/flight_055.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_025",
+    "audio_path": "data/datasets/audio/note_search_025.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_078",
+    "audio_path": "data/datasets/audio/flight_078.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_105",
+    "audio_path": "data/datasets/audio/flight_105.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_002",
+    "audio_path": "data/datasets/audio/note_create_002.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_029",
+    "audio_path": "data/datasets/audio/flight_029.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_023",
+    "audio_path": "data/datasets/audio/calendar_get_023.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_113",
+    "audio_path": "data/datasets/audio/flight_113.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_024",
+    "audio_path": "data/datasets/audio/flight_024.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_038",
+    "audio_path": "data/datasets/audio/calendar_add_038.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_010",
+    "audio_path": "data/datasets/audio/music_010.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_026",
+    "audio_path": "data/datasets/audio/calendar_add_026.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_057",
+    "audio_path": "data/datasets/audio/flight_057.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_013",
+    "audio_path": "data/datasets/audio/no_tool_013.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_057",
+    "audio_path": "data/datasets/audio/calendar_add_057.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_017",
+    "audio_path": "data/datasets/audio/note_create_017.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_023",
+    "audio_path": "data/datasets/audio/music_023.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_052",
+    "audio_path": "data/datasets/audio/music_052.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_037",
+    "audio_path": "data/datasets/audio/music_037.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_006",
+    "audio_path": "data/datasets/audio/no_tool_006.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_036",
+    "audio_path": "data/datasets/audio/music_036.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_009",
+    "audio_path": "data/datasets/audio/music_009.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_038",
+    "audio_path": "data/datasets/audio/calendar_get_038.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_047",
+    "audio_path": "data/datasets/audio/calendar_get_047.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_028",
+    "audio_path": "data/datasets/audio/no_tool_028.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_042",
+    "audio_path": "data/datasets/audio/no_tool_042.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_026",
+    "audio_path": "data/datasets/audio/flight_026.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_047",
+    "audio_path": "data/datasets/audio/music_047.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_024",
+    "audio_path": "data/datasets/audio/note_create_024.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_005",
+    "audio_path": "data/datasets/audio/note_search_005.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_021",
+    "audio_path": "data/datasets/audio/note_search_021.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_030",
+    "audio_path": "data/datasets/audio/no_tool_030.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_002",
+    "audio_path": "data/datasets/audio/note_search_002.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_010",
+    "audio_path": "data/datasets/audio/calendar_get_010.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_081",
+    "audio_path": "data/datasets/audio/flight_081.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_055",
+    "audio_path": "data/datasets/audio/calendar_add_055.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_008",
+    "audio_path": "data/datasets/audio/no_tool_008.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_035",
+    "audio_path": "data/datasets/audio/calendar_get_035.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_013",
+    "audio_path": "data/datasets/audio/calendar_get_013.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_015",
+    "audio_path": "data/datasets/audio/no_tool_015.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "task_completion",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_027",
+    "audio_path": "data/datasets/audio/no_tool_027.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_022",
+    "audio_path": "data/datasets/audio/note_search_022.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_016",
+    "audio_path": "data/datasets/audio/flight_016.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_073",
+    "audio_path": "data/datasets/audio/flight_073.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_036",
+    "audio_path": "data/datasets/audio/flight_036.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_026",
+    "audio_path": "data/datasets/audio/calendar_get_026.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_050",
+    "audio_path": "data/datasets/audio/music_050.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_074",
+    "audio_path": "data/datasets/audio/flight_074.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_007",
+    "audio_path": "data/datasets/audio/note_create_007.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_004",
+    "audio_path": "data/datasets/audio/flight_004.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_035",
+    "audio_path": "data/datasets/audio/no_tool_035.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_031",
+    "audio_path": "data/datasets/audio/no_tool_031.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_039",
+    "audio_path": "data/datasets/audio/calendar_add_039.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_020",
+    "audio_path": "data/datasets/audio/calendar_add_020.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_093",
+    "audio_path": "data/datasets/audio/flight_093.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_015",
+    "audio_path": "data/datasets/audio/flight_015.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_017",
+    "audio_path": "data/datasets/audio/calendar_add_017.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_014",
+    "audio_path": "data/datasets/audio/flight_014.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_046",
+    "audio_path": "data/datasets/audio/music_046.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_011",
+    "audio_path": "data/datasets/audio/note_search_011.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_040",
+    "audio_path": "data/datasets/audio/calendar_get_040.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_116",
+    "audio_path": "data/datasets/audio/flight_116.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_054",
+    "audio_path": "data/datasets/audio/music_054.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_023",
+    "audio_path": "data/datasets/audio/calendar_add_023.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_019",
+    "audio_path": "data/datasets/audio/no_tool_019.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_009",
+    "audio_path": "data/datasets/audio/calendar_get_009.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_015",
+    "audio_path": "data/datasets/audio/note_search_015.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_060",
+    "audio_path": "data/datasets/audio/calendar_add_060.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_056",
+    "audio_path": "data/datasets/audio/flight_056.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_115",
+    "audio_path": "data/datasets/audio/flight_115.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_007",
+    "audio_path": "data/datasets/audio/music_007.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_080",
+    "audio_path": "data/datasets/audio/flight_080.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_109",
+    "audio_path": "data/datasets/audio/flight_109.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_020",
+    "audio_path": "data/datasets/audio/music_020.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_056",
+    "audio_path": "data/datasets/audio/music_056.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_054",
+    "audio_path": "data/datasets/audio/flight_054.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_001",
+    "audio_path": "data/datasets/audio/calendar_get_001.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_040",
+    "audio_path": "data/datasets/audio/calendar_add_040.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_008",
+    "audio_path": "data/datasets/audio/note_create_008.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_028",
+    "audio_path": "data/datasets/audio/calendar_add_028.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_027",
+    "audio_path": "data/datasets/audio/flight_027.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_037",
+    "audio_path": "data/datasets/audio/calendar_get_037.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_002",
+    "audio_path": "data/datasets/audio/calendar_get_002.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_031",
+    "audio_path": "data/datasets/audio/calendar_get_031.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_063",
+    "audio_path": "data/datasets/audio/flight_063.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_049",
+    "audio_path": "data/datasets/audio/calendar_add_049.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_012",
+    "audio_path": "data/datasets/audio/note_search_012.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_048",
+    "audio_path": "data/datasets/audio/music_048.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_001",
+    "audio_path": "data/datasets/audio/note_create_001.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_031",
+    "audio_path": "data/datasets/audio/flight_031.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_045",
+    "audio_path": "data/datasets/audio/music_045.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_067",
+    "audio_path": "data/datasets/audio/flight_067.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_011",
+    "audio_path": "data/datasets/audio/calendar_get_011.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_050",
+    "audio_path": "data/datasets/audio/flight_050.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_042",
+    "audio_path": "data/datasets/audio/calendar_get_042.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_048",
+    "audio_path": "data/datasets/audio/flight_048.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_044",
+    "audio_path": "data/datasets/audio/flight_044.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_047",
+    "audio_path": "data/datasets/audio/flight_047.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_035",
+    "audio_path": "data/datasets/audio/flight_035.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_003",
+    "audio_path": "data/datasets/audio/music_003.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_024",
+    "audio_path": "data/datasets/audio/note_search_024.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_079",
+    "audio_path": "data/datasets/audio/flight_079.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_012",
+    "audio_path": "data/datasets/audio/calendar_get_012.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_011",
+    "audio_path": "data/datasets/audio/calendar_add_011.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_013",
+    "audio_path": "data/datasets/audio/note_search_013.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_020",
+    "audio_path": "data/datasets/audio/no_tool_020.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_039",
+    "audio_path": "data/datasets/audio/calendar_get_039.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_041",
+    "audio_path": "data/datasets/audio/calendar_add_041.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_049",
+    "audio_path": "data/datasets/audio/flight_049.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_033",
+    "audio_path": "data/datasets/audio/calendar_get_033.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_025",
+    "audio_path": "data/datasets/audio/calendar_get_025.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_025",
+    "audio_path": "data/datasets/audio/no_tool_025.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "task_completion",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_054",
+    "audio_path": "data/datasets/audio/calendar_add_054.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_032",
+    "audio_path": "data/datasets/audio/calendar_get_032.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_117",
+    "audio_path": "data/datasets/audio/flight_117.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_052",
+    "audio_path": "data/datasets/audio/calendar_get_052.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_022",
+    "audio_path": "data/datasets/audio/no_tool_022.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_111",
+    "audio_path": "data/datasets/audio/flight_111.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_014",
+    "audio_path": "data/datasets/audio/no_tool_014.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_043",
+    "audio_path": "data/datasets/audio/music_043.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_006",
+    "audio_path": "data/datasets/audio/note_search_006.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_search_008",
+    "audio_path": "data/datasets/audio/note_search_008.wav",
+    "expected_tool": "search_notes",
+    "predicted_tool": "search_notes",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_059",
+    "audio_path": "data/datasets/audio/flight_059.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_004",
+    "audio_path": "data/datasets/audio/no_tool_004.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_051",
+    "audio_path": "data/datasets/audio/flight_051.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_041",
+    "audio_path": "data/datasets/audio/calendar_get_041.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_010",
+    "audio_path": "data/datasets/audio/note_create_010.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_019",
+    "audio_path": "data/datasets/audio/music_019.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_053",
+    "audio_path": "data/datasets/audio/calendar_get_053.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_031",
+    "audio_path": "data/datasets/audio/calendar_add_031.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_032",
+    "audio_path": "data/datasets/audio/music_032.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_006",
+    "audio_path": "data/datasets/audio/note_create_006.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_016",
+    "audio_path": "data/datasets/audio/calendar_get_016.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_047",
+    "audio_path": "data/datasets/audio/calendar_add_047.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "no_tool_009",
+    "audio_path": "data/datasets/audio/no_tool_009.wav",
+    "expected_tool": "no_tool_available",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_041",
+    "audio_path": "data/datasets/audio/music_041.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "music_060",
+    "audio_path": "data/datasets/audio/music_060.wav",
+    "expected_tool": "search_music",
+    "predicted_tool": "search_music",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_025",
+    "audio_path": "data/datasets/audio/note_create_025.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "task_completion",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_020",
+    "audio_path": "data/datasets/audio/note_create_020.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_021",
+    "audio_path": "data/datasets/audio/calendar_add_021.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "add_calendar_event",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_065",
+    "audio_path": "data/datasets/audio/flight_065.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_034",
+    "audio_path": "data/datasets/audio/flight_034.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_076",
+    "audio_path": "data/datasets/audio/flight_076.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "note_create_012",
+    "audio_path": "data/datasets/audio/note_create_012.wav",
+    "expected_tool": "create_note",
+    "predicted_tool": "create_note",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_add_045",
+    "audio_path": "data/datasets/audio/calendar_add_045.wav",
+    "expected_tool": "add_calendar_event",
+    "predicted_tool": "no_tool_available",
+    "correct_tool": false,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_042",
+    "audio_path": "data/datasets/audio/flight_042.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "flight_038",
+    "audio_path": "data/datasets/audio/flight_038.wav",
+    "expected_tool": "flight_schedule",
+    "predicted_tool": "flight_schedule",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  },
+  {
+    "id": "calendar_get_048",
+    "audio_path": "data/datasets/audio/calendar_get_048.wav",
+    "expected_tool": "get_calendar_events",
+    "predicted_tool": "get_calendar_events",
+    "correct_tool": true,
+    "parsable": true,
+    "success": true,
+    "steps": 1
+  }
+]

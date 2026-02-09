@@ -1,0 +1,6434 @@
+[
+  {
+    "id": "no_tool_011",
+    "text": "Спасибо",
+    "text_for_tts": "Спасибо",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_001",
+    "text": "Как добраться из Москвы в Иркутск 2026-02-15",
+    "text_for_tts": "Как добраться из Москвы в Иркутск пятнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Москва",
+      "to_city": "Иркутск",
+      "date": "2026-02-15"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_017",
+    "text": "Найди песню Сплин",
+    "text_for_tts": "Найди песню Сплин",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_032",
+    "text": "У меня будет вебинар 2026-02-27, запиши пожалуйста",
+    "text_for_tts": "У меня будет вебинар двадцать седьмое февраля, запиши пожалуйста",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-27",
+      "description": "вебинар"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_019",
+    "text": "Сохрани: позвонить маме",
+    "text_for_tts": "Сохрани: позвонить маме",
+    "tool": "create_note",
+    "params": {
+      "title": "позвонить",
+      "content": "позвонить маме"
+    },
+    "metadata": {
+      "template_id": "note_create_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_106",
+    "text": "Поищи билеты из Иркутска в Калининград на 2026-03-05",
+    "text_for_tts": "Поищи билеты из Иркутска в Калининград на пятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Иркутск",
+      "to_city": "Калининград",
+      "date": "2026-03-05"
+    },
+    "metadata": {
+      "template_id": "flight_template_08",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_005",
+    "text": "Включи Сплин - Выхода нет",
+    "text_for_tts": "Включи Сплин - Выхода нет",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин - Выхода нет",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_060",
+    "text": "Хочу полететь из Казани в Екатеринбург 2026-03-01",
+    "text_for_tts": "Хочу полететь из Казани в Екатеринбург первое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Екатеринбург",
+      "date": "2026-03-01"
+    },
+    "metadata": {
+      "template_id": "flight_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_038",
+    "text": "Хочу послушать Би-2",
+    "text_for_tts": "Хочу послушать Би-2",
+    "tool": "search_music",
+    "params": {
+      "query": "Би-2",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_069",
+    "text": "Покажи авиарейсы Сочи - Омск 2026-03-06",
+    "text_for_tts": "Покажи авиарейсы Сочи - Омск шестое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Сочи",
+      "to_city": "Омск",
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "flight_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_052",
+    "text": "Рейсы из Москвы в Екатеринбург 2026-03-09",
+    "text_for_tts": "Рейсы из Москвы в Екатеринбург девятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Москва",
+      "to_city": "Екатеринбург",
+      "date": "2026-03-09"
+    },
+    "metadata": {
+      "template_id": "flight_template_18",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_021",
+    "text": "Создай заметку: записаться к врачу",
+    "text_for_tts": "Создай заметку: записаться к врачу",
+    "tool": "create_note",
+    "params": {
+      "title": "записаться",
+      "content": "записаться к врачу"
+    },
+    "metadata": {
+      "template_id": "note_create_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_030",
+    "text": "Создай событие: демо продукта, дата 2026-02-28",
+    "text_for_tts": "Создай событие: демо продукта, дата двадцать восьмое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-28",
+      "description": "демо продукта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_039",
+    "text": "Кто ты?",
+    "text_for_tts": "Кто ты?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_011",
+    "text": "Поставь Земфира - Искала",
+    "text_for_tts": "Поставь Земфира - Искала",
+    "tool": "search_music",
+    "params": {
+      "query": "Земфира - Искала",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_008",
+    "text": "Что у меня по расписанию 2026-02-11",
+    "text_for_tts": "Что у меня по расписанию одиннадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-11"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_005",
+    "text": "Мне нужно конференция 2026-03-04, добавь в календарь",
+    "text_for_tts": "Мне нужно конференция четвёртое марта, добавь в календарь",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-04",
+      "description": "конференция"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_055",
+    "text": "Поищи трек Алиса",
+    "text_for_tts": "Поищи трек Алиса",
+    "tool": "search_music",
+    "params": {
+      "query": "Алиса",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_039",
+    "text": "Поиск песни Ария",
+    "text_for_tts": "Поиск песни Ария",
+    "tool": "search_music",
+    "params": {
+      "query": "Ария",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_006",
+    "text": "Найди в Яндекс Музыке Земфира - Искала",
+    "text_for_tts": "Найди в Яндекс Музыке Земфира - Искала",
+    "tool": "search_music",
+    "params": {
+      "query": "Земфира - Искала",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_034",
+    "text": "Зафиксируй событие вебинар на дату 2026-02-18",
+    "text_for_tts": "Зафиксируй событие вебинар на дату восемнадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-18",
+      "description": "вебинар"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_049",
+    "text": "Хочу послушать Nautilus Pompilius",
+    "text_for_tts": "Хочу послушать Nautilus Pompilius",
+    "tool": "search_music",
+    "params": {
+      "query": "Nautilus Pompilius",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_019",
+    "text": "Что в календаре на 2026-02-28",
+    "text_for_tts": "Что в календаре на двадцать восьмое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-28"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_003",
+    "text": "Какие события у меня намечены на 2026-02-27",
+    "text_for_tts": "Какие события у меня намечены на двадцать седьмое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-27"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_028",
+    "text": "Что у меня завтра",
+    "text_for_tts": "Что у меня завтра",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-08"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_041",
+    "text": "Самолёты из Калининграда в Москву 2026-02-10",
+    "text_for_tts": "Самолёты из Калининграда в Москву десятое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Калининград",
+      "to_city": "Москва",
+      "date": "2026-02-10"
+    },
+    "metadata": {
+      "template_id": "flight_template_19",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_062",
+    "text": "Покажи расписание из Воронежа в Казань 2026-02-21",
+    "text_for_tts": "Покажи расписание из Воронежа в Казань двадцать первое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Воронеж",
+      "to_city": "Казань",
+      "date": "2026-02-21"
+    },
+    "metadata": {
+      "template_id": "flight_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_012",
+    "text": "Здравствуй",
+    "text_for_tts": "Здравствуй",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_006",
+    "text": "Создай событие: тренинг, дата 2026-02-23",
+    "text_for_tts": "Создай событие: тренинг, дата двадцать третье февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-23",
+      "description": "тренинг"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_035",
+    "text": "Поиск песни Сплин",
+    "text_for_tts": "Поиск песни Сплин",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_014",
+    "text": "Что в календаре на 2026-02-17",
+    "text_for_tts": "Что в календаре на семнадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-17"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_018",
+    "text": "Что в календаре на 2026-02-21",
+    "text_for_tts": "Что в календаре на двадцать первое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-21"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_004",
+    "text": "Сделай заметку позвонить маме",
+    "text_for_tts": "Сделай заметку позвонить маме",
+    "tool": "create_note",
+    "params": {
+      "title": "позвонить",
+      "content": "позвонить маме"
+    },
+    "metadata": {
+      "template_id": "note_create_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_024",
+    "text": "Привет",
+    "text_for_tts": "Привет",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_018",
+    "text": "Мне нужна песня Сплин",
+    "text_for_tts": "Мне нужна песня Сплин",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_053",
+    "text": "Добавь встречу обед с партнерами на 2026-02-16",
+    "text_for_tts": "Добавь встречу обед с партнерами на шестнадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-16",
+      "description": "обед с партнерами"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_040",
+    "text": "Расскажи анекдот",
+    "text_for_tts": "Расскажи анекдот",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_019",
+    "text": "Запиши в календарь совещание 2026-02-22",
+    "text_for_tts": "Запиши в календарь совещание двадцать второе февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-22",
+      "description": "совещание"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_101",
+    "text": "Найди рейсы из Иркутска в Хабаровск на в субботу",
+    "text_for_tts": "Найди рейсы из Иркутска в Хабаровск на в субботу",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Иркутск",
+      "to_city": "Хабаровск",
+      "date": "2026-02-14"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_025",
+    "text": "Что есть из Казани в Уфу на 2026-02-20",
+    "text_for_tts": "Что есть из Казани в Уфу на двадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Уфа",
+      "date": "2026-02-20"
+    },
+    "metadata": {
+      "template_id": "flight_template_20",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_004",
+    "text": "Хочу послушать Алиса",
+    "text_for_tts": "Хочу послушать Алиса",
+    "tool": "search_music",
+    "params": {
+      "query": "Алиса",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_028",
+    "text": "Создай новую заметку с текстом написать статью",
+    "text_for_tts": "Создай новую заметку с текстом написать статью",
+    "tool": "create_note",
+    "params": {
+      "title": "написать",
+      "content": "написать статью"
+    },
+    "metadata": {
+      "template_id": "note_create_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_027",
+    "text": "Мне нужно запомнить: подготовить отчет",
+    "text_for_tts": "Мне нужно запомнить: подготовить отчет",
+    "tool": "create_note",
+    "params": {
+      "title": "подготовить",
+      "content": "подготовить отчет"
+    },
+    "metadata": {
+      "template_id": "note_create_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_056",
+    "text": "Какие встречи у меня 2026-02-23",
+    "text_for_tts": "Какие встречи у меня двадцать третье февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-23"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_070",
+    "text": "Покажи авиарейсы Воронеж - Ростов-на-Дону завтра",
+    "text_for_tts": "Покажи авиарейсы Воронеж - Ростов-на-Дону завтра",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Воронеж",
+      "to_city": "Ростов-на-Дону",
+      "date": "2026-02-08"
+    },
+    "metadata": {
+      "template_id": "flight_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_064",
+    "text": "Мне надо срочно в Иркутск из Калининграда, что есть на 2026-02-20",
+    "text_for_tts": "Мне надо срочно в Иркутск из Калининграда, что есть на двадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Калининград",
+      "to_city": "Иркутск",
+      "date": "2026-02-20"
+    },
+    "metadata": {
+      "template_id": "flight_template_11",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_060",
+    "text": "Какие встречи у меня 2026-02-20",
+    "text_for_tts": "Какие встречи у меня двадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-20"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_023",
+    "text": "Покажи заметки про оплатить",
+    "text_for_tts": "Покажи заметки про оплатить",
+    "tool": "search_notes",
+    "params": {
+      "query": "оплатить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_085",
+    "text": "Мне надо срочно в Калининград из Уфы, что есть на 2026-02-16",
+    "text_for_tts": "Мне надо срочно в Калининград из Уфы, что есть на шестнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Уфа",
+      "to_city": "Калининград",
+      "date": "2026-02-16"
+    },
+    "metadata": {
+      "template_id": "flight_template_11",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_096",
+    "text": "Мне нужно в Челябинск из Краснодара 2026-02-10",
+    "text_for_tts": "Мне нужно в Челябинск из Краснодара десятое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Краснодар",
+      "to_city": "Челябинск",
+      "date": "2026-02-10"
+    },
+    "metadata": {
+      "template_id": "flight_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_053",
+    "text": "Хочу послушать Сплин - Выхода нет",
+    "text_for_tts": "Хочу послушать Сплин - Выхода нет",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин - Выхода нет",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_043",
+    "text": "Покажи расписание на 2026-03-07",
+    "text_for_tts": "Покажи расписание на седьмое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-07"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_022",
+    "text": "Запланируй планерка на 2026-02-26",
+    "text_for_tts": "Запланируй планерка на двадцать шестое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-26",
+      "description": "планерка"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_014",
+    "text": "Создай событие: вебинар, дата 2026-03-06",
+    "text_for_tts": "Создай событие: вебинар, дата шестое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-06",
+      "description": "вебинар"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_036",
+    "text": "Расскажи о себе",
+    "text_for_tts": "Расскажи о себе",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_058",
+    "text": "Напомни мне про планерка 2026-03-06",
+    "text_for_tts": "Напомни мне про планерка шестое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-06",
+      "description": "планерка"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_010",
+    "text": "Поиск заметки купить",
+    "text_for_tts": "Поиск заметки купить",
+    "tool": "search_notes",
+    "params": {
+      "query": "купить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_088",
+    "text": "Поищи билеты из Калининграда в Москву на 2026-03-01",
+    "text_for_tts": "Поищи билеты из Калининграда в Москву на первое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Калининград",
+      "to_city": "Москва",
+      "date": "2026-03-01"
+    },
+    "metadata": {
+      "template_id": "flight_template_08",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_022",
+    "text": "Самолёты из Самары в Краснодар 2026-02-15",
+    "text_for_tts": "Самолёты из Самары в Краснодар пятнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Самара",
+      "to_city": "Краснодар",
+      "date": "2026-02-15"
+    },
+    "metadata": {
+      "template_id": "flight_template_19",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_004",
+    "text": "Добавь в расписание ревью кода на 2026-02-23",
+    "text_for_tts": "Добавь в расписание ревью кода на двадцать третье февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-23",
+      "description": "ревью кода"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_033",
+    "text": "У меня будет планирование спринта 2026-02-22, запиши пожалуйста",
+    "text_for_tts": "У меня будет планирование спринта двадцать второе февраля, запиши пожалуйста",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-22",
+      "description": "планирование спринта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_094",
+    "text": "Самолёты из Владивостока в Иркутск 2026-02-09",
+    "text_for_tts": "Самолёты из Владивостока в Иркутск девятое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Владивосток",
+      "to_city": "Иркутск",
+      "date": "2026-02-09"
+    },
+    "metadata": {
+      "template_id": "flight_template_19",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_058",
+    "text": "Покажи расписание на 2026-03-06",
+    "text_for_tts": "Покажи расписание на шестое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_003",
+    "text": "Найди рейсы из Казани в Калининград на 2026-02-15",
+    "text_for_tts": "Найди рейсы из Казани в Калининград на пятнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Калининград",
+      "date": "2026-02-15"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_016",
+    "text": "Поищи трек Сплин - Выхода нет",
+    "text_for_tts": "Поищи трек Сплин - Выхода нет",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин - Выхода нет",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_013",
+    "text": "Мне нужна песня Сплин",
+    "text_for_tts": "Мне нужна песня Сплин",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_012",
+    "text": "Когда летит самолет из Калининграда в Екатеринбург 2026-02-20",
+    "text_for_tts": "Когда летит самолет из Калининграда в Екатеринбург двадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Калининград",
+      "to_city": "Екатеринбург",
+      "date": "2026-02-20"
+    },
+    "metadata": {
+      "template_id": "flight_template_03",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_034",
+    "text": "Привет",
+    "text_for_tts": "Привет",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_007",
+    "text": "Спасибо",
+    "text_for_tts": "Спасибо",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_082",
+    "text": "Как добраться из Краснодара в Пермь 2026-03-08",
+    "text_for_tts": "Как добраться из Краснодара в Пермь восьмое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Краснодар",
+      "to_city": "Пермь",
+      "date": "2026-03-08"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_057",
+    "text": "Что у меня 2026-02-24",
+    "text_for_tts": "Что у меня двадцать четвёртое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-24"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_089",
+    "text": "Мне надо срочно в Казань из Красноярска, что есть на 2026-03-04",
+    "text_for_tts": "Мне надо срочно в Казань из Красноярска, что есть на четвёртое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Красноярск",
+      "to_city": "Казань",
+      "date": "2026-03-04"
+    },
+    "metadata": {
+      "template_id": "flight_template_11",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_097",
+    "text": "Мне надо срочно в Хабаровск из Воронежа, что есть на 2026-03-01",
+    "text_for_tts": "Мне надо срочно в Хабаровск из Воронежа, что есть на первое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Воронеж",
+      "to_city": "Хабаровск",
+      "date": "2026-03-01"
+    },
+    "metadata": {
+      "template_id": "flight_template_11",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_031",
+    "text": "Найди мне Сплин",
+    "text_for_tts": "Найди мне Сплин",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_017",
+    "text": "Покажи расписание из Калининграда в Санкт-Петербург 2026-03-05",
+    "text_for_tts": "Покажи расписание из Калининграда в Санкт-Петербург пятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Калининград",
+      "to_city": "Санкт-Петербург",
+      "date": "2026-03-05"
+    },
+    "metadata": {
+      "template_id": "flight_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_051",
+    "text": "У меня будет конференция 2026-02-11, запиши пожалуйста",
+    "text_for_tts": "У меня будет конференция одиннадцатое февраля, запиши пожалуйста",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-11",
+      "description": "конференция"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_048",
+    "text": "Зафиксируй событие совещание на дату 2026-02-18",
+    "text_for_tts": "Зафиксируй событие совещание на дату восемнадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-18",
+      "description": "совещание"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_050",
+    "text": "Напомни мне про вебинар 2026-03-03",
+    "text_for_tts": "Напомни мне про вебинар третье марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-03",
+      "description": "вебинар"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_024",
+    "text": "Поищи трек под названием Земфира",
+    "text_for_tts": "Поищи трек под названием Земфира",
+    "tool": "search_music",
+    "params": {
+      "query": "Земфира",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_010",
+    "text": "Здравствуй",
+    "text_for_tts": "Здравствуй",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_024",
+    "text": "Что у меня по расписанию 2026-02-17",
+    "text_for_tts": "Что у меня по расписанию семнадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-17"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_012",
+    "text": "Найди композицию Король и Шут",
+    "text_for_tts": "Найди композицию Король и Шут",
+    "tool": "search_music",
+    "params": {
+      "query": "Король и Шут",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_018",
+    "text": "Создай событие тренинг на в четверг",
+    "text_for_tts": "Создай событие тренинг на в четверг",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-12",
+      "description": "тренинг"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_029",
+    "text": "Найди песню Аквариум",
+    "text_for_tts": "Найди песню Аквариум",
+    "tool": "search_music",
+    "params": {
+      "query": "Аквариум",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_033",
+    "text": "Посмотри пожалуйста рейсы из Иркутска в Калининград на послезавтра",
+    "text_for_tts": "Посмотри пожалуйста рейсы из Иркутска в Калининград на послезавтра",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Иркутск",
+      "to_city": "Калининград",
+      "date": "2026-02-09"
+    },
+    "metadata": {
+      "template_id": "flight_template_12",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_015",
+    "text": "Что у меня по расписанию 2026-03-07",
+    "text_for_tts": "Что у меня по расписанию седьмое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-07"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_014",
+    "text": "Найди песню Сплин",
+    "text_for_tts": "Найди песню Сплин",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_059",
+    "text": "Что запланировано 2026-02-15",
+    "text_for_tts": "Что запланировано пятнадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-15"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_072",
+    "text": "Как добраться из Екатеринбурга в Пермь в четверг",
+    "text_for_tts": "Как добраться из Екатеринбурга в Пермь в четверг",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Екатеринбург",
+      "to_city": "Пермь",
+      "date": "2026-02-12"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_013",
+    "text": "Посмотри пожалуйста рейсы из Сочи в Самару на 2026-02-19",
+    "text_for_tts": "Посмотри пожалуйста рейсы из Сочи в Самару на девятнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Сочи",
+      "to_city": "Самара",
+      "date": "2026-02-19"
+    },
+    "metadata": {
+      "template_id": "flight_template_12",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_022",
+    "text": "Какие события у меня намечены на 2026-03-03",
+    "text_for_tts": "Какие события у меня намечены на третье марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-03"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_009",
+    "text": "Найди авиабилеты из Нижнего Новгорода в Екатеринбург на дату 2026-03-09",
+    "text_for_tts": "Найди авиабилеты из Нижнего Новгорода в Екатеринбург на дату девятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Нижний Новгород",
+      "to_city": "Екатеринбург",
+      "date": "2026-03-09"
+    },
+    "metadata": {
+      "template_id": "flight_template_15",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_043",
+    "text": "Мне надо срочно в Нижний Новгород из Казани, что есть на 2026-02-15",
+    "text_for_tts": "Мне надо срочно в Нижний Новгород из Казани, что есть на пятнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Нижний Новгород",
+      "date": "2026-02-15"
+    },
+    "metadata": {
+      "template_id": "flight_template_11",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_055",
+    "text": "Что запланировано в среду",
+    "text_for_tts": "Что запланировано в среду",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-11"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_037",
+    "text": "Мне нужно собеседование 2026-02-23, добавь в календарь",
+    "text_for_tts": "Мне нужно собеседование двадцать третье февраля, добавь в календарь",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-23",
+      "description": "собеседование"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_007",
+    "text": "Мне нужно в Екатеринбург из Хабаровска в вторник",
+    "text_for_tts": "Мне нужно в Екатеринбург из Хабаровска в вторник",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Хабаровск",
+      "to_city": "Екатеринбург",
+      "date": "2026-02-10"
+    },
+    "metadata": {
+      "template_id": "flight_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_077",
+    "text": "Хочу полететь из Челябинска в Пермь 2026-03-02",
+    "text_for_tts": "Хочу полететь из Челябинска в Пермь второе марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Челябинск",
+      "to_city": "Пермь",
+      "date": "2026-03-02"
+    },
+    "metadata": {
+      "template_id": "flight_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_046",
+    "text": "Посмотри что у меня в календаре на 2026-02-19",
+    "text_for_tts": "Посмотри что у меня в календаре на девятнадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-19"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_09",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_120",
+    "text": "Мне нужно в Челябинск из Казани 2026-02-21",
+    "text_for_tts": "Мне нужно в Челябинск из Казани двадцать первое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Челябинск",
+      "date": "2026-02-21"
+    },
+    "metadata": {
+      "template_id": "flight_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_100",
+    "text": "Когда можно улететь из Сочи в Воронеж, интересует 2026-02-17",
+    "text_for_tts": "Когда можно улететь из Сочи в Воронеж, интересует семнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Сочи",
+      "to_city": "Воронеж",
+      "date": "2026-02-17"
+    },
+    "metadata": {
+      "template_id": "flight_template_13",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_053",
+    "text": "Поищи билеты из Сочи в Челябинск на 2026-02-23",
+    "text_for_tts": "Поищи билеты из Сочи в Челябинск на двадцать третье февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Сочи",
+      "to_city": "Челябинск",
+      "date": "2026-02-23"
+    },
+    "metadata": {
+      "template_id": "flight_template_08",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_003",
+    "text": "Сохрани: забронировать отель",
+    "text_for_tts": "Сохрани: забронировать отель",
+    "tool": "create_note",
+    "params": {
+      "title": "забронировать",
+      "content": "забронировать отель"
+    },
+    "metadata": {
+      "template_id": "note_create_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_037",
+    "text": "Проверь расписание самолётов Владивосток - Пермь на 2026-03-04",
+    "text_for_tts": "Проверь расписание самолётов Владивосток - Пермь на четвёртое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Владивосток",
+      "to_city": "Пермь",
+      "date": "2026-03-04"
+    },
+    "metadata": {
+      "template_id": "flight_template_14",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_020",
+    "text": "Где заметка про забрать",
+    "text_for_tts": "Где заметка про забрать",
+    "tool": "search_notes",
+    "params": {
+      "query": "забрать"
+    },
+    "metadata": {
+      "template_id": "note_search_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_015",
+    "text": "Создай новую заметку с текстом забрать посылку",
+    "text_for_tts": "Создай новую заметку с текстом забрать посылку",
+    "tool": "create_note",
+    "params": {
+      "title": "забрать",
+      "content": "забрать посылку"
+    },
+    "metadata": {
+      "template_id": "note_create_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_051",
+    "text": "Мне нужна песня Сплин",
+    "text_for_tts": "Мне нужна песня Сплин",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_026",
+    "text": "Найди заметку про оплатить",
+    "text_for_tts": "Найди заметку про оплатить",
+    "tool": "search_notes",
+    "params": {
+      "query": "оплатить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_016",
+    "text": "Поиск заметки забрать",
+    "text_for_tts": "Поиск заметки забрать",
+    "tool": "search_notes",
+    "params": {
+      "query": "забрать"
+    },
+    "metadata": {
+      "template_id": "note_search_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_068",
+    "text": "Есть ли рейсы Краснодар - Казань на 2026-03-08",
+    "text_for_tts": "Есть ли рейсы Краснодар - Казань на восьмое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Краснодар",
+      "to_city": "Казань",
+      "date": "2026-03-08"
+    },
+    "metadata": {
+      "template_id": "flight_template_05",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_002",
+    "text": "Хочу послушать Звери",
+    "text_for_tts": "Хочу послушать Звери",
+    "tool": "search_music",
+    "params": {
+      "query": "Звери",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_018",
+    "text": "Запиши: обновить резюме",
+    "text_for_tts": "Запиши: обновить резюме",
+    "tool": "create_note",
+    "params": {
+      "title": "обновить",
+      "content": "обновить резюме"
+    },
+    "metadata": {
+      "template_id": "note_create_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_003",
+    "text": "Добрый день",
+    "text_for_tts": "Добрый день",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_032",
+    "text": "Найди рейсы из Воронежа в Хабаровск на 2026-02-23",
+    "text_for_tts": "Найди рейсы из Воронежа в Хабаровск на двадцать третье февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Воронеж",
+      "to_city": "Хабаровск",
+      "date": "2026-02-23"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_029",
+    "text": "Проверь мои встречи на 2026-03-06",
+    "text_for_tts": "Проверь мои встречи на шестое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_021",
+    "text": "Что у меня запланировано на 2026-02-13",
+    "text_for_tts": "Что у меня запланировано на тринадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-13"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_059",
+    "text": "Хочу послушать Земфира - Искала",
+    "text_for_tts": "Хочу послушать Земфира - Искала",
+    "tool": "search_music",
+    "params": {
+      "query": "Земфира - Искала",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_037",
+    "text": "Найди поезд из Москвы в Питер",
+    "text_for_tts": "Найди поезд из Москвы в Питер",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Поддерживаются только авиарейсы",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_14",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_013",
+    "text": "Мне нужно ревью кода 2026-02-16, добавь в календарь",
+    "text_for_tts": "Мне нужно ревью кода шестнадцатое февраля, добавь в календарь",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-16",
+      "description": "ревью кода"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_092",
+    "text": "Какие самолёты летают из Санкт-Петербурга в Новосибирск 2026-02-27",
+    "text_for_tts": "Какие самолёты летают из Санкт-Петербурга в Новосибирск двадцать седьмое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Санкт-Петербург",
+      "to_city": "Новосибирск",
+      "date": "2026-02-27"
+    },
+    "metadata": {
+      "template_id": "flight_template_09",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_007",
+    "text": "Какие события у меня намечены на послезавтра",
+    "text_for_tts": "Какие события у меня намечены на послезавтра",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-09"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_108",
+    "text": "Когда летит самолет из Челябинска в Уфу 2026-03-08",
+    "text_for_tts": "Когда летит самолет из Челябинска в Уфу восьмое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Челябинск",
+      "to_city": "Уфа",
+      "date": "2026-03-08"
+    },
+    "metadata": {
+      "template_id": "flight_template_03",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_012",
+    "text": "Создай событие: встреча с инвестором, дата в субботу",
+    "text_for_tts": "Создай событие: встреча с инвестором, дата в субботу",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-14",
+      "description": "встреча с инвестором"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_030",
+    "text": "Какие события у меня намечены на 2026-02-08",
+    "text_for_tts": "Какие события у меня намечены на восьмое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-08"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_023",
+    "text": "Сколько будет 2 + 2?",
+    "text_for_tts": "Сколько будет 2 + 2?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_058",
+    "text": "Покажи расписание из Санкт-Петербурга в Воронеж 2026-02-23",
+    "text_for_tts": "Покажи расписание из Санкт-Петербурга в Воронеж двадцать третье февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Санкт-Петербург",
+      "to_city": "Воронеж",
+      "date": "2026-02-23"
+    },
+    "metadata": {
+      "template_id": "flight_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_008",
+    "text": "Посмотри пожалуйста рейсы из Краснодара в Красноярск на 2026-03-05",
+    "text_for_tts": "Посмотри пожалуйста рейсы из Краснодара в Красноярск на пятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Краснодар",
+      "to_city": "Красноярск",
+      "date": "2026-03-05"
+    },
+    "metadata": {
+      "template_id": "flight_template_12",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_003",
+    "text": "Зафиксируй событие встреча с командой на дату 2026-03-07",
+    "text_for_tts": "Зафиксируй событие встреча с командой на дату седьмое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-07",
+      "description": "встреча с командой"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_036",
+    "text": "Напомни мне про ревью кода 2026-02-18",
+    "text_for_tts": "Напомни мне про ревью кода восемнадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-18",
+      "description": "ревью кода"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_002",
+    "text": "Создай событие: ревью кода, дата 2026-03-08",
+    "text_for_tts": "Создай событие: ревью кода, дата восьмое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-08",
+      "description": "ревью кода"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_022",
+    "text": "Мне нужна песня Земфира - Искала",
+    "text_for_tts": "Мне нужна песня Земфира - Искала",
+    "tool": "search_music",
+    "params": {
+      "query": "Земфира - Искала",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_005",
+    "text": "Привет",
+    "text_for_tts": "Привет",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_016",
+    "text": "Запиши заметку обновить резюме",
+    "text_for_tts": "Запиши заметку обновить резюме",
+    "tool": "create_note",
+    "params": {
+      "title": "обновить",
+      "content": "обновить резюме"
+    },
+    "metadata": {
+      "template_id": "note_create_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_045",
+    "text": "Что запланировано 2026-02-21",
+    "text_for_tts": "Что запланировано двадцать первое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-21"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_054",
+    "text": "Что в календаре на 2026-03-06",
+    "text_for_tts": "Что в календаре на шестое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_099",
+    "text": "Когда можно улететь из Иркутска в Пермь, интересует в четверг",
+    "text_for_tts": "Когда можно улететь из Иркутска в Пермь, интересует в четверг",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Иркутск",
+      "to_city": "Пермь",
+      "date": "2026-02-12"
+    },
+    "metadata": {
+      "template_id": "flight_template_13",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_017",
+    "text": "Какая погода сегодня?",
+    "text_for_tts": "Какая погода сегодня?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_021",
+    "text": "Поставь Король и Шут",
+    "text_for_tts": "Поставь Король и Шут",
+    "tool": "search_music",
+    "params": {
+      "query": "Король и Шут",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_044",
+    "text": "Поищи трек под названием Ария",
+    "text_for_tts": "Поищи трек под названием Ария",
+    "tool": "search_music",
+    "params": {
+      "query": "Ария",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_033",
+    "text": "Расскажи анекдот",
+    "text_for_tts": "Расскажи анекдот",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_095",
+    "text": "Найди рейсы из Ростова-на-Дону в Пермь на 2026-03-01",
+    "text_for_tts": "Найди рейсы из Ростова-на-Дону в Пермь на первое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Ростов-на-Дону",
+      "to_city": "Пермь",
+      "date": "2026-03-01"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_041",
+    "text": "Здравствуй",
+    "text_for_tts": "Здравствуй",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_010",
+    "text": "Рейсы из Иркутска в Самару 2026-02-26",
+    "text_for_tts": "Рейсы из Иркутска в Самару двадцать шестое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Иркутск",
+      "to_city": "Самара",
+      "date": "2026-02-26"
+    },
+    "metadata": {
+      "template_id": "flight_template_18",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_014",
+    "text": "Мне нужно запомнить: сделать презентацию",
+    "text_for_tts": "Мне нужно запомнить: сделать презентацию",
+    "tool": "create_note",
+    "params": {
+      "title": "сделать",
+      "content": "сделать презентацию"
+    },
+    "metadata": {
+      "template_id": "note_create_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_004",
+    "text": "Что в календаре на 2026-03-04",
+    "text_for_tts": "Что в календаре на четвёртое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-04"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_017",
+    "text": "Покажи заметки про проверить",
+    "text_for_tts": "Покажи заметки про проверить",
+    "tool": "search_notes",
+    "params": {
+      "query": "проверить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_049",
+    "text": "Какие встречи у меня 2026-03-09",
+    "text_for_tts": "Какие встречи у меня девятое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-09"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_010",
+    "text": "Создай событие: встреча с командой, дата в вторник",
+    "text_for_tts": "Создай событие: встреча с командой, дата в вторник",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-10",
+      "description": "встреча с командой"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_050",
+    "text": "Что у меня по расписанию 2026-02-23",
+    "text_for_tts": "Что у меня по расписанию двадцать третье февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-23"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_003",
+    "text": "Покажи заметку записаться",
+    "text_for_tts": "Покажи заметку записаться",
+    "tool": "search_notes",
+    "params": {
+      "query": "записаться"
+    },
+    "metadata": {
+      "template_id": "note_search_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_071",
+    "text": "Рейсы из Иркутска в Екатеринбург 2026-03-08",
+    "text_for_tts": "Рейсы из Иркутска в Екатеринбург восьмое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Иркутск",
+      "to_city": "Екатеринбург",
+      "date": "2026-03-08"
+    },
+    "metadata": {
+      "template_id": "flight_template_18",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_015",
+    "text": "Поищи трек Сплин - Выхода нет",
+    "text_for_tts": "Поищи трек Сплин - Выхода нет",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин - Выхода нет",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_114",
+    "text": "Что есть из Ростова-на-Дону в Уфу на 2026-03-06",
+    "text_for_tts": "Что есть из Ростова-на-Дону в Уфу на шестое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Ростов-на-Дону",
+      "to_city": "Уфа",
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "flight_template_20",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_001",
+    "text": "Напомни мне про стендап послезавтра",
+    "text_for_tts": "Напомни мне про стендап послезавтра",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-09",
+      "description": "стендап"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_018",
+    "text": "Какие самолёты летают из Казани в Калининград 2026-03-09",
+    "text_for_tts": "Какие самолёты летают из Казани в Калининград девятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Калининград",
+      "date": "2026-03-09"
+    },
+    "metadata": {
+      "template_id": "flight_template_09",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_026",
+    "text": "Сделай заметку обновить резюме",
+    "text_for_tts": "Сделай заметку обновить резюме",
+    "tool": "create_note",
+    "params": {
+      "title": "обновить",
+      "content": "обновить резюме"
+    },
+    "metadata": {
+      "template_id": "note_create_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_039",
+    "text": "Найди авиабилеты из Ростова-на-Дону в Челябинск на дату в среду",
+    "text_for_tts": "Найди авиабилеты из Ростова-на-Дону в Челябинск на дату в среду",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Ростов-на-Дону",
+      "to_city": "Челябинск",
+      "date": "2026-02-11"
+    },
+    "metadata": {
+      "template_id": "flight_template_15",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_013",
+    "text": "Создай заметку: проверить почту",
+    "text_for_tts": "Создай заметку: проверить почту",
+    "tool": "create_note",
+    "params": {
+      "title": "проверить",
+      "content": "проверить почту"
+    },
+    "metadata": {
+      "template_id": "note_create_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_083",
+    "text": "Что есть из Новосибирска в Красноярск на 2026-03-07",
+    "text_for_tts": "Что есть из Новосибирска в Красноярск на седьмое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Новосибирск",
+      "to_city": "Красноярск",
+      "date": "2026-03-07"
+    },
+    "metadata": {
+      "template_id": "flight_template_20",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_042",
+    "text": "Зафиксируй событие планирование спринта на дату 2026-02-22",
+    "text_for_tts": "Зафиксируй событие планирование спринта на дату двадцать второе февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-22",
+      "description": "планирование спринта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_022",
+    "text": "Заметка: позвонить маме",
+    "text_for_tts": "Заметка: позвонить маме",
+    "tool": "create_note",
+    "params": {
+      "title": "позвонить",
+      "content": "позвонить маме"
+    },
+    "metadata": {
+      "template_id": "note_create_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_029",
+    "text": "Добавь встречу стендап на 2026-03-06",
+    "text_for_tts": "Добавь встречу стендап на шестое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-06",
+      "description": "стендап"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_025",
+    "text": "Поставь в календарь тренинг, это будет в среду",
+    "text_for_tts": "Поставь в календарь тренинг, это будет в среду",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-11",
+      "description": "тренинг"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_119",
+    "text": "Есть ли рейсы Новосибирск - Красноярск на 2026-02-20",
+    "text_for_tts": "Есть ли рейсы Новосибирск - Красноярск на двадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Новосибирск",
+      "to_city": "Красноярск",
+      "date": "2026-02-20"
+    },
+    "metadata": {
+      "template_id": "flight_template_05",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_007",
+    "text": "Создай событие: планирование спринта, дата завтра",
+    "text_for_tts": "Создай событие: планирование спринта, дата завтра",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-08",
+      "description": "планирование спринта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_002",
+    "text": "Привет",
+    "text_for_tts": "Привет",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_046",
+    "text": "Проверь расписание самолётов Владивосток - Екатеринбург на в среду",
+    "text_for_tts": "Проверь расписание самолётов Владивосток - Екатеринбург на в среду",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Владивосток",
+      "to_city": "Екатеринбург",
+      "date": "2026-02-11"
+    },
+    "metadata": {
+      "template_id": "flight_template_14",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_006",
+    "text": "Какие события у меня намечены на 2026-02-21",
+    "text_for_tts": "Какие события у меня намечены на двадцать первое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-21"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_040",
+    "text": "Когда летит самолет из Хабаровска в Москву 2026-02-26",
+    "text_for_tts": "Когда летит самолет из Хабаровска в Москву двадцать шестое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Хабаровск",
+      "to_city": "Москва",
+      "date": "2026-02-26"
+    },
+    "metadata": {
+      "template_id": "flight_template_03",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_035",
+    "text": "Запиши в календарь вебинар 2026-03-08",
+    "text_for_tts": "Запиши в календарь вебинар восьмое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-08",
+      "description": "вебинар"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_001",
+    "text": "Поищи трек под названием Сплин",
+    "text_for_tts": "Поищи трек под названием Сплин",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_021",
+    "text": "Какая погода сегодня?",
+    "text_for_tts": "Какая погода сегодня?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_034",
+    "text": "Поищи трек под названием Король и Шут",
+    "text_for_tts": "Поищи трек под названием Король и Шут",
+    "tool": "search_music",
+    "params": {
+      "query": "Король и Шут",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_056",
+    "text": "Добавь в расписание конференция на 2026-02-23",
+    "text_for_tts": "Добавь в расписание конференция на двадцать третье февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-23",
+      "description": "конференция"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_042",
+    "text": "Найди мне Земфира - Искала",
+    "text_for_tts": "Найди мне Земфира - Искала",
+    "tool": "search_music",
+    "params": {
+      "query": "Земфира - Искала",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_061",
+    "text": "Когда можно улететь из Екатеринбурга в Воронеж, интересует 2026-02-15",
+    "text_for_tts": "Когда можно улететь из Екатеринбурга в Воронеж, интересует пятнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Екатеринбург",
+      "to_city": "Воронеж",
+      "date": "2026-02-15"
+    },
+    "metadata": {
+      "template_id": "flight_template_13",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_043",
+    "text": "Спасибо",
+    "text_for_tts": "Спасибо",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_046",
+    "text": "У меня будет встреча с инвестором 2026-02-19, запиши пожалуйста",
+    "text_for_tts": "У меня будет встреча с инвестором девятнадцатое февраля, запиши пожалуйста",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-19",
+      "description": "встреча с инвестором"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_059",
+    "text": "Напомни мне про звонок с клиентом 2026-02-26",
+    "text_for_tts": "Напомни мне про звонок с клиентом двадцать шестое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-26",
+      "description": "звонок с клиентом"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_090",
+    "text": "Когда летят из Самары в Пермь 2026-02-18",
+    "text_for_tts": "Когда летят из Самары в Пермь восемнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Самара",
+      "to_city": "Пермь",
+      "date": "2026-02-18"
+    },
+    "metadata": {
+      "template_id": "flight_template_17",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_018",
+    "text": "Где заметка про позвонить",
+    "text_for_tts": "Где заметка про позвонить",
+    "tool": "search_notes",
+    "params": {
+      "query": "позвонить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_005",
+    "text": "Что запланировано 2026-03-09",
+    "text_for_tts": "Что запланировано девятое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-09"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_016",
+    "text": "Запиши в календарь презентация проекта 2026-03-04",
+    "text_for_tts": "Запиши в календарь презентация проекта четвёртое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-04",
+      "description": "презентация проекта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_018",
+    "text": "Сколько будет 2 + 2?",
+    "text_for_tts": "Сколько будет 2 + 2?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_043",
+    "text": "Запиши в календарь конференция 2026-02-15",
+    "text_for_tts": "Запиши в календарь конференция пятнадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-15",
+      "description": "конференция"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_028",
+    "text": "Где заметка про проверить",
+    "text_for_tts": "Где заметка про проверить",
+    "tool": "search_notes",
+    "params": {
+      "query": "проверить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_033",
+    "text": "Включи Би-2",
+    "text_for_tts": "Включи Би-2",
+    "tool": "search_music",
+    "params": {
+      "query": "Би-2",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_051",
+    "text": "Проверь мои встречи на 2026-02-27",
+    "text_for_tts": "Проверь мои встречи на двадцать седьмое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-27"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_086",
+    "text": "Как добраться из Самары в Санкт-Петербург 2026-03-07",
+    "text_for_tts": "Как добраться из Самары в Санкт-Петербург седьмое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Самара",
+      "to_city": "Санкт-Петербург",
+      "date": "2026-03-07"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_025",
+    "text": "Мне нужна песня Алиса",
+    "text_for_tts": "Мне нужна песня Алиса",
+    "tool": "search_music",
+    "params": {
+      "query": "Алиса",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_087",
+    "text": "Мне нужно в Краснодар из Челябинска 2026-02-17",
+    "text_for_tts": "Мне нужно в Краснодар из Челябинска семнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Челябинск",
+      "to_city": "Краснодар",
+      "date": "2026-02-17"
+    },
+    "metadata": {
+      "template_id": "flight_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_032",
+    "text": "Расскажи о себе",
+    "text_for_tts": "Расскажи о себе",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_044",
+    "text": "Покажи рейсы в Париж",
+    "text_for_tts": "Покажи рейсы в Париж",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Поддерживаются только рейсы по России",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_15",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_021",
+    "text": "Рейсы из Нижнего Новгорода в Красноярск 2026-03-03",
+    "text_for_tts": "Рейсы из Нижнего Новгорода в Красноярск третье марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Нижний Новгород",
+      "to_city": "Красноярск",
+      "date": "2026-03-03"
+    },
+    "metadata": {
+      "template_id": "flight_template_18",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_015",
+    "text": "Добавь встречу презентация проекта на 2026-02-19",
+    "text_for_tts": "Добавь встречу презентация проекта на девятнадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-19",
+      "description": "презентация проекта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_103",
+    "text": "Мне нужно в Омск из Ростова-на-Дону 2026-03-05",
+    "text_for_tts": "Мне нужно в Омск из Ростова-на-Дону пятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Ростов-на-Дону",
+      "to_city": "Омск",
+      "date": "2026-03-05"
+    },
+    "metadata": {
+      "template_id": "flight_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_026",
+    "text": "Пока",
+    "text_for_tts": "Пока",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_13",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_020",
+    "text": "Что у меня 2026-03-06",
+    "text_for_tts": "Что у меня шестое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_009",
+    "text": "Поиск заметки забронировать",
+    "text_for_tts": "Поиск заметки забронировать",
+    "tool": "search_notes",
+    "params": {
+      "query": "забронировать"
+    },
+    "metadata": {
+      "template_id": "note_search_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_028",
+    "text": "Мне надо срочно в Хабаровск из Екатеринбурга, что есть на 2026-02-21",
+    "text_for_tts": "Мне надо срочно в Хабаровск из Екатеринбурга, что есть на двадцать первое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Екатеринбург",
+      "to_city": "Хабаровск",
+      "date": "2026-02-21"
+    },
+    "metadata": {
+      "template_id": "flight_template_11",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_044",
+    "text": "Что у меня запланировано на 2026-03-01",
+    "text_for_tts": "Что у меня запланировано на первое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-01"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_023",
+    "text": "Есть ли рейсы Ростов-на-Дону - Омск на 2026-02-10",
+    "text_for_tts": "Есть ли рейсы Ростов-на-Дону - Омск на десятое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Ростов-на-Дону",
+      "to_city": "Омск",
+      "date": "2026-02-10"
+    },
+    "metadata": {
+      "template_id": "flight_template_05",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_001",
+    "text": "Помоги мне",
+    "text_for_tts": "Помоги мне",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_027",
+    "text": "Поищи трек ДДТ",
+    "text_for_tts": "Поищи трек ДДТ",
+    "tool": "search_music",
+    "params": {
+      "query": "ДДТ",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_019",
+    "text": "Где заметка про проверить",
+    "text_for_tts": "Где заметка про проверить",
+    "tool": "search_notes",
+    "params": {
+      "query": "проверить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_005",
+    "text": "Сохрани: купить молоко",
+    "text_for_tts": "Сохрани: купить молоко",
+    "tool": "create_note",
+    "params": {
+      "title": "купить",
+      "content": "купить молоко"
+    },
+    "metadata": {
+      "template_id": "note_create_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_058",
+    "text": "Найди в Яндекс Музыке Агата Кристи",
+    "text_for_tts": "Найди в Яндекс Музыке Агата Кристи",
+    "tool": "search_music",
+    "params": {
+      "query": "Агата Кристи",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_016",
+    "text": "Помоги мне",
+    "text_for_tts": "Помоги мне",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_023",
+    "text": "Запиши заметку забрать посылку",
+    "text_for_tts": "Запиши заметку забрать посылку",
+    "tool": "create_note",
+    "params": {
+      "title": "забрать",
+      "content": "забрать посылку"
+    },
+    "metadata": {
+      "template_id": "note_create_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_006",
+    "text": "Найди рейсы из Сочи в Челябинск на 2026-02-18",
+    "text_for_tts": "Найди рейсы из Сочи в Челябинск на восемнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Сочи",
+      "to_city": "Челябинск",
+      "date": "2026-02-18"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_036",
+    "text": "Покажи события на 2026-02-23",
+    "text_for_tts": "Покажи события на двадцать третье февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-23"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_030",
+    "text": "Как добраться из Иркутска в Нижний Новгород 2026-02-27",
+    "text_for_tts": "Как добраться из Иркутска в Нижний Новгород двадцать седьмое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Иркутск",
+      "to_city": "Нижний Новгород",
+      "date": "2026-02-27"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_008",
+    "text": "Поиск песни Аквариум",
+    "text_for_tts": "Поиск песни Аквариум",
+    "tool": "search_music",
+    "params": {
+      "query": "Аквариум",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_107",
+    "text": "Найди рейсы из Санкт-Петербурга в Красноярск на 2026-02-23",
+    "text_for_tts": "Найди рейсы из Санкт-Петербурга в Красноярск на двадцать третье февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Санкт-Петербург",
+      "to_city": "Красноярск",
+      "date": "2026-02-23"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_044",
+    "text": "Поставь напоминание конференция 2026-03-01",
+    "text_for_tts": "Поставь напоминание конференция первое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-01",
+      "description": "конференция"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_007",
+    "text": "Где заметка про сделать",
+    "text_for_tts": "Где заметка про сделать",
+    "tool": "search_notes",
+    "params": {
+      "query": "сделать"
+    },
+    "metadata": {
+      "template_id": "note_search_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_104",
+    "text": "Хочу полететь из Казани в Хабаровск 2026-02-24",
+    "text_for_tts": "Хочу полететь из Казани в Хабаровск двадцать четвёртое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Хабаровск",
+      "date": "2026-02-24"
+    },
+    "metadata": {
+      "template_id": "flight_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_027",
+    "text": "Добавь встречу демо продукта на 2026-02-25",
+    "text_for_tts": "Добавь встречу демо продукта на двадцать пятое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-25",
+      "description": "демо продукта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_110",
+    "text": "Найди рейсы из Екатеринбурга в Челябинск на 2026-02-15",
+    "text_for_tts": "Найди рейсы из Екатеринбурга в Челябинск на пятнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Екатеринбург",
+      "to_city": "Челябинск",
+      "date": "2026-02-15"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_004",
+    "text": "Найди заметку про написать",
+    "text_for_tts": "Найди заметку про написать",
+    "tool": "search_notes",
+    "params": {
+      "query": "написать"
+    },
+    "metadata": {
+      "template_id": "note_search_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_040",
+    "text": "Мне нужна песня Звери",
+    "text_for_tts": "Мне нужна песня Звери",
+    "tool": "search_music",
+    "params": {
+      "query": "Звери",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_020",
+    "text": "Найди авиабилеты из Новосибирска в Иркутск на дату в четверг",
+    "text_for_tts": "Найди авиабилеты из Новосибирска в Иркутск на дату в четверг",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Новосибирск",
+      "to_city": "Иркутск",
+      "date": "2026-02-12"
+    },
+    "metadata": {
+      "template_id": "flight_template_15",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_118",
+    "text": "Какие самолёты летают из Хабаровска в Краснодар 2026-03-08",
+    "text_for_tts": "Какие самолёты летают из Хабаровска в Краснодар восьмое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Хабаровск",
+      "to_city": "Краснодар",
+      "date": "2026-03-08"
+    },
+    "metadata": {
+      "template_id": "flight_template_09",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_005",
+    "text": "Рейсы из Уфы в Калининград 2026-02-22",
+    "text_for_tts": "Рейсы из Уфы в Калининград двадцать второе февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Уфа",
+      "to_city": "Калининград",
+      "date": "2026-02-22"
+    },
+    "metadata": {
+      "template_id": "flight_template_18",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_112",
+    "text": "Как добраться из Челябинска в Новосибирск 2026-03-05",
+    "text_for_tts": "Как добраться из Челябинска в Новосибирск пятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Челябинск",
+      "to_city": "Новосибирск",
+      "date": "2026-03-05"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_011",
+    "text": "Когда летит самолет из Санкт-Петербурга в Красноярск 2026-03-04",
+    "text_for_tts": "Когда летит самолет из Санкт-Петербурга в Красноярск четвёртое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Санкт-Петербург",
+      "to_city": "Красноярск",
+      "date": "2026-03-04"
+    },
+    "metadata": {
+      "template_id": "flight_template_03",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_011",
+    "text": "Сделай заметку позвонить маме",
+    "text_for_tts": "Сделай заметку позвонить маме",
+    "tool": "create_note",
+    "params": {
+      "title": "позвонить",
+      "content": "позвонить маме"
+    },
+    "metadata": {
+      "template_id": "note_create_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_026",
+    "text": "Найди композицию Земфира",
+    "text_for_tts": "Найди композицию Земфира",
+    "tool": "search_music",
+    "params": {
+      "query": "Земфира",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_102",
+    "text": "Самолёты из Воронежа в Хабаровск 2026-02-22",
+    "text_for_tts": "Самолёты из Воронежа в Хабаровск двадцать второе февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Воронеж",
+      "to_city": "Хабаровск",
+      "date": "2026-02-22"
+    },
+    "metadata": {
+      "template_id": "flight_template_19",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_019",
+    "text": "Мне надо срочно в Ростов-на-Дону из Владивостока, что есть на 2026-02-20",
+    "text_for_tts": "Мне надо срочно в Ростов-на-Дону из Владивостока, что есть на двадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Владивосток",
+      "to_city": "Ростов-на-Дону",
+      "date": "2026-02-20"
+    },
+    "metadata": {
+      "template_id": "flight_template_11",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_091",
+    "text": "Как добраться из Красноярска в Сочи 2026-02-26",
+    "text_for_tts": "Как добраться из Красноярска в Сочи двадцать шестое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Красноярск",
+      "to_city": "Сочи",
+      "date": "2026-02-26"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_027",
+    "text": "Покажи расписание на 2026-03-03",
+    "text_for_tts": "Покажи расписание на третье марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-03"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_052",
+    "text": "Запланируй тренинг на 2026-02-19",
+    "text_for_tts": "Запланируй тренинг на девятнадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-19",
+      "description": "тренинг"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_034",
+    "text": "Что у меня 2026-02-13",
+    "text_for_tts": "Что у меня тринадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-13"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_024",
+    "text": "Поставь напоминание звонок с клиентом 2026-02-26",
+    "text_for_tts": "Поставь напоминание звонок с клиентом двадцать шестое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-26",
+      "description": "звонок с клиентом"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_009",
+    "text": "Напомни мне про обед с партнерами 2026-02-27",
+    "text_for_tts": "Напомни мне про обед с партнерами двадцать седьмое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-27",
+      "description": "обед с партнерами"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_028",
+    "text": "Включи Алиса",
+    "text_for_tts": "Включи Алиса",
+    "tool": "search_music",
+    "params": {
+      "query": "Алиса",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_001",
+    "text": "Покажи заметки про подготовить",
+    "text_for_tts": "Покажи заметки про подготовить",
+    "tool": "search_notes",
+    "params": {
+      "query": "подготовить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_009",
+    "text": "Запиши: проверить почту",
+    "text_for_tts": "Запиши: проверить почту",
+    "tool": "create_note",
+    "params": {
+      "title": "проверить",
+      "content": "проверить почту"
+    },
+    "metadata": {
+      "template_id": "note_create_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_098",
+    "text": "Покажи авиарейсы Ростов-на-Дону - Иркутск 2026-03-01",
+    "text_for_tts": "Покажи авиарейсы Ростов-на-Дону - Иркутск первое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Ростов-на-Дону",
+      "to_city": "Иркутск",
+      "date": "2026-03-01"
+    },
+    "metadata": {
+      "template_id": "flight_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_038",
+    "text": "Кто ты?",
+    "text_for_tts": "Кто ты?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_045",
+    "text": "Самолёты из Перми в Омск 2026-02-15",
+    "text_for_tts": "Самолёты из Перми в Омск пятнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Пермь",
+      "to_city": "Омск",
+      "date": "2026-02-15"
+    },
+    "metadata": {
+      "template_id": "flight_template_19",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_030",
+    "text": "Хочу послушать Ария",
+    "text_for_tts": "Хочу послушать Ария",
+    "tool": "search_music",
+    "params": {
+      "query": "Ария",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_027",
+    "text": "Найди заметку про сделать",
+    "text_for_tts": "Найди заметку про сделать",
+    "tool": "search_notes",
+    "params": {
+      "query": "сделать"
+    },
+    "metadata": {
+      "template_id": "note_search_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_008",
+    "text": "Поставь в календарь ревью кода, это будет 2026-03-03",
+    "text_for_tts": "Поставь в календарь ревью кода, это будет третье марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-03",
+      "description": "ревью кода"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_002",
+    "text": "Как добраться из Нижнего Новгорода в Казань 2026-02-26",
+    "text_for_tts": "Как добраться из Нижнего Новгорода в Казань двадцать шестое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Нижний Новгород",
+      "to_city": "Казань",
+      "date": "2026-02-26"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_014",
+    "text": "Где заметка про обновить",
+    "text_for_tts": "Где заметка про обновить",
+    "tool": "search_notes",
+    "params": {
+      "query": "обновить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_084",
+    "text": "Хочу полететь из Уфы в Москву 2026-02-13",
+    "text_for_tts": "Хочу полететь из Уфы в Москву тринадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Уфа",
+      "to_city": "Москва",
+      "date": "2026-02-13"
+    },
+    "metadata": {
+      "template_id": "flight_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_075",
+    "text": "Покажи расписание из Казани в Челябинск 2026-03-06",
+    "text_for_tts": "Покажи расписание из Казани в Челябинск шестое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Челябинск",
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "flight_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_066",
+    "text": "Когда летит самолет из Москвы в Омск 2026-02-27",
+    "text_for_tts": "Когда летит самолет из Москвы в Омск двадцать седьмое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Москва",
+      "to_city": "Омск",
+      "date": "2026-02-27"
+    },
+    "metadata": {
+      "template_id": "flight_template_03",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_029",
+    "text": "Расскажи анекдот",
+    "text_for_tts": "Расскажи анекдот",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_057",
+    "text": "Найди музыку Сплин",
+    "text_for_tts": "Найди музыку Сплин",
+    "tool": "search_music",
+    "params": {
+      "query": "Сплин",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_017",
+    "text": "Проверь мои встречи на 2026-02-26",
+    "text_for_tts": "Проверь мои встречи на двадцать шестое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-26"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_055",
+    "text": "Когда можно улететь из Красноярска в Омск, интересует 2026-02-17",
+    "text_for_tts": "Когда можно улететь из Красноярска в Омск, интересует семнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Красноярск",
+      "to_city": "Омск",
+      "date": "2026-02-17"
+    },
+    "metadata": {
+      "template_id": "flight_template_13",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_025",
+    "text": "Поищи заметку обновить",
+    "text_for_tts": "Поищи заметку обновить",
+    "tool": "search_notes",
+    "params": {
+      "query": "обновить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_078",
+    "text": "Найди рейсы из Екатеринбурга в Казань на 2026-03-08",
+    "text_for_tts": "Найди рейсы из Екатеринбурга в Казань на восьмое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Екатеринбург",
+      "to_city": "Казань",
+      "date": "2026-03-08"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_105",
+    "text": "Что есть из Хабаровска в Казань на 2026-03-06",
+    "text_for_tts": "Что есть из Хабаровска в Казань на шестое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Хабаровск",
+      "to_city": "Казань",
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "flight_template_20",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_002",
+    "text": "Сохрани заметку: забрать посылку",
+    "text_for_tts": "Сохрани заметку: забрать посылку",
+    "tool": "create_note",
+    "params": {
+      "title": "забрать",
+      "content": "забрать посылку"
+    },
+    "metadata": {
+      "template_id": "note_create_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_029",
+    "text": "Найди рейсы из Красноярска в Нижний Новгород на 2026-03-04",
+    "text_for_tts": "Найди рейсы из Красноярска в Нижний Новгород на четвёртое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Красноярск",
+      "to_city": "Нижний Новгород",
+      "date": "2026-03-04"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_023",
+    "text": "Что у меня 2026-02-22",
+    "text_for_tts": "Что у меня двадцать второе февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-22"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_113",
+    "text": "Когда летят из Нижнего Новгорода в Хабаровск 2026-03-04",
+    "text_for_tts": "Когда летят из Нижнего Новгорода в Хабаровск четвёртое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Нижний Новгород",
+      "to_city": "Хабаровск",
+      "date": "2026-03-04"
+    },
+    "metadata": {
+      "template_id": "flight_template_17",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_024",
+    "text": "Как добраться из Новосибирска в Владивосток 2026-03-05",
+    "text_for_tts": "Как добраться из Новосибирска в Владивосток пятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Новосибирск",
+      "to_city": "Владивосток",
+      "date": "2026-03-05"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_038",
+    "text": "Запланируй встреча с инвестором на 2026-02-16",
+    "text_for_tts": "Запланируй встреча с инвестором на шестнадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-16",
+      "description": "встреча с инвестором"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_010",
+    "text": "Найди музыку Звери",
+    "text_for_tts": "Найди музыку Звери",
+    "tool": "search_music",
+    "params": {
+      "query": "Звери",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_026",
+    "text": "Запланируй планерка на 2026-03-05",
+    "text_for_tts": "Запланируй планерка на пятое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-05",
+      "description": "планерка"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_057",
+    "text": "Покажи расписание из Перми в Нижний Новгород 2026-02-09",
+    "text_for_tts": "Покажи расписание из Перми в Нижний Новгород девятое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Пермь",
+      "to_city": "Нижний Новгород",
+      "date": "2026-02-09"
+    },
+    "metadata": {
+      "template_id": "flight_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_013",
+    "text": "Расскажи о себе",
+    "text_for_tts": "Расскажи о себе",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_057",
+    "text": "Мне нужно собеседование послезавтра, добавь в календарь",
+    "text_for_tts": "Мне нужно собеседование послезавтра, добавь в календарь",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-09",
+      "description": "собеседование"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_017",
+    "text": "Заметка: написать статью",
+    "text_for_tts": "Заметка: написать статью",
+    "tool": "create_note",
+    "params": {
+      "title": "написать",
+      "content": "написать статью"
+    },
+    "metadata": {
+      "template_id": "note_create_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_023",
+    "text": "Найди в Яндекс Музыке Кино - Группа крови",
+    "text_for_tts": "Найди в Яндекс Музыке Кино - Группа крови",
+    "tool": "search_music",
+    "params": {
+      "query": "Кино - Группа крови",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_052",
+    "text": "Мне нужна песня Кино - Группа крови",
+    "text_for_tts": "Мне нужна песня Кино - Группа крови",
+    "tool": "search_music",
+    "params": {
+      "query": "Кино - Группа крови",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_037",
+    "text": "Хочу послушать Виктор Цой",
+    "text_for_tts": "Хочу послушать Виктор Цой",
+    "tool": "search_music",
+    "params": {
+      "query": "Виктор Цой",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_006",
+    "text": "Добрый день",
+    "text_for_tts": "Добрый день",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_036",
+    "text": "Поиск песни Агата Кристи",
+    "text_for_tts": "Поиск песни Агата Кристи",
+    "tool": "search_music",
+    "params": {
+      "query": "Агата Кристи",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_009",
+    "text": "Найди композицию Nautilus Pompilius",
+    "text_for_tts": "Найди композицию Nautilus Pompilius",
+    "tool": "search_music",
+    "params": {
+      "query": "Nautilus Pompilius",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_038",
+    "text": "Какие встречи у меня 2026-02-18",
+    "text_for_tts": "Какие встречи у меня восемнадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-18"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_047",
+    "text": "Что запланировано 2026-02-28",
+    "text_for_tts": "Что запланировано двадцать восьмое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-28"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_028",
+    "text": "Найди поезд из Москвы в Питер",
+    "text_for_tts": "Найди поезд из Москвы в Питер",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Поддерживаются только авиарейсы",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_14",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_042",
+    "text": "Расскажи о себе",
+    "text_for_tts": "Расскажи о себе",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_026",
+    "text": "Найди авиабилеты из Ростова-на-Дону в Красноярск на дату 2026-02-25",
+    "text_for_tts": "Найди авиабилеты из Ростова-на-Дону в Красноярск на дату двадцать пятое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Ростов-на-Дону",
+      "to_city": "Красноярск",
+      "date": "2026-02-25"
+    },
+    "metadata": {
+      "template_id": "flight_template_15",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_047",
+    "text": "Найди песню Кино - Группа крови",
+    "text_for_tts": "Найди песню Кино - Группа крови",
+    "tool": "search_music",
+    "params": {
+      "query": "Кино - Группа крови",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_024",
+    "text": "Мне нужно запомнить: оплатить счета",
+    "text_for_tts": "Мне нужно запомнить: оплатить счета",
+    "tool": "create_note",
+    "params": {
+      "title": "оплатить",
+      "content": "оплатить счета"
+    },
+    "metadata": {
+      "template_id": "note_create_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_005",
+    "text": "Поиск заметки забрать",
+    "text_for_tts": "Поиск заметки забрать",
+    "tool": "search_notes",
+    "params": {
+      "query": "забрать"
+    },
+    "metadata": {
+      "template_id": "note_search_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_021",
+    "text": "Поиск заметки оплатить",
+    "text_for_tts": "Поиск заметки оплатить",
+    "tool": "search_notes",
+    "params": {
+      "query": "оплатить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_030",
+    "text": "Какая погода сегодня?",
+    "text_for_tts": "Какая погода сегодня?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_002",
+    "text": "Поищи заметку купить",
+    "text_for_tts": "Поищи заметку купить",
+    "tool": "search_notes",
+    "params": {
+      "query": "купить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_010",
+    "text": "Проверь мои встречи на в вторник",
+    "text_for_tts": "Проверь мои встречи на в вторник",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-10"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_081",
+    "text": "Посмотри пожалуйста рейсы из Санкт-Петербурга в Самару на в субботу",
+    "text_for_tts": "Посмотри пожалуйста рейсы из Санкт-Петербурга в Самару на в субботу",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Санкт-Петербург",
+      "to_city": "Самара",
+      "date": "2026-02-14"
+    },
+    "metadata": {
+      "template_id": "flight_template_12",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_055",
+    "text": "Поставь в календарь планирование спринта, это будет 2026-02-11",
+    "text_for_tts": "Поставь в календарь планирование спринта, это будет одиннадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-11",
+      "description": "планирование спринта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_008",
+    "text": "Кто ты?",
+    "text_for_tts": "Кто ты?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_035",
+    "text": "Покажи расписание на 2026-02-28",
+    "text_for_tts": "Покажи расписание на двадцать восьмое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-28"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_013",
+    "text": "Какие события у меня намечены на 2026-02-23",
+    "text_for_tts": "Какие события у меня намечены на двадцать третье февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-23"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_015",
+    "text": "Пока",
+    "text_for_tts": "Пока",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_13",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_027",
+    "text": "Покажи рейсы в Париж",
+    "text_for_tts": "Покажи рейсы в Париж",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Поддерживаются только рейсы по России",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_15",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_022",
+    "text": "Найди заметку про записаться",
+    "text_for_tts": "Найди заметку про записаться",
+    "tool": "search_notes",
+    "params": {
+      "query": "записаться"
+    },
+    "metadata": {
+      "template_id": "note_search_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_016",
+    "text": "Рейсы из Калининграда в Краснодар 2026-03-06",
+    "text_for_tts": "Рейсы из Калининграда в Краснодар шестое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Калининград",
+      "to_city": "Краснодар",
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "flight_template_18",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_073",
+    "text": "Что есть из Владивостока в Краснодар на в субботу",
+    "text_for_tts": "Что есть из Владивостока в Краснодар на в субботу",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Владивосток",
+      "to_city": "Краснодар",
+      "date": "2026-02-14"
+    },
+    "metadata": {
+      "template_id": "flight_template_20",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_036",
+    "text": "Рейсы из Сочи в Иркутск 2026-02-24",
+    "text_for_tts": "Рейсы из Сочи в Иркутск двадцать четвёртое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Сочи",
+      "to_city": "Иркутск",
+      "date": "2026-02-24"
+    },
+    "metadata": {
+      "template_id": "flight_template_18",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_026",
+    "text": "Что запланировано в вторник",
+    "text_for_tts": "Что запланировано в вторник",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-10"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_050",
+    "text": "Найди музыку Мумий Тролль",
+    "text_for_tts": "Найди музыку Мумий Тролль",
+    "tool": "search_music",
+    "params": {
+      "query": "Мумий Тролль",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_074",
+    "text": "Какие самолёты летают из Ростова-на-Дону в Омск 2026-02-16",
+    "text_for_tts": "Какие самолёты летают из Ростова-на-Дону в Омск шестнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Ростов-на-Дону",
+      "to_city": "Омск",
+      "date": "2026-02-16"
+    },
+    "metadata": {
+      "template_id": "flight_template_09",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_007",
+    "text": "Запиши заметку купить подарок",
+    "text_for_tts": "Запиши заметку купить подарок",
+    "tool": "create_note",
+    "params": {
+      "title": "купить",
+      "content": "купить подарок"
+    },
+    "metadata": {
+      "template_id": "note_create_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_004",
+    "text": "Найди рейсы из Нижнего Новгорода в Владивосток на 2026-03-02",
+    "text_for_tts": "Найди рейсы из Нижнего Новгорода в Владивосток на второе марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Нижний Новгород",
+      "to_city": "Владивосток",
+      "date": "2026-03-02"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_035",
+    "text": "Привет",
+    "text_for_tts": "Привет",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_031",
+    "text": "Что ты умеешь?",
+    "text_for_tts": "Что ты умеешь?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_039",
+    "text": "Зафиксируй событие вебинар на дату 2026-02-25",
+    "text_for_tts": "Зафиксируй событие вебинар на дату двадцать пятое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-25",
+      "description": "вебинар"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_020",
+    "text": "Мне нужно собеседование 2026-02-27, добавь в календарь",
+    "text_for_tts": "Мне нужно собеседование двадцать седьмое февраля, добавь в календарь",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-27",
+      "description": "собеседование"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_093",
+    "text": "Мне надо срочно в Нижний Новгород из Уфы, что есть на в среду",
+    "text_for_tts": "Мне надо срочно в Нижний Новгород из Уфы, что есть на в среду",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Уфа",
+      "to_city": "Нижний Новгород",
+      "date": "2026-02-11"
+    },
+    "metadata": {
+      "template_id": "flight_template_11",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_015",
+    "text": "Хочу полететь из Челябинска в Самару 2026-02-16",
+    "text_for_tts": "Хочу полететь из Челябинска в Самару шестнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Челябинск",
+      "to_city": "Самара",
+      "date": "2026-02-16"
+    },
+    "metadata": {
+      "template_id": "flight_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_017",
+    "text": "Поставь напоминание совещание 2026-03-06",
+    "text_for_tts": "Поставь напоминание совещание шестое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-06",
+      "description": "совещание"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_014",
+    "text": "Какие самолёты летают из Казани в Владивосток 2026-02-25",
+    "text_for_tts": "Какие самолёты летают из Казани в Владивосток двадцать пятое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Владивосток",
+      "date": "2026-02-25"
+    },
+    "metadata": {
+      "template_id": "flight_template_09",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_046",
+    "text": "Мне нужна песня Король и Шут",
+    "text_for_tts": "Мне нужна песня Король и Шут",
+    "tool": "search_music",
+    "params": {
+      "query": "Король и Шут",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_011",
+    "text": "Покажи заметку записаться",
+    "text_for_tts": "Покажи заметку записаться",
+    "tool": "search_notes",
+    "params": {
+      "query": "записаться"
+    },
+    "metadata": {
+      "template_id": "note_search_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_040",
+    "text": "Покажи расписание на 2026-03-06",
+    "text_for_tts": "Покажи расписание на шестое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_116",
+    "text": "Поищи билеты из Красноярска в Нижний Новгород на 2026-02-23",
+    "text_for_tts": "Поищи билеты из Красноярска в Нижний Новгород на двадцать третье февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Красноярск",
+      "to_city": "Нижний Новгород",
+      "date": "2026-02-23"
+    },
+    "metadata": {
+      "template_id": "flight_template_08",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_054",
+    "text": "Найди песню Ария",
+    "text_for_tts": "Найди песню Ария",
+    "tool": "search_music",
+    "params": {
+      "query": "Ария",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_023",
+    "text": "Запланируй ревью кода на 2026-02-20",
+    "text_for_tts": "Запланируй ревью кода на двадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-20",
+      "description": "ревью кода"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_019",
+    "text": "Здравствуй",
+    "text_for_tts": "Здравствуй",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_009",
+    "text": "Что в календаре на 2026-02-28",
+    "text_for_tts": "Что в календаре на двадцать восьмое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-28"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_015",
+    "text": "Найди заметку про купить",
+    "text_for_tts": "Найди заметку про купить",
+    "tool": "search_notes",
+    "params": {
+      "query": "купить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_060",
+    "text": "Добавь встречу обед с партнерами на 2026-02-12",
+    "text_for_tts": "Добавь встречу обед с партнерами на двенадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-12",
+      "description": "обед с партнерами"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_056",
+    "text": "Рейсы из Омска в Новосибирск в субботу",
+    "text_for_tts": "Рейсы из Омска в Новосибирск в субботу",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Омск",
+      "to_city": "Новосибирск",
+      "date": "2026-02-14"
+    },
+    "metadata": {
+      "template_id": "flight_template_18",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_115",
+    "text": "Найди авиабилеты из Сочи в Ростов-на-Дону на дату 2026-02-22",
+    "text_for_tts": "Найди авиабилеты из Сочи в Ростов-на-Дону на дату двадцать второе февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Сочи",
+      "to_city": "Ростов-на-Дону",
+      "date": "2026-02-22"
+    },
+    "metadata": {
+      "template_id": "flight_template_15",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_007",
+    "text": "Поставь Аквариум",
+    "text_for_tts": "Поставь Аквариум",
+    "tool": "search_music",
+    "params": {
+      "query": "Аквариум",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_080",
+    "text": "Рейсы из Новосибирска в Челябинск в четверг",
+    "text_for_tts": "Рейсы из Новосибирска в Челябинск в четверг",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Новосибирск",
+      "to_city": "Челябинск",
+      "date": "2026-02-12"
+    },
+    "metadata": {
+      "template_id": "flight_template_18",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_109",
+    "text": "Мне нужно в Ростов-на-Дону из Самары 2026-02-20",
+    "text_for_tts": "Мне нужно в Ростов-на-Дону из Самары двадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Самара",
+      "to_city": "Ростов-на-Дону",
+      "date": "2026-02-20"
+    },
+    "metadata": {
+      "template_id": "flight_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_020",
+    "text": "Поищи трек под названием Король и Шут",
+    "text_for_tts": "Поищи трек под названием Король и Шут",
+    "tool": "search_music",
+    "params": {
+      "query": "Король и Шут",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_056",
+    "text": "Найди композицию Звери",
+    "text_for_tts": "Найди композицию Звери",
+    "tool": "search_music",
+    "params": {
+      "query": "Звери",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_054",
+    "text": "Когда можно улететь из Санкт-Петербурга в Владивосток, интересует 2026-02-20",
+    "text_for_tts": "Когда можно улететь из Санкт-Петербурга в Владивосток, интересует двадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Санкт-Петербург",
+      "to_city": "Владивосток",
+      "date": "2026-02-20"
+    },
+    "metadata": {
+      "template_id": "flight_template_13",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_001",
+    "text": "Что у меня 2026-02-10",
+    "text_for_tts": "Что у меня десятое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-10"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_040",
+    "text": "Поставь напоминание звонок с клиентом 2026-02-15",
+    "text_for_tts": "Поставь напоминание звонок с клиентом пятнадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-15",
+      "description": "звонок с клиентом"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_008",
+    "text": "Сделай заметку обновить резюме",
+    "text_for_tts": "Сделай заметку обновить резюме",
+    "tool": "create_note",
+    "params": {
+      "title": "обновить",
+      "content": "обновить резюме"
+    },
+    "metadata": {
+      "template_id": "note_create_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_028",
+    "text": "Мне нужно звонок с клиентом 2026-02-24, добавь в календарь",
+    "text_for_tts": "Мне нужно звонок с клиентом двадцать четвёртое февраля, добавь в календарь",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-24",
+      "description": "звонок с клиентом"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_027",
+    "text": "Найди рейсы из Екатеринбурга в Пермь на 2026-03-04",
+    "text_for_tts": "Найди рейсы из Екатеринбурга в Пермь на четвёртое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Екатеринбург",
+      "to_city": "Пермь",
+      "date": "2026-03-04"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_037",
+    "text": "Какие планы на 2026-02-18",
+    "text_for_tts": "Какие планы на восемнадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-18"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_06",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_002",
+    "text": "Покажи события на 2026-02-25",
+    "text_for_tts": "Покажи события на двадцать пятое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-25"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_031",
+    "text": "Проверь мои встречи на 2026-03-06",
+    "text_for_tts": "Проверь мои встречи на шестое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_063",
+    "text": "Самолёты из Ростова-на-Дону в Хабаровск 2026-03-09",
+    "text_for_tts": "Самолёты из Ростова-на-Дону в Хабаровск девятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Ростов-на-Дону",
+      "to_city": "Хабаровск",
+      "date": "2026-03-09"
+    },
+    "metadata": {
+      "template_id": "flight_template_19",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_049",
+    "text": "У меня будет собеседование в субботу, запиши пожалуйста",
+    "text_for_tts": "У меня будет собеседование в субботу, запиши пожалуйста",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-14",
+      "description": "собеседование"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_012",
+    "text": "Где заметка про позвонить",
+    "text_for_tts": "Где заметка про позвонить",
+    "tool": "search_notes",
+    "params": {
+      "query": "позвонить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_048",
+    "text": "Поищи трек под названием Земфира - Искала",
+    "text_for_tts": "Поищи трек под названием Земфира - Искала",
+    "tool": "search_music",
+    "params": {
+      "query": "Земфира - Искала",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_001",
+    "text": "Заметка: позвонить маме",
+    "text_for_tts": "Заметка: позвонить маме",
+    "tool": "create_note",
+    "params": {
+      "title": "позвонить",
+      "content": "позвонить маме"
+    },
+    "metadata": {
+      "template_id": "note_create_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_031",
+    "text": "Посмотри пожалуйста рейсы из Сочи в Пермь на 2026-03-04",
+    "text_for_tts": "Посмотри пожалуйста рейсы из Сочи в Пермь на четвёртое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Сочи",
+      "to_city": "Пермь",
+      "date": "2026-03-04"
+    },
+    "metadata": {
+      "template_id": "flight_template_12",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_045",
+    "text": "Найди композицию Алиса",
+    "text_for_tts": "Найди композицию Алиса",
+    "tool": "search_music",
+    "params": {
+      "query": "Алиса",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_067",
+    "text": "Как добраться из Казани в Пермь в субботу",
+    "text_for_tts": "Как добраться из Казани в Пермь в субботу",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Пермь",
+      "date": "2026-02-14"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_011",
+    "text": "Какие встречи у меня 2026-02-25",
+    "text_for_tts": "Какие встречи у меня двадцать пятое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-25"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_050",
+    "text": "Есть ли рейсы Уфа - Сочи на 2026-02-16",
+    "text_for_tts": "Есть ли рейсы Уфа - Сочи на шестнадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Уфа",
+      "to_city": "Сочи",
+      "date": "2026-02-16"
+    },
+    "metadata": {
+      "template_id": "flight_template_05",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_042",
+    "text": "Что у меня 2026-02-18",
+    "text_for_tts": "Что у меня восемнадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-18"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_048",
+    "text": "Покажи расписание из Екатеринбурга в Санкт-Петербург 2026-02-20",
+    "text_for_tts": "Покажи расписание из Екатеринбурга в Санкт-Петербург двадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Екатеринбург",
+      "to_city": "Санкт-Петербург",
+      "date": "2026-02-20"
+    },
+    "metadata": {
+      "template_id": "flight_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_044",
+    "text": "Покажи самолёты из Владивостока в Пермь 2026-02-12",
+    "text_for_tts": "Покажи самолёты из Владивостока в Пермь двенадцатое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Владивосток",
+      "to_city": "Пермь",
+      "date": "2026-02-12"
+    },
+    "metadata": {
+      "template_id": "flight_template_16",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_047",
+    "text": "Посмотри пожалуйста рейсы из Уфы в Челябинск на 2026-02-22",
+    "text_for_tts": "Посмотри пожалуйста рейсы из Уфы в Челябинск на двадцать второе февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Уфа",
+      "to_city": "Челябинск",
+      "date": "2026-02-22"
+    },
+    "metadata": {
+      "template_id": "flight_template_12",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_035",
+    "text": "Когда летит самолет из Нижнего Новгорода в Новосибирск в четверг",
+    "text_for_tts": "Когда летит самолет из Нижнего Новгорода в Новосибирск в четверг",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Нижний Новгород",
+      "to_city": "Новосибирск",
+      "date": "2026-02-12"
+    },
+    "metadata": {
+      "template_id": "flight_template_03",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_003",
+    "text": "Найди в Яндекс Музыке Агата Кристи",
+    "text_for_tts": "Найди в Яндекс Музыке Агата Кристи",
+    "tool": "search_music",
+    "params": {
+      "query": "Агата Кристи",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_024",
+    "text": "Найди мою заметку оплатить",
+    "text_for_tts": "Найди мою заметку оплатить",
+    "tool": "search_notes",
+    "params": {
+      "query": "оплатить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_079",
+    "text": "Есть ли рейсы Нижний Новгород - Санкт-Петербург на 2026-03-06",
+    "text_for_tts": "Есть ли рейсы Нижний Новгород - Санкт-Петербург на шестое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Нижний Новгород",
+      "to_city": "Санкт-Петербург",
+      "date": "2026-03-06"
+    },
+    "metadata": {
+      "template_id": "flight_template_05",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_012",
+    "text": "Что у меня запланировано на 2026-02-21",
+    "text_for_tts": "Что у меня запланировано на двадцать первое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-21"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_011",
+    "text": "Создай событие ретроспектива на в пятницу",
+    "text_for_tts": "Создай событие ретроспектива на в пятницу",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-13",
+      "description": "ретроспектива"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_013",
+    "text": "Найди все заметки связанные с позвонить",
+    "text_for_tts": "Найди все заметки связанные с позвонить",
+    "tool": "search_notes",
+    "params": {
+      "query": "позвонить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_020",
+    "text": "Расскажи о себе",
+    "text_for_tts": "Расскажи о себе",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_039",
+    "text": "Что запланировано 2026-02-17",
+    "text_for_tts": "Что запланировано семнадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-17"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_041",
+    "text": "Напомни мне про тренинг 2026-03-02",
+    "text_for_tts": "Напомни мне про тренинг второе марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-02",
+      "description": "тренинг"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_049",
+    "text": "Как добраться из Калининграда в Владивосток в субботу",
+    "text_for_tts": "Как добраться из Калининграда в Владивосток в субботу",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Калининград",
+      "to_city": "Владивосток",
+      "date": "2026-02-14"
+    },
+    "metadata": {
+      "template_id": "flight_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_033",
+    "text": "Что запланировано 2026-02-24",
+    "text_for_tts": "Что запланировано двадцать четвёртое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-24"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_025",
+    "text": "Что у меня 2026-02-24",
+    "text_for_tts": "Что у меня двадцать четвёртое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-24"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_025",
+    "text": "Спасибо",
+    "text_for_tts": "Спасибо",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_054",
+    "text": "Добавь встречу конференция на 2026-03-02",
+    "text_for_tts": "Добавь встречу конференция на второе марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-02",
+      "description": "конференция"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_032",
+    "text": "Что у меня запланировано на 2026-03-04",
+    "text_for_tts": "Что у меня запланировано на четвёртое марта",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-03-04"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_117",
+    "text": "Какие самолёты летают из Челябинска в Казань 2026-03-02",
+    "text_for_tts": "Какие самолёты летают из Челябинска в Казань второе марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Челябинск",
+      "to_city": "Казань",
+      "date": "2026-03-02"
+    },
+    "metadata": {
+      "template_id": "flight_template_09",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_052",
+    "text": "Что у меня по расписанию в пятницу",
+    "text_for_tts": "Что у меня по расписанию в пятницу",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-13"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_022",
+    "text": "Как дела?",
+    "text_for_tts": "Как дела?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_111",
+    "text": "Когда летят из Челябинска в Санкт-Петербург 2026-02-25",
+    "text_for_tts": "Когда летят из Челябинска в Санкт-Петербург двадцать пятое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Челябинск",
+      "to_city": "Санкт-Петербург",
+      "date": "2026-02-25"
+    },
+    "metadata": {
+      "template_id": "flight_template_17",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_014",
+    "text": "Расскажи о себе",
+    "text_for_tts": "Расскажи о себе",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_043",
+    "text": "Поищи трек Nautilus Pompilius",
+    "text_for_tts": "Поищи трек Nautilus Pompilius",
+    "tool": "search_music",
+    "params": {
+      "query": "Nautilus Pompilius",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_006",
+    "text": "Найди все заметки связанные с купить",
+    "text_for_tts": "Найди все заметки связанные с купить",
+    "tool": "search_notes",
+    "params": {
+      "query": "купить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_search_008",
+    "text": "Поищи заметку обновить",
+    "text_for_tts": "Поищи заметку обновить",
+    "tool": "search_notes",
+    "params": {
+      "query": "обновить"
+    },
+    "metadata": {
+      "template_id": "note_search_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_059",
+    "text": "Когда летят из Сочи в Санкт-Петербург 2026-02-24",
+    "text_for_tts": "Когда летят из Сочи в Санкт-Петербург двадцать четвёртое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Сочи",
+      "to_city": "Санкт-Петербург",
+      "date": "2026-02-24"
+    },
+    "metadata": {
+      "template_id": "flight_template_17",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_004",
+    "text": "Что ты умеешь?",
+    "text_for_tts": "Что ты умеешь?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_051",
+    "text": "Когда летит самолет из Челябинска в Пермь в среду",
+    "text_for_tts": "Когда летит самолет из Челябинска в Пермь в среду",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Челябинск",
+      "to_city": "Пермь",
+      "date": "2026-02-11"
+    },
+    "metadata": {
+      "template_id": "flight_template_03",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_041",
+    "text": "Что у меня запланировано на 2026-02-22",
+    "text_for_tts": "Что у меня запланировано на двадцать второе февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-22"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_010",
+    "text": "Сохрани: обновить резюме",
+    "text_for_tts": "Сохрани: обновить резюме",
+    "tool": "create_note",
+    "params": {
+      "title": "обновить",
+      "content": "обновить резюме"
+    },
+    "metadata": {
+      "template_id": "note_create_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_019",
+    "text": "Поиск песни Агата Кристи",
+    "text_for_tts": "Поиск песни Агата Кристи",
+    "tool": "search_music",
+    "params": {
+      "query": "Агата Кристи",
+      "search_type": "artist"
+    },
+    "metadata": {
+      "template_id": "music_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_053",
+    "text": "Что у меня запланировано на 2026-02-25",
+    "text_for_tts": "Что у меня запланировано на двадцать пятое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-25"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_031",
+    "text": "Напомни мне про обед с партнерами 2026-02-21",
+    "text_for_tts": "Напомни мне про обед с партнерами двадцать первое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-21",
+      "description": "обед с партнерами"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_032",
+    "text": "Найди в Яндекс Музыке Звери",
+    "text_for_tts": "Найди в Яндекс Музыке Звери",
+    "tool": "search_music",
+    "params": {
+      "query": "Звери",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_006",
+    "text": "Запиши: забронировать отель",
+    "text_for_tts": "Запиши: забронировать отель",
+    "tool": "create_note",
+    "params": {
+      "title": "забронировать",
+      "content": "забронировать отель"
+    },
+    "metadata": {
+      "template_id": "note_create_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_016",
+    "text": "Проверь мои встречи на 2026-02-15",
+    "text_for_tts": "Проверь мои встречи на пятнадцатое февраля",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-15"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_11",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_047",
+    "text": "Запланируй конференция на 2026-02-16",
+    "text_for_tts": "Запланируй конференция на шестнадцатое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-16",
+      "description": "конференция"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "no_tool_009",
+    "text": "Какая погода сегодня?",
+    "text_for_tts": "Какая погода сегодня?",
+    "tool": "no_tool_available",
+    "params": {
+      "reason": "Запрос не требует вызова инструмента",
+      "user_message": "Извините, я не могу помочь с этим запросом"
+    },
+    "metadata": {
+      "template_id": "no_tool_template_09",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_041",
+    "text": "Поиск песни Алиса",
+    "text_for_tts": "Поиск песни Алиса",
+    "tool": "search_music",
+    "params": {
+      "query": "Алиса",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "music_060",
+    "text": "Хочу послушать Аквариум",
+    "text_for_tts": "Хочу послушать Аквариум",
+    "tool": "search_music",
+    "params": {
+      "query": "Аквариум",
+      "search_type": "track"
+    },
+    "metadata": {
+      "template_id": "music_template_05",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_025",
+    "text": "Сохрани: купить подарок",
+    "text_for_tts": "Сохрани: купить подарок",
+    "tool": "create_note",
+    "params": {
+      "title": "купить",
+      "content": "купить подарок"
+    },
+    "metadata": {
+      "template_id": "note_create_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_020",
+    "text": "Сохрани заметку: купить молоко",
+    "text_for_tts": "Сохрани заметку: купить молоко",
+    "tool": "create_note",
+    "params": {
+      "title": "купить",
+      "content": "купить молоко"
+    },
+    "metadata": {
+      "template_id": "note_create_template_03",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_021",
+    "text": "Зафиксируй событие планерка на дату 2026-03-04",
+    "text_for_tts": "Зафиксируй событие планерка на дату четвёртое марта",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-03-04",
+      "description": "планерка"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_12",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_065",
+    "text": "Покажи авиарейсы Челябинск - Хабаровск 2026-03-09",
+    "text_for_tts": "Покажи авиарейсы Челябинск - Хабаровск девятое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Челябинск",
+      "to_city": "Хабаровск",
+      "date": "2026-03-09"
+    },
+    "metadata": {
+      "template_id": "flight_template_10",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_034",
+    "text": "Самолёты из Казани в Екатеринбург 2026-03-03",
+    "text_for_tts": "Самолёты из Казани в Екатеринбург третье марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Казань",
+      "to_city": "Екатеринбург",
+      "date": "2026-03-03"
+    },
+    "metadata": {
+      "template_id": "flight_template_19",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_076",
+    "text": "Найди рейсы из Хабаровска в Новосибирск на 2026-02-28",
+    "text_for_tts": "Найди рейсы из Хабаровска в Новосибирск на двадцать восьмое февраля",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Хабаровск",
+      "to_city": "Новосибирск",
+      "date": "2026-02-28"
+    },
+    "metadata": {
+      "template_id": "flight_template_01",
+      "complexity": "medium",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "note_create_012",
+    "text": "Добавь заметку купить подарок",
+    "text_for_tts": "Добавь заметку купить подарок",
+    "tool": "create_note",
+    "params": {
+      "title": "купить",
+      "content": "купить подарок"
+    },
+    "metadata": {
+      "template_id": "note_create_template_04",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_add_045",
+    "text": "Напомни мне про демо продукта 2026-02-21",
+    "text_for_tts": "Напомни мне про демо продукта двадцать первое февраля",
+    "tool": "add_calendar_event",
+    "params": {
+      "date": "2026-02-21",
+      "description": "демо продукта"
+    },
+    "metadata": {
+      "template_id": "calendar_add_template_08",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_042",
+    "text": "Покажи расписание из Калининграда в Казань 2026-03-08",
+    "text_for_tts": "Покажи расписание из Калининграда в Казань восьмое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Калининград",
+      "to_city": "Казань",
+      "date": "2026-03-08"
+    },
+    "metadata": {
+      "template_id": "flight_template_02",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "flight_038",
+    "text": "Мне нужно в Уфу из Иркутска 2026-03-01",
+    "text_for_tts": "Мне нужно в Уфу из Иркутска первое марта",
+    "tool": "flight_schedule",
+    "params": {
+      "from_city": "Иркутск",
+      "to_city": "Уфа",
+      "date": "2026-03-01"
+    },
+    "metadata": {
+      "template_id": "flight_template_07",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  },
+  {
+    "id": "calendar_get_048",
+    "text": "Что у меня запланировано на в субботу",
+    "text_for_tts": "Что у меня запланировано на в субботу",
+    "tool": "get_calendar_events",
+    "params": {
+      "date": "2026-02-14"
+    },
+    "metadata": {
+      "template_id": "calendar_get_template_01",
+      "complexity": "simple",
+      "language": "ru",
+      "llm_rephrased": false
+    }
+  }
+]
